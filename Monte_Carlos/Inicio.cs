@@ -14,10 +14,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
+
 namespace Monte_Carlos
 {
     public partial class Inicio : Form
     {
+        
         private int Contador;
         public Inicio()
         {
@@ -187,5 +190,11 @@ namespace Monte_Carlos
             ventana.Show();
 
         }
+
+        private void btnRed_Click(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }
