@@ -40,6 +40,9 @@
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.GrandePeque = new System.Windows.Forms.PictureBox();
             this.PanelIzquierdo = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -68,16 +71,15 @@
             this.btncliente = new System.Windows.Forms.Button();
             this.btnservicio = new System.Windows.Forms.Button();
             this.PanelCentral = new System.Windows.Forms.Panel();
+            this.btnRed = new FontAwesome.Sharp.IconButton();
             this.ProgesoBarra = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.PanelArriba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Peque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrandePeque)).BeginInit();
             this.PanelIzquierdo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -87,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.PanelCentral.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHora
@@ -243,6 +245,41 @@
             this.PanelIzquierdo.Size = new System.Drawing.Size(206, 520);
             this.PanelIzquierdo.TabIndex = 16;
             this.PanelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelIzquierdo_Paint);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Orange;
+            this.panel10.Location = new System.Drawing.Point(201, 477);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(5, 40);
+            this.panel10.TabIndex = 11;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(150, 478);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(51, 40);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 22;
+            this.pictureBox10.TabStop = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Peru;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(3, 479);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(200, 37);
+            this.btnSalir.TabIndex = 23;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox9
             // 
@@ -561,6 +598,7 @@
             // 
             // PanelCentral
             // 
+            this.PanelCentral.Controls.Add(this.btnRed);
             this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelCentral.Location = new System.Drawing.Point(206, 52);
             this.PanelCentral.Name = "PanelCentral";
@@ -568,40 +606,23 @@
             this.PanelCentral.TabIndex = 17;
             this.PanelCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCentral_Paint);
             // 
-            // pictureBox10
+            // btnRed
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(150, 478);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(51, 40);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 22;
-            this.pictureBox10.TabStop = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Peru;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(3, 479);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(200, 37);
-            this.btnSalir.TabIndex = 23;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Orange;
-            this.panel10.Location = new System.Drawing.Point(201, 477);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(5, 40);
-            this.panel10.TabIndex = 11;
+            this.btnRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.btnRed.FlatAppearance.BorderSize = 0;
+            this.btnRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRed.ForeColor = System.Drawing.Color.Black;
+            this.btnRed.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
+            this.btnRed.IconColor = System.Drawing.Color.Black;
+            this.btnRed.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRed.Location = new System.Drawing.Point(43, 28);
+            this.btnRed.Name = "btnRed";
+            this.btnRed.Size = new System.Drawing.Size(146, 47);
+            this.btnRed.TabIndex = 0;
+            this.btnRed.Text = "Red";
+            this.btnRed.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRed.UseVisualStyleBackColor = false;
+            this.btnRed.Click += new System.EventHandler(this.btnRed_Click);
             // 
             // Inicio
             // 
@@ -626,6 +647,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrandePeque)).EndInit();
             this.PanelIzquierdo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -635,7 +657,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.PanelCentral.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -683,5 +705,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btnSalir;
+        private FontAwesome.Sharp.IconButton btnRed;
     }
 }
