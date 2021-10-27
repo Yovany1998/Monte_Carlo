@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="537632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="536608">
       <assemblyIdentity name="Monte_Carlos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Wk9p175NH1/OsJOT+gv8utGTyUCeYwQzjypgl+rsfhQ=</dsig:DigestValue>
+        <dsig:DigestValue>HDbBvRhBBVyj0Qsw1LkMRfDpdWRrqsimy8yIcTEBlC8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -369,13 +369,13 @@
       <dsig:DigestValue>4RJ8mbN+PBHmlkROE0uzv9h1GiZezTZ1mtSeVs+wfzw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Monte_Carlos.exe.config" size="3412">
+  <file name="Monte_Carlos.exe.config" size="3448">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>NMPwLsdsD09oVmQDrBCTrbm9yuwgUIl7KMOhI38Bugo=</dsig:DigestValue>
+      <dsig:DigestValue>HO4MPp97gqtkqCORa8YuWDy7UVuS3PJaTouWHXVqqZI=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
