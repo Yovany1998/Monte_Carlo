@@ -13,7 +13,7 @@ namespace Monte_Carlos.Reservaciones
     public partial class Insertar_Reservaciones : Form
     {
        
-        long idTemporal;
+        /*long idTemporal;
         int log;
         long CodigoReserva;
         DateTime FechaRegistro;
@@ -25,7 +25,7 @@ namespace Monte_Carlos.Reservaciones
         bool editar = false;
         bool editarDetalle = false;
        // bool ValidarComida = false;
-        bool ValidarCliente = false;
+        bool ValidarCliente = false;*/
 
 
         public Insertar_Reservaciones()

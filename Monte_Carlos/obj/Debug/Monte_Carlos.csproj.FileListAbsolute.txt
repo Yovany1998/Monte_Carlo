@@ -522,4 +522,3 @@ C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Car
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.application
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
-C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CopyComplete
