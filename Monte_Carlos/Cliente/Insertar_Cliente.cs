@@ -229,7 +229,7 @@ namespace Monte_Carlos.Cliente
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Limpiar();
+            
         }
 
         private void dvClientes_MouseClick(object sender, MouseEventArgs e)
@@ -242,17 +242,27 @@ namespace Monte_Carlos.Cliente
 
         private void btnElimicar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
             if (editar == false)
             {
                 MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
             }
             else
             {
-                    Variables.Clientes.RemoveRange(Variables.Clientes.Where(x => x.IdCliente == idCliente));
-                    Variables.SaveChanges();
-                    Limpiar();
-                    CargaDv();
-                          }
+                Variables.Clientes.RemoveRange(Variables.Clientes.Where(x => x.IdCliente == idCliente));
+                Variables.SaveChanges();
+                Limpiar();
+                CargaDv();
+            }
+        }
+
+        private void btnNuevo1_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }
