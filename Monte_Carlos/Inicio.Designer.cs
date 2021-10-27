@@ -146,7 +146,7 @@
             this.IBtnCarta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnCarta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IBtnCarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBtnCarta.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
+            this.IBtnCarta.IconChar = FontAwesome.Sharp.IconChar.Hotdog;
             this.IBtnCarta.IconColor = System.Drawing.Color.Black;
             this.IBtnCarta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCarta.IconSize = 35;
@@ -186,7 +186,7 @@
             this.IBtnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IBtnEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBtnEmpleado.IconChar = FontAwesome.Sharp.IconChar.Osi;
+            this.IBtnEmpleado.IconChar = FontAwesome.Sharp.IconChar.StreetView;
             this.IBtnEmpleado.IconColor = System.Drawing.Color.Black;
             this.IBtnEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnEmpleado.IconSize = 35;

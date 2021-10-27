@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="532000">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="534048">
       <assemblyIdentity name="Monte_Carlos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>g5or2ki5wK09eugqS8j1W87/UqZ5eEaS/EZdBO7sc04=</dsig:DigestValue>
+        <dsig:DigestValue>Nx1pb1mRrDMjj3cGtOQ4yiMju01ELve3qTeAA/SX0s4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

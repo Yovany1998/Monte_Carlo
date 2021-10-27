@@ -216,6 +216,91 @@ namespace Monte_Carlos.Salidas
             Limpiar();
             dvCompra.ClearSelection();
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            if (txtProducto.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingrese el producto");
+                return;
+            }
+            if (txtPrecio.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingresar el precio");
+                return;
+            }
+            if (Convert.ToInt32(txtPrecio.Text) <= 0)
+            {
+                MessageBox.Show("El precio no puede ser menor o igual a 0");
+                return;
+            }
+            if (txtDetalle.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingresar el detalle de la compra");
+                return;
+            }
+
+            Subto = Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(txtPrecio.Text);
+
+            if (editar)
+            {
+                MessageBox.Show("Compra modificada!");
+                var tCompra = Variables.Compras.FirstOrDefault(x => x.IdCompra == idCompras);
+                tCompra.Producto = txtProducto.Text;
+                tCompra.Precio = Convert.ToDouble(txtPrecio.Text);
+                tCompra.Detalle = txtDetalle.Text;
+                tCompra.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                tCompra.Subtotal = Subto;
+                Variables.SaveChanges();
+            }
+            else
+            {
+                MessageBox.Show("Compra guardada");
+                Compras tbCompra = new Compras
+                {
+                    Producto = txtProducto.Text,
+                    Precio = Convert.ToDouble(txtPrecio.Text),
+                    Detalle = txtDetalle.Text,
+                    Cantidad = Convert.ToInt32(txtCantidad.Text),
+                    Fecha = FechaActual,
+                    Subtotal = Subto
+                };
+                Variables.Compras.Add(tbCompra);
+                Variables.SaveChanges();
+            }
+            editar = false;
+            idCompras = 0;
+            CargaDv();
+            Limpiar();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            dvCompra.ClearSelection();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            if (editar == false)
+            {
+                MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
+            }
+            else
+            {
+                if (dvCompra.RowCount == 2)
+                {
+                    MessageBox.Show("Si eliminas este registro no podras acceder al programa");
+                }
+                else
+                {
+
+                    Variables.Compras.RemoveRange(Variables.Compras.Where(x => x.IdCompra == idCompras));
+                    Variables.SaveChanges();
+                    Limpiar();
+                    CargaDv();
+                }
+            }
+        }
     }
-    
 }
