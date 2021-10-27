@@ -165,13 +165,10 @@ namespace Monte_Carlos.Cliente
             var tClientes = from p in Variables.Clientes
                             select new
                             {
-                                p.IdCliente,
-                                p.Identidad,
+                                p.IdCliente,                                
                                 p.Nombre,
                                 p.Apellido,
-                                p.Edad,
-                                p.Telefono,
-                                p.Correo,
+                                p.Telefono,      
                             };
             dvClientes.DataSource = tClientes.CopyAnonymusToDataTable();
         }
@@ -227,10 +224,7 @@ namespace Monte_Carlos.Cliente
             }
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
+       
 
         private void dvClientes_MouseClick(object sender, MouseEventArgs e)
         {
@@ -240,7 +234,9 @@ namespace Monte_Carlos.Cliente
             }
         }
 
-        private void btnElimicar_Click(object sender, EventArgs e)
+        
+
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (editar == false)
             {
@@ -248,11 +244,16 @@ namespace Monte_Carlos.Cliente
             }
             else
             {
-                    Variables.Clientes.RemoveRange(Variables.Clientes.Where(x => x.IdCliente == idCliente));
-                    Variables.SaveChanges();
-                    Limpiar();
-                    CargaDv();
-                          }
+                Variables.Clientes.RemoveRange(Variables.Clientes.Where(x => x.IdCliente == idCliente));
+                Variables.SaveChanges();
+                Limpiar();
+                CargaDv();
+            }
+        }
+
+        private void btnNuevo1_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }
