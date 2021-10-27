@@ -229,6 +229,9 @@
     <EmbeddedResource Include="Demas\Ingresar_Usuario.resx">
       <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.dje.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\Ingreso_Comida-Bebida.resx">
       <DependentUpon>Ingreso_Comida-Bebida.cs</DependentUpon>
     </EmbeddedResource>
