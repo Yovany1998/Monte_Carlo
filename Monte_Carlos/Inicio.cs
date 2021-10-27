@@ -98,7 +98,7 @@ namespace Monte_Carlos
         private void button1_Click(object sender, EventArgs e)
         {
     
-            AbrirFormEnPanel(new Ingreso_Comida());
+            AbrirFormEnPanel(new Ingreso_Carta());
 
         }
 

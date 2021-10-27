@@ -148,11 +148,11 @@
     <Compile Include="Menu.cs">
       <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
-    <Compile Include="Menu\Ingreso_Comida-Bebida.cs">
+    <Compile Include="Carta\crud_carta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\Ingreso_Comida-Bebida.Designer.cs">
-      <DependentUpon>Ingreso_Comida-Bebida.cs</DependentUpon>
+    <Compile Include="Carta\crud_carta.Designer.cs">
+      <DependentUpon>crud_carta.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente\Insertar_Cliente.cs">
       <SubType>Form</SubType>
@@ -229,8 +229,8 @@
     <EmbeddedResource Include="Demas\Ingresar_Usuario.resx">
       <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\Ingreso_Comida-Bebida.resx">
-      <DependentUpon>Ingreso_Comida-Bebida.cs</DependentUpon>
+    <EmbeddedResource Include="Carta\crud_carta.resx">
+      <DependentUpon>crud_carta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\Insertar_Cliente.resx">
       <DependentUpon>Insertar_Cliente.cs</DependentUpon>
