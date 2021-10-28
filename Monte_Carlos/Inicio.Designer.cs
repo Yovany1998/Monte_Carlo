@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.PanelIzquierdo = new System.Windows.Forms.Panel();
+            this.PanelCentral = new System.Windows.Forms.Panel();
+            this.ProgesoBarra = new System.Windows.Forms.Timer(this.components);
+            this.IBtnUsuario = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.IBtnProveedor = new FontAwesome.Sharp.IconButton();
@@ -40,13 +43,8 @@
             this.IBtnEmpleado = new FontAwesome.Sharp.IconButton();
             this.IBtnVenta = new FontAwesome.Sharp.IconButton();
             this.IBtnReservacion = new FontAwesome.Sharp.IconButton();
-            this.PanelCentral = new System.Windows.Forms.Panel();
-            this.btnRed = new FontAwesome.Sharp.IconButton();
-            this.ProgesoBarra = new System.Windows.Forms.Timer(this.components);
-            this.IBtnUsuario = new FontAwesome.Sharp.IconButton();
             this.PanelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.PanelCentral.SuspendLayout();
             this.SuspendLayout();
             // 
             // horafecha
@@ -68,35 +66,76 @@
             this.PanelIzquierdo.Controls.Add(this.IBtnReservacion);
             this.PanelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.PanelIzquierdo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelIzquierdo.Name = "PanelIzquierdo";
-            this.PanelIzquierdo.Size = new System.Drawing.Size(206, 520);
+            this.PanelIzquierdo.Size = new System.Drawing.Size(275, 937);
             this.PanelIzquierdo.TabIndex = 16;
             this.PanelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelIzquierdo_Paint);
+            // 
+            // PanelCentral
+            // 
+            this.PanelCentral.AutoScroll = true;
+            this.PanelCentral.BackColor = System.Drawing.Color.Transparent;
+            this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelCentral.Location = new System.Drawing.Point(275, 0);
+            this.PanelCentral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelCentral.Name = "PanelCentral";
+            this.PanelCentral.Size = new System.Drawing.Size(1202, 937);
+            this.PanelCentral.TabIndex = 17;
+            this.PanelCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCentral_Paint);
+            // 
+            // ProgesoBarra
+            // 
+            this.ProgesoBarra.Tick += new System.EventHandler(this.ProgesoBarra_Tick);
+            // 
+            // IBtnUsuario
+            // 
+            this.IBtnUsuario.FlatAppearance.BorderSize = 0;
+            this.IBtnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.IBtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBtnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.IBtnUsuario.IconColor = System.Drawing.Color.Black;
+            this.IBtnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBtnUsuario.IconSize = 35;
+            this.IBtnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IBtnUsuario.Location = new System.Drawing.Point(0, 426);
+            this.IBtnUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.IBtnUsuario.Name = "IBtnUsuario";
+            this.IBtnUsuario.Size = new System.Drawing.Size(273, 46);
+            this.IBtnUsuario.TabIndex = 9;
+            this.IBtnUsuario.Text = "Usuario";
+            this.IBtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBtnUsuario.UseVisualStyleBackColor = true;
+            this.IBtnUsuario.Click += new System.EventHandler(this.IBtnUsuario_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(45, 39);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(161, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // iconButton1
             // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleRight;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.iconButton1.Location = new System.Drawing.Point(3, 480);
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton1.Location = new System.Drawing.Point(0, 891);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(205, 37);
+            this.iconButton1.Size = new System.Drawing.Size(275, 46);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Text = "Cerrar Sesion";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,15 +147,16 @@
             this.IBtnProveedor.FlatAppearance.BorderSize = 0;
             this.IBtnProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBtnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBtnProveedor.IconChar = FontAwesome.Sharp.IconChar.ShippingFast;
             this.IBtnProveedor.IconColor = System.Drawing.Color.Black;
             this.IBtnProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnProveedor.IconSize = 35;
             this.IBtnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnProveedor.Location = new System.Drawing.Point(1, 420);
+            this.IBtnProveedor.Location = new System.Drawing.Point(0, 586);
+            this.IBtnProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnProveedor.Name = "IBtnProveedor";
-            this.IBtnProveedor.Size = new System.Drawing.Size(205, 37);
+            this.IBtnProveedor.Size = new System.Drawing.Size(273, 46);
             this.IBtnProveedor.TabIndex = 7;
             this.IBtnProveedor.Text = "Proveedor";
             this.IBtnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -128,15 +168,16 @@
             this.IBtnCliente.FlatAppearance.BorderSize = 0;
             this.IBtnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBtnCliente.IconChar = FontAwesome.Sharp.IconChar.Restroom;
             this.IBtnCliente.IconColor = System.Drawing.Color.Black;
             this.IBtnCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCliente.IconSize = 35;
             this.IBtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnCliente.Location = new System.Drawing.Point(1, 333);
+            this.IBtnCliente.Location = new System.Drawing.Point(0, 479);
+            this.IBtnCliente.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnCliente.Name = "IBtnCliente";
-            this.IBtnCliente.Size = new System.Drawing.Size(205, 37);
+            this.IBtnCliente.Size = new System.Drawing.Size(273, 46);
             this.IBtnCliente.TabIndex = 6;
             this.IBtnCliente.Text = "Cliente";
             this.IBtnCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -148,15 +189,16 @@
             this.IBtnCarta.FlatAppearance.BorderSize = 0;
             this.IBtnCarta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnCarta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBtnCarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnCarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBtnCarta.IconChar = FontAwesome.Sharp.IconChar.Hotdog;
             this.IBtnCarta.IconColor = System.Drawing.Color.Black;
             this.IBtnCarta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCarta.IconSize = 35;
             this.IBtnCarta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnCarta.Location = new System.Drawing.Point(1, 162);
+            this.IBtnCarta.Location = new System.Drawing.Point(0, 268);
+            this.IBtnCarta.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnCarta.Name = "IBtnCarta";
-            this.IBtnCarta.Size = new System.Drawing.Size(205, 37);
+            this.IBtnCarta.Size = new System.Drawing.Size(273, 46);
             this.IBtnCarta.TabIndex = 1;
             this.IBtnCarta.Text = "Carta";
             this.IBtnCarta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -168,15 +210,16 @@
             this.IBtnCompra.FlatAppearance.BorderSize = 0;
             this.IBtnCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBtnCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBtnCompra.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
             this.IBtnCompra.IconColor = System.Drawing.Color.Black;
             this.IBtnCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCompra.IconSize = 35;
             this.IBtnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnCompra.Location = new System.Drawing.Point(1, 376);
+            this.IBtnCompra.Location = new System.Drawing.Point(0, 532);
+            this.IBtnCompra.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnCompra.Name = "IBtnCompra";
-            this.IBtnCompra.Size = new System.Drawing.Size(205, 37);
+            this.IBtnCompra.Size = new System.Drawing.Size(273, 46);
             this.IBtnCompra.TabIndex = 5;
             this.IBtnCompra.Text = "Compra";
             this.IBtnCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,18 +231,18 @@
             this.IBtnEmpleado.FlatAppearance.BorderSize = 0;
             this.IBtnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBtnEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBtnEmpleado.IconChar = FontAwesome.Sharp.IconChar.StreetView;
             this.IBtnEmpleado.IconColor = System.Drawing.Color.Black;
             this.IBtnEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnEmpleado.IconSize = 35;
             this.IBtnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnEmpleado.Location = new System.Drawing.Point(1, 123);
+            this.IBtnEmpleado.Location = new System.Drawing.Point(0, 220);
+            this.IBtnEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnEmpleado.Name = "IBtnEmpleado";
-            this.IBtnEmpleado.Size = new System.Drawing.Size(205, 37);
+            this.IBtnEmpleado.Size = new System.Drawing.Size(273, 46);
             this.IBtnEmpleado.TabIndex = 2;
             this.IBtnEmpleado.Text = "Empleado";
-            this.IBtnEmpleado.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.IBtnEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBtnEmpleado.UseVisualStyleBackColor = true;
             this.IBtnEmpleado.Click += new System.EventHandler(this.IBtnEmpleado_Click);
@@ -209,15 +252,16 @@
             this.IBtnVenta.FlatAppearance.BorderSize = 0;
             this.IBtnVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBtnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBtnVenta.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
             this.IBtnVenta.IconColor = System.Drawing.Color.Black;
             this.IBtnVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnVenta.IconSize = 35;
             this.IBtnVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnVenta.Location = new System.Drawing.Point(1, 202);
+            this.IBtnVenta.Location = new System.Drawing.Point(0, 318);
+            this.IBtnVenta.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnVenta.Name = "IBtnVenta";
-            this.IBtnVenta.Size = new System.Drawing.Size(205, 37);
+            this.IBtnVenta.Size = new System.Drawing.Size(273, 46);
             this.IBtnVenta.TabIndex = 4;
             this.IBtnVenta.Text = "Venta";
             this.IBtnVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -229,91 +273,38 @@
             this.IBtnReservacion.FlatAppearance.BorderSize = 0;
             this.IBtnReservacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.IBtnReservacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBtnReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IBtnReservacion.IconChar = FontAwesome.Sharp.IconChar.Bookmark;
             this.IBtnReservacion.IconColor = System.Drawing.Color.Black;
             this.IBtnReservacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnReservacion.IconSize = 35;
             this.IBtnReservacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnReservacion.Location = new System.Drawing.Point(1, 247);
+            this.IBtnReservacion.Location = new System.Drawing.Point(0, 373);
+            this.IBtnReservacion.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnReservacion.Name = "IBtnReservacion";
-            this.IBtnReservacion.Size = new System.Drawing.Size(205, 37);
+            this.IBtnReservacion.Size = new System.Drawing.Size(273, 46);
             this.IBtnReservacion.TabIndex = 3;
             this.IBtnReservacion.Text = "Reservacion";
             this.IBtnReservacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBtnReservacion.UseVisualStyleBackColor = true;
             this.IBtnReservacion.Click += new System.EventHandler(this.IBtnReservacion_Click);
             // 
-            // PanelCentral
-            // 
-            this.PanelCentral.AutoScroll = true;
-            this.PanelCentral.BackColor = System.Drawing.Color.Transparent;
-            this.PanelCentral.Controls.Add(this.btnRed);
-            this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelCentral.Location = new System.Drawing.Point(206, 0);
-            this.PanelCentral.Name = "PanelCentral";
-            this.PanelCentral.Size = new System.Drawing.Size(902, 520);
-            this.PanelCentral.TabIndex = 17;
-            this.PanelCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCentral_Paint);
-            // 
-            // btnRed
-            // 
-            this.btnRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
-            this.btnRed.FlatAppearance.BorderSize = 0;
-            this.btnRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRed.ForeColor = System.Drawing.Color.Black;
-            this.btnRed.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
-            this.btnRed.IconColor = System.Drawing.Color.Black;
-            this.btnRed.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRed.Location = new System.Drawing.Point(29, 212);
-            this.btnRed.Name = "btnRed";
-            this.btnRed.Size = new System.Drawing.Size(146, 47);
-            this.btnRed.TabIndex = 0;
-            this.btnRed.Text = "Red";
-            this.btnRed.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRed.UseVisualStyleBackColor = false;
-            this.btnRed.Click += new System.EventHandler(this.btnRed_Click);
-            // 
-            // ProgesoBarra
-            // 
-            this.ProgesoBarra.Tick += new System.EventHandler(this.ProgesoBarra_Tick);
-            // 
-            // IBtnUsuario
-            // 
-            this.IBtnUsuario.FlatAppearance.BorderSize = 0;
-            this.IBtnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
-            this.IBtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IBtnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.IBtnUsuario.IconColor = System.Drawing.Color.Black;
-            this.IBtnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IBtnUsuario.IconSize = 35;
-            this.IBtnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnUsuario.Location = new System.Drawing.Point(1, 290);
-            this.IBtnUsuario.Name = "IBtnUsuario";
-            this.IBtnUsuario.Size = new System.Drawing.Size(205, 37);
-            this.IBtnUsuario.TabIndex = 9;
-            this.IBtnUsuario.Text = "Usuario";
-            this.IBtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IBtnUsuario.UseVisualStyleBackColor = true;
-            this.IBtnUsuario.Click += new System.EventHandler(this.IBtnUsuario_Click);
-            // 
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1108, 520);
+            this.ClientSize = new System.Drawing.Size(1477, 937);
             this.Controls.Add(this.PanelCentral);
             this.Controls.Add(this.PanelIzquierdo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.PanelIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.PanelCentral.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -323,7 +314,6 @@
         private System.Windows.Forms.Panel PanelIzquierdo;
         private System.Windows.Forms.Panel PanelCentral;
         private System.Windows.Forms.Timer ProgesoBarra;
-        private FontAwesome.Sharp.IconButton btnRed;
         private FontAwesome.Sharp.IconButton IBtnProveedor;
         private FontAwesome.Sharp.IconButton IBtnCliente;
         private FontAwesome.Sharp.IconButton IBtnCompra;

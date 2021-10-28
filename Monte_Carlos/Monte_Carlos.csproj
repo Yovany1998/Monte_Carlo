@@ -126,12 +126,6 @@
     <Compile Include="Demas\Entrada.Designer.cs">
       <DependentUpon>Entrada.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demas\Ingresar_Usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Demas\Ingresar_Usuario.Designer.cs">
-      <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="DetalleReservacion.cs">
       <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
@@ -145,6 +139,12 @@
       <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
     <Compile Include="LINQTODATATABLE.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
@@ -165,12 +165,6 @@
     </Compile>
     <Compile Include="Empleado\Insertar_Empleado.Designer.cs">
       <DependentUpon>Insertar_Empleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -241,11 +235,11 @@
       <DependentUpon>Generar_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Venta\Validacion.cs" />
+    <None Include="Resources\LogoFincaMonteCarlo.png" />
+    <None Include="Resources\elLogo.png" />
+    <None Include="Resources\LogoEnColores.png" />
     <EmbeddedResource Include="Demas\Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Demas\Ingresar_Usuario.resx">
-      <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Carta\crud_carta.resx">
       <DependentUpon>crud_carta.cs</DependentUpon>
@@ -256,11 +250,11 @@
     <EmbeddedResource Include="Empleado\Insertar_Empleado.resx">
       <DependentUpon>Insertar_Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
