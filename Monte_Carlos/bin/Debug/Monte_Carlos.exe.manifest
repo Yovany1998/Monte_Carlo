@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the
-          requestedExecutionLevel node with one of the following.
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward
-         compatibility then delete the requestedExecutionLevel node.
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="534048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="498208">
       <assemblyIdentity name="Monte_Carlos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Nx1pb1mRrDMjj3cGtOQ4yiMju01ELve3qTeAA/SX0s4=</dsig:DigestValue>
+        <dsig:DigestValue>nOFHZHe00k99/SZj+IPrSPS371+lnq+kbTtCWV6FmKQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -270,22 +270,22 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Conexiones.Context.tt" size="22299">
+  <file name="Conexiones.Context.tt" size="22934">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>L7Py6WQo6RmXtzmL5H9V1w03s21JG+JOqojubiblHeU=</dsig:DigestValue>
+      <dsig:DigestValue>vRjXg1MlBokFrbDYUCXuJESnIvPuyknMgLGy4XpePmU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Conexiones.tt" size="24547">
+  <file name="Conexiones.tt" size="25279">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zz39PKJhFj14zrNt0K/QhxMNRVO7diLnM8bEMb+97iY=</dsig:DigestValue>
+      <dsig:DigestValue>jav+8r1Xj/1HVvPsVRS2HQhG8GSdlv5C9u5+LEcsjLI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\font-awesome.css" size="39751">
