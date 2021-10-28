@@ -576,4 +576,3 @@ C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\D
 C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.application
 C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
-C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Proveedor.Form1.resources
