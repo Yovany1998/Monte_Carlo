@@ -98,13 +98,13 @@ namespace Monte_Carlos
         private void txtContraseña_MouseClick(object sender, MouseEventArgs e)
         {
             txtContraseña.Text = "";
-            panel2.BackColor = Color.Yellow;
+            
         }
 
         private void txtUsuario_MouseClick(object sender, MouseEventArgs e)
         {
             txtUsuario.Text = "";
-            panel1.BackColor = Color.Yellow;
+            
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -147,6 +147,16 @@ namespace Monte_Carlos
                 lblHora.Text = DateTime.Now.ToShortTimeString();
                 lblFecha.Text = DateTime.Now.ToLongDateString();
             
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

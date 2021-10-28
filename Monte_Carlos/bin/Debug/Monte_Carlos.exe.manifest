@@ -270,22 +270,22 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Conexiones.Context.tt" size="22934">
+  <file name="Conexiones.Context.tt" size="22299">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>vRjXg1MlBokFrbDYUCXuJESnIvPuyknMgLGy4XpePmU=</dsig:DigestValue>
+      <dsig:DigestValue>L7Py6WQo6RmXtzmL5H9V1w03s21JG+JOqojubiblHeU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Conexiones.tt" size="25279">
+  <file name="Conexiones.tt" size="24547">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jav+8r1Xj/1HVvPsVRS2HQhG8GSdlv5C9u5+LEcsjLI=</dsig:DigestValue>
+      <dsig:DigestValue>zz39PKJhFj14zrNt0K/QhxMNRVO7diLnM8bEMb+97iY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\font-awesome.css" size="39751">
