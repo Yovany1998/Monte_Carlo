@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Monte_Carlos.Carta
 {
-    public partial class Ingreso_Comida : Form
+    public partial class Ingreso_Carta : Form
     {
         MonteCarlo Variables = new MonteCarlo();
         long idComidaBebida = 0;
         bool editar = false;
         int log;
 
-        public Ingreso_Comida()
+        public Ingreso_Carta()
         {
             InitializeComponent();
 
