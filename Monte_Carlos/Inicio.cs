@@ -145,7 +145,7 @@ namespace Monte_Carlos
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Demas.Ingresar_Usuario());
+            AbrirFormEnPanel(new Usuarios.Ingresar_Usuarios());
         }
 
         private void Minimizar_Click(object sender, EventArgs e)

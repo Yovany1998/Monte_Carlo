@@ -219,6 +219,12 @@
     <Compile Include="Usuario.cs">
       <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\Ingresar_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Ingresar_Usuarios.Designer.cs">
+      <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas.cs">
       <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Salidas\Ingresar_Compras.resx">
       <DependentUpon>Ingresar_Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Ingresar_Usuarios.resx">
+      <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
