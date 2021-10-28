@@ -36,8 +36,8 @@ namespace Monte_Carlos.Salidas
 
         private void Ingresar_Compras_Load(object sender, EventArgs e)
         {
-            log = 1;
-            DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
+          //  log = 1;
+            /*DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
             var tCompras = from p in Variables.Compras
                            where p.Fecha == Fechas
                            select new
@@ -54,6 +54,7 @@ namespace Monte_Carlos.Salidas
             idCompras = 0;
             Limpiar();
             editar = false;
+            */
         }
         public DateTime FechaActual
         {

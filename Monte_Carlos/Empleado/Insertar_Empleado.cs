@@ -39,13 +39,13 @@ namespace Monte_Carlos.Empleado
         }
         private void Insertar_Empleado_Load(object sender, EventArgs e)
         {
-            CargarDv();
-            dvEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            idEmpleado = 0;
-            Limpiar();
-            editar = false;
-            Log = 1;
-            dvEmpleado.ClearSelection();
+            //CargarDv();
+            //dvEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //idEmpleado = 0;
+            //Limpiar();
+            //editar = false;
+            //Log = 1;
+            //dvEmpleado.ClearSelection();
         }
 
         private void btninsertar_Click(object sender, EventArgs e)

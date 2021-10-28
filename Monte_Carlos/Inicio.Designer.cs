@@ -43,6 +43,7 @@
             this.PanelCentral = new System.Windows.Forms.Panel();
             this.btnRed = new FontAwesome.Sharp.IconButton();
             this.ProgesoBarra = new System.Windows.Forms.Timer(this.components);
+            this.IBtnUsuario = new FontAwesome.Sharp.IconButton();
             this.PanelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelCentral.SuspendLayout();
@@ -55,6 +56,7 @@
             // PanelIzquierdo
             // 
             this.PanelIzquierdo.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelIzquierdo.Controls.Add(this.IBtnUsuario);
             this.PanelIzquierdo.Controls.Add(this.pictureBox1);
             this.PanelIzquierdo.Controls.Add(this.iconButton1);
             this.PanelIzquierdo.Controls.Add(this.IBtnProveedor);
@@ -112,13 +114,14 @@
             this.IBtnProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnProveedor.IconSize = 35;
             this.IBtnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnProveedor.Location = new System.Drawing.Point(1, 380);
+            this.IBtnProveedor.Location = new System.Drawing.Point(1, 420);
             this.IBtnProveedor.Name = "IBtnProveedor";
             this.IBtnProveedor.Size = new System.Drawing.Size(205, 37);
             this.IBtnProveedor.TabIndex = 7;
             this.IBtnProveedor.Text = "Proveedor";
             this.IBtnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IBtnProveedor.UseVisualStyleBackColor = true;
+            this.IBtnProveedor.Click += new System.EventHandler(this.IBtnProveedor_Click);
             // 
             // IBtnCliente
             // 
@@ -131,7 +134,7 @@
             this.IBtnCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCliente.IconSize = 35;
             this.IBtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnCliente.Location = new System.Drawing.Point(1, 293);
+            this.IBtnCliente.Location = new System.Drawing.Point(1, 333);
             this.IBtnCliente.Name = "IBtnCliente";
             this.IBtnCliente.Size = new System.Drawing.Size(205, 37);
             this.IBtnCliente.TabIndex = 6;
@@ -171,7 +174,7 @@
             this.IBtnCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCompra.IconSize = 35;
             this.IBtnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnCompra.Location = new System.Drawing.Point(1, 336);
+            this.IBtnCompra.Location = new System.Drawing.Point(1, 376);
             this.IBtnCompra.Name = "IBtnCompra";
             this.IBtnCompra.Size = new System.Drawing.Size(205, 37);
             this.IBtnCompra.TabIndex = 5;
@@ -243,6 +246,7 @@
             // 
             // PanelCentral
             // 
+            this.PanelCentral.AutoScroll = true;
             this.PanelCentral.BackColor = System.Drawing.Color.Transparent;
             this.PanelCentral.Controls.Add(this.btnRed);
             this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -273,6 +277,26 @@
             // ProgesoBarra
             // 
             this.ProgesoBarra.Tick += new System.EventHandler(this.ProgesoBarra_Tick);
+            // 
+            // IBtnUsuario
+            // 
+            this.IBtnUsuario.FlatAppearance.BorderSize = 0;
+            this.IBtnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.IBtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBtnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.IBtnUsuario.IconColor = System.Drawing.Color.Black;
+            this.IBtnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBtnUsuario.IconSize = 35;
+            this.IBtnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IBtnUsuario.Location = new System.Drawing.Point(1, 290);
+            this.IBtnUsuario.Name = "IBtnUsuario";
+            this.IBtnUsuario.Size = new System.Drawing.Size(205, 37);
+            this.IBtnUsuario.TabIndex = 9;
+            this.IBtnUsuario.Text = "Usuario";
+            this.IBtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBtnUsuario.UseVisualStyleBackColor = true;
+            this.IBtnUsuario.Click += new System.EventHandler(this.IBtnUsuario_Click);
             // 
             // Inicio
             // 
@@ -309,5 +333,6 @@
         private FontAwesome.Sharp.IconButton IBtnCarta;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton IBtnUsuario;
     }
 }

@@ -178,7 +178,7 @@ namespace Monte_Carlos
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            //AbrirFormEnPanel(new Ingreso_Comida());
+            AbrirFormEnPanel(new Carta.Ingreso_Carta());
         }
 
         private void IBtnEmpleado_Click(object sender, EventArgs e)
@@ -223,7 +223,9 @@ namespace Monte_Carlos
 
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            Login ventana = new Login();
+            ventana.Show();
         }
 
         private void ProgesoBarra_Tick(object sender, EventArgs e)
@@ -234,6 +236,16 @@ namespace Monte_Carlos
         private void iconButton3_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void IBtnProveedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Proveedor.CRUD_Proveedor());
+        }
+
+        private void IBtnUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Usuarios.Ingresar_Usuarios());
         }
 
         /*private void IBtnNormal_Click(object sender, EventArgs e)

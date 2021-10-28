@@ -27,38 +27,51 @@ namespace Monte_Carlos
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-
-
-            if (txtUsuario.Text == string.Empty)
-            {
-                MessageBox.Show("Ingrese usuario");
-                return;
-            }
-
-            if (txtContraseña.Text == string.Empty)
-            {
-                MessageBox.Show("Ingrese contraseña");
-                return;
-            }
-            string pass = Hash.obtenerHash256(txtContraseña.Text);
-                 var tUsuarios = entity.Usuario.FirstOrDefault(x => x.Nombre == txtUsuario.Text && x.Contrasena == pass && x.Estado == true);
-
-            if (tUsuarios == null)
-            {
-                MessageBox.Show("Usuario o Contrasenia incorrecto");
-                Limpiar();
-                return;
-            }
-            else
-            {
-                Limpiar();
-
+            //Una ves lista este listo el codigo comentar esto
+        
                 this.Hide();
                 Inicio ventana = new Inicio();
                 ventana.Show();
+                //asta aqui
+       
+/*
+        
+
+                if (txtUsuario.Text == string.Empty)
+                {
+                    MessageBox.Show("Ingrese usuario");
+                    return;
+                }
+
+                if (txtContraseña.Text == string.Empty)
+                {
+                    MessageBox.Show("Ingrese contraseña");
+                    return;
+                }
+                string pass = Hash.obtenerHash256(txtContraseña.Text);
+                var tUsuarios = entity.Usuario.FirstOrDefault(x => x.Nombre == txtUsuario.Text && x.Contrasena == pass && x.Estado == true);
+
+                if (tUsuarios == null)
+                {
+                    MessageBox.Show("Usuario o Contrasenia incorrecto");
+                    Limpiar();
+                    return;
+                }
+                else
+                {
+                    Limpiar();
+
+                 
+                    
+                    this.Hide();
+                    Inicio ventana = new Inicio();
+                    ventana.Show();
+                    
+                }
+         
 
             }
-
+    */
 
 
         }
@@ -116,7 +129,7 @@ namespace Monte_Carlos
 
         private void CargaDv()
         {
-            var tUsuario = from p in entity.Usuario
+            /*var tUsuario = from p in entity.Usuario
                            select new
                            {
                                p.IdUsuario,
@@ -134,6 +147,7 @@ namespace Monte_Carlos
             entity.Usuario.Add(tbUsuario);
             entity.SaveChanges();
         }
+            */
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

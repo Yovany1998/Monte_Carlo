@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Insertar_Empleado));
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnElimicar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CmbCargo = new System.Windows.Forms.ComboBox();
@@ -46,34 +43,12 @@
             this.dvEmpleado = new System.Windows.Forms.DataGridView();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new FontAwesome.Sharp.IconPictureBox();
+            this.btnNuevo = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Peru;
-            this.btnNuevo.ForeColor = System.Drawing.Color.Black;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.Location = new System.Drawing.Point(428, 445);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(48, 41);
-            this.btnNuevo.TabIndex = 86;
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            // 
-            // btnElimicar
-            // 
-            this.btnElimicar.BackColor = System.Drawing.Color.Peru;
-            this.btnElimicar.ForeColor = System.Drawing.Color.Black;
-            this.btnElimicar.Image = ((System.Drawing.Image)(resources.GetObject("btnElimicar.Image")));
-            this.btnElimicar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnElimicar.Location = new System.Drawing.Point(507, 445);
-            this.btnElimicar.Name = "btnElimicar";
-            this.btnElimicar.Size = new System.Drawing.Size(48, 41);
-            this.btnElimicar.TabIndex = 85;
-            this.btnElimicar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnElimicar.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -220,14 +195,41 @@
             this.txtNombre.Size = new System.Drawing.Size(396, 24);
             this.txtNombre.TabIndex = 70;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.Location = new System.Drawing.Point(523, 460);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(32, 32);
+            this.btnEliminar.TabIndex = 86;
+            this.btnEliminar.TabStop = false;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.White;
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNuevo.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevo.Location = new System.Drawing.Point(485, 460);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(32, 32);
+            this.btnNuevo.TabIndex = 85;
+            this.btnNuevo.TabStop = false;
+            // 
             // Insertar_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(700, 709);
+            this.ClientSize = new System.Drawing.Size(700, 724);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnElimicar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CmbCargo);
@@ -249,15 +251,14 @@
             this.Text = "Insertar_Empleado";
             this.Load += new System.EventHandler(this.Insertar_Empleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnElimicar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CmbCargo;
@@ -273,5 +274,7 @@
         private System.Windows.Forms.DataGridView dvEmpleado;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
+        private FontAwesome.Sharp.IconPictureBox btnEliminar;
+        private FontAwesome.Sharp.IconPictureBox btnNuevo;
     }
 }
