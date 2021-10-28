@@ -631,3 +631,4 @@ D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.application
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CopyComplete
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
+D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Facturación.resources
