@@ -198,11 +198,11 @@
     <Compile Include="Pedidos\Ver_Pedido.Designer.cs">
       <DependentUpon>Ver_Pedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Salidas\Ingresar_Compras.cs">
+    <Compile Include="Compras\Crud_Compras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Salidas\Ingresar_Compras.Designer.cs">
-      <DependentUpon>Ingresar_Compras.cs</DependentUpon>
+    <Compile Include="Compras\Crud_Compras.Designer.cs">
+      <DependentUpon>Crud_Compras.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
       <DependentUpon>Conexiones.tt</DependentUpon>
@@ -260,8 +260,8 @@
     <EmbeddedResource Include="Pedidos\Ver_Pedido.resx">
       <DependentUpon>Ver_Pedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Salidas\Ingresar_Compras.resx">
-      <DependentUpon>Ingresar_Compras.cs</DependentUpon>
+    <EmbeddedResource Include="Compras\Crud_Compras.resx">
+      <DependentUpon>Crud_Compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
