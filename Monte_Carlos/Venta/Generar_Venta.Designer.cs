@@ -84,7 +84,7 @@
             this.btnBuscarCliente.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBuscarCliente.IconColor = System.Drawing.Color.Black;
             this.btnBuscarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(252, 56);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(232, 62);
             this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(193, 32);
@@ -95,9 +95,10 @@
             // 
             // txtNombreCompleto
             // 
+            this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCompleto.Location = new System.Drawing.Point(232, 30);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(372, 20);
+            this.txtNombreCompleto.Size = new System.Drawing.Size(372, 26);
             this.txtNombreCompleto.TabIndex = 46;
             // 
             // lblNombre
@@ -113,9 +114,10 @@
             // txtBuscarComidaOBebida
             // 
             this.txtBuscarComidaOBebida.Enabled = false;
+            this.txtBuscarComidaOBebida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarComidaOBebida.Location = new System.Drawing.Point(290, 127);
             this.txtBuscarComidaOBebida.Name = "txtBuscarComidaOBebida";
-            this.txtBuscarComidaOBebida.Size = new System.Drawing.Size(222, 20);
+            this.txtBuscarComidaOBebida.Size = new System.Drawing.Size(222, 26);
             this.txtBuscarComidaOBebida.TabIndex = 48;
             // 
             // icoBuscarComidaObebida
@@ -140,7 +142,7 @@
             this.btnOrdenesEnEspera.IconChar = FontAwesome.Sharp.IconChar.ConciergeBell;
             this.btnOrdenesEnEspera.IconColor = System.Drawing.Color.Black;
             this.btnOrdenesEnEspera.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOrdenesEnEspera.IconSize = 36;
+            this.btnOrdenesEnEspera.IconSize = 52;
             this.btnOrdenesEnEspera.Location = new System.Drawing.Point(518, 113);
             this.btnOrdenesEnEspera.Name = "btnOrdenesEnEspera";
             this.btnOrdenesEnEspera.Size = new System.Drawing.Size(86, 47);
@@ -224,7 +226,6 @@
             this.Name = "Generar_Venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generar_Venta";
-            
             ((System.ComponentModel.ISupportInitialize)(this.dgBebidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgComidas)).EndInit();
