@@ -28,5 +28,16 @@ namespace Monte_Carlos
             Inicio ventana = new Inicio();
             ventana.Show();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            lblSistema.Parent = pictureBox1;
+            lblSistema.BackColor = Color.Transparent;
+        }
+
+        private void lblIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
