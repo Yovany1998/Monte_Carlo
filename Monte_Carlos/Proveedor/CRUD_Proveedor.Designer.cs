@@ -51,7 +51,6 @@ namespace Monte_Carlos.Proveedor
             // 
             // panel1
             // 
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnNuevo);
             this.panel1.Controls.Add(this.dgProvedores);
@@ -79,9 +78,10 @@ namespace Monte_Carlos.Proveedor
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 52;
             this.btnEliminar.Location = new System.Drawing.Point(454, 681);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(59, 52);
+            this.btnEliminar.Size = new System.Drawing.Size(52, 52);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -93,6 +93,7 @@ namespace Monte_Carlos.Proveedor
             this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevo.IconSize = 52;
             this.btnNuevo.Location = new System.Drawing.Point(385, 681);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(52, 52);
@@ -152,20 +153,20 @@ namespace Monte_Carlos.Proveedor
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(-2, 365);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(-1, 370);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 29);
+            this.label6.Size = new System.Drawing.Size(128, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "Observacion";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-2, 265);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(-1, 270);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 29);
+            this.label4.Size = new System.Drawing.Size(52, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "RTN";
             // 
@@ -180,10 +181,10 @@ namespace Monte_Carlos.Proveedor
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-5, 172);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(-1, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(249, 29);
+            this.label3.Size = new System.Drawing.Size(200, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nombre de contacto";
             // 
@@ -198,10 +199,10 @@ namespace Monte_Carlos.Proveedor
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-5, 89);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-1, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 29);
+            this.label2.Size = new System.Drawing.Size(196, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Numero de telefono";
             // 
@@ -216,10 +217,10 @@ namespace Monte_Carlos.Proveedor
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-5, 16);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-1, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 29);
+            this.label1.Size = new System.Drawing.Size(93, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Empresa";
             // 

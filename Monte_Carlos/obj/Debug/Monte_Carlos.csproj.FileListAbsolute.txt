@@ -742,3 +742,4 @@ C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\D
 C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Usuarios.Ingresar_Usuarios.resources
+C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.Lista_Clientes.resources

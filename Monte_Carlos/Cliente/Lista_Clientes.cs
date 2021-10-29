@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Monte_Carlos.Proveedor
+namespace Monte_Carlos.Cliente
 {
-    public partial class CRUD_Proveedor : Form
+    public partial class Lista_Clientes : Form
     {
-        public CRUD_Proveedor()
+        public Lista_Clientes()
         {
             InitializeComponent();
         }
-
     }
 }
