@@ -102,6 +102,12 @@
     <Compile Include="Clientes.cs">
       <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cliente\Lista_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Lista_Clientes.Designer.cs">
+      <DependentUpon>Lista_Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras.cs">
       <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
@@ -238,6 +244,9 @@
     <None Include="Resources\LogoFincaMonteCarlo.png" />
     <None Include="Resources\elLogo.png" />
     <None Include="Resources\LogoEnColores.png" />
+    <EmbeddedResource Include="Cliente\Lista_Clientes.resx">
+      <DependentUpon>Lista_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Demas\Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
