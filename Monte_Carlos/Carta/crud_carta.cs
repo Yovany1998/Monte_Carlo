@@ -108,12 +108,12 @@ namespace Monte_Carlos.Carta
     
         private void Ingreso_Comida_Load(object sender, EventArgs e)
         {
-            CargaDv();
-            dvComida.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            idComidaBebida = 0;
-            Limpiar();
-            editar = false;
-            log = 1;
+          //  CargaDv();
+            //dvComida.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //idComidaBebida = 0;
+            //Limpiar();
+            //editar = false;
+            //log = 1;
         }
         private void dvComida_SelectionChanged(object sender, EventArgs e)
         {

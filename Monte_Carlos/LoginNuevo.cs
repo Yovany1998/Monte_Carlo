@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Monte_Carlos.Proveedor
+namespace Monte_Carlos
 {
-    public partial class Form1 : Form
+    public partial class LoginNuevo : Form
     {
-        public Form1()
+        public LoginNuevo()
         {
             InitializeComponent();
         }

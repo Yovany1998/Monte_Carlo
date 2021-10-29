@@ -189,10 +189,10 @@ namespace Monte_Carlos.Cliente
 
         private void Insertar_Cliente_Load(object sender, EventArgs e)
         {
-            Log = 1;
-            CargaDv();
-            dvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            Limpiar();
+          //  Log = 1;
+            //CargaDv();
+            //dvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //Limpiar();
         }
 
        
