@@ -42,13 +42,15 @@ namespace Monte_Carlos.Venta
             this.label10 = new System.Windows.Forms.Label();
             this.txtInsertarCliente = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgListadeProductos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
             // 
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(117, 46);
+            this.lblNombre.Location = new System.Drawing.Point(138, 55);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(224, 24);
@@ -58,7 +60,7 @@ namespace Monte_Carlos.Venta
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 80);
+            this.label1.Location = new System.Drawing.Point(138, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 24);
@@ -68,7 +70,7 @@ namespace Monte_Carlos.Venta
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(173, 80);
+            this.label2.Location = new System.Drawing.Point(194, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 24);
@@ -78,7 +80,7 @@ namespace Monte_Carlos.Venta
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(117, 137);
+            this.label3.Location = new System.Drawing.Point(138, 146);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 24);
@@ -89,8 +91,8 @@ namespace Monte_Carlos.Venta
             // 
             this.dgListadeProductos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgListadeProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListadeProductos.Location = new System.Drawing.Point(121, 183);
-            this.dgListadeProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgListadeProductos.Location = new System.Drawing.Point(142, 192);
+            this.dgListadeProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgListadeProductos.Name = "dgListadeProductos";
             this.dgListadeProductos.RowHeadersWidth = 51;
             this.dgListadeProductos.RowTemplate.Height = 24;
@@ -100,7 +102,7 @@ namespace Monte_Carlos.Venta
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(117, 356);
+            this.label5.Location = new System.Drawing.Point(138, 365);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 24);
@@ -110,7 +112,7 @@ namespace Monte_Carlos.Venta
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(117, 390);
+            this.label6.Location = new System.Drawing.Point(138, 399);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 24);
@@ -120,7 +122,7 @@ namespace Monte_Carlos.Venta
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(117, 427);
+            this.label7.Location = new System.Drawing.Point(138, 436);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 24);
@@ -130,7 +132,7 @@ namespace Monte_Carlos.Venta
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(235, 356);
+            this.label8.Location = new System.Drawing.Point(256, 365);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 24);
@@ -140,7 +142,7 @@ namespace Monte_Carlos.Venta
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(235, 392);
+            this.label9.Location = new System.Drawing.Point(256, 401);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 24);
@@ -150,7 +152,7 @@ namespace Monte_Carlos.Venta
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(235, 430);
+            this.label10.Location = new System.Drawing.Point(256, 439);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 24);
@@ -165,7 +167,7 @@ namespace Monte_Carlos.Venta
             this.txtInsertarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInsertarCliente.ForeColor = System.Drawing.Color.Black;
             this.txtInsertarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.txtInsertarCliente.Location = new System.Drawing.Point(121, 471);
+            this.txtInsertarCliente.Location = new System.Drawing.Point(142, 480);
             this.txtInsertarCliente.Name = "txtInsertarCliente";
             this.txtInsertarCliente.Size = new System.Drawing.Size(220, 37);
             this.txtInsertarCliente.TabIndex = 58;
@@ -177,11 +179,33 @@ namespace Monte_Carlos.Venta
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(632, 46);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(653, 50);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(132, 28);
             this.dateTimePicker1.TabIndex = 59;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.txtInsertarCliente);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.dgListadeProductos);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(902, 572);
+            this.panel1.TabIndex = 60;
             // 
             // Facturación
             // 
@@ -189,24 +213,12 @@ namespace Monte_Carlos.Venta
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 572);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.txtInsertarCliente);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dgListadeProductos);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Facturación";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "c";
             ((System.ComponentModel.ISupportInitialize)(this.dgListadeProductos)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,5 +238,6 @@ namespace Monte_Carlos.Venta
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button txtInsertarCliente;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

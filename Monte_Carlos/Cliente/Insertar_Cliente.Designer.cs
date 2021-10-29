@@ -39,15 +39,17 @@
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnNuevo1 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dvClientes)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtApellido
             // 
             this.txtApellido.AllowDrop = true;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(270, 111);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Location = new System.Drawing.Point(277, 112);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(352, 29);
@@ -56,7 +58,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(267, 85);
+            this.label3.Location = new System.Drawing.Point(274, 86);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 24);
@@ -67,8 +69,8 @@
             // 
             this.txtNombre.AllowDrop = true;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(271, 55);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Location = new System.Drawing.Point(278, 56);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(352, 29);
@@ -77,7 +79,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(267, 29);
+            this.label2.Location = new System.Drawing.Point(274, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 24);
@@ -92,7 +94,7 @@
             this.txtInsertarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInsertarCliente.ForeColor = System.Drawing.Color.Black;
             this.txtInsertarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.txtInsertarCliente.Location = new System.Drawing.Point(271, 215);
+            this.txtInsertarCliente.Location = new System.Drawing.Point(278, 216);
             this.txtInsertarCliente.Name = "txtInsertarCliente";
             this.txtInsertarCliente.Size = new System.Drawing.Size(351, 37);
             this.txtInsertarCliente.TabIndex = 6;
@@ -104,7 +106,7 @@
             // 
             this.dvClientes.BackgroundColor = System.Drawing.Color.White;
             this.dvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvClientes.Location = new System.Drawing.Point(271, 336);
+            this.dvClientes.Location = new System.Drawing.Point(278, 337);
             this.dvClientes.Name = "dvClientes";
             this.dvClientes.RowHeadersWidth = 51;
             this.dvClientes.Size = new System.Drawing.Size(351, 154);
@@ -116,8 +118,8 @@
             // 
             this.txtTelefono.AllowDrop = true;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(271, 167);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Location = new System.Drawing.Point(278, 168);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.MaxLength = 8;
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
@@ -127,7 +129,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(266, 141);
+            this.label4.Location = new System.Drawing.Point(273, 142);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(242, 24);
@@ -143,7 +145,7 @@
             this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 52;
-            this.btnEliminar.Location = new System.Drawing.Point(582, 289);
+            this.btnEliminar.Location = new System.Drawing.Point(589, 290);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.btnEliminar.Size = new System.Drawing.Size(39, 41);
@@ -161,7 +163,7 @@
             this.btnNuevo1.IconColor = System.Drawing.Color.Black;
             this.btnNuevo1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo1.IconSize = 52;
-            this.btnNuevo1.Location = new System.Drawing.Point(537, 289);
+            this.btnNuevo1.Location = new System.Drawing.Point(544, 290);
             this.btnNuevo1.Name = "btnNuevo1";
             this.btnNuevo1.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.btnNuevo1.Size = new System.Drawing.Size(39, 41);
@@ -173,12 +175,32 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 296);
+            this.label1.Location = new System.Drawing.Point(274, 297);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 25);
             this.label1.TabIndex = 48;
             this.label1.Text = "Lista de clientes";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.txtInsertarCliente);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnNuevo1);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtTelefono);
+            this.panel1.Controls.Add(this.txtApellido);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.dvClientes);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(904, 523);
+            this.panel1.TabIndex = 1;
             // 
             // Insertar_Cliente
             // 
@@ -186,25 +208,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 520);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnNuevo1);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dvClientes);
-            this.Controls.Add(this.txtInsertarCliente);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Insertar_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insertar_Cliente";
             this.Load += new System.EventHandler(this.Insertar_Cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvClientes)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -221,5 +234,6 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnNuevo1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

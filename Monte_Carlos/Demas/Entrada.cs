@@ -34,6 +34,11 @@ namespace Monte_Carlos.Demas
 
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         /*   private void IBtnNormal_Click(object sender, EventArgs e)
            {
                this.WindowState = FormWindowState.Maximized;
