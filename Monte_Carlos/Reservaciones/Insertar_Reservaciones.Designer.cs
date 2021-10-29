@@ -45,16 +45,17 @@
             // 
             // Fecha
             // 
+            this.Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha.Location = new System.Drawing.Point(306, 115);
             this.Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.Fecha.Name = "Fecha";
-            this.Fecha.Size = new System.Drawing.Size(273, 20);
+            this.Fecha.Size = new System.Drawing.Size(273, 26);
             this.Fecha.TabIndex = 3;
             // 
             // lblFecha
             // 
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(303, 98);
+            this.lblFecha.Location = new System.Drawing.Point(303, 96);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(99, 24);
@@ -64,7 +65,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(303, 18);
+            this.label1.Location = new System.Drawing.Point(303, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 24);
@@ -73,9 +74,10 @@
             // 
             // txtNombreCompleto
             // 
+            this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCompleto.Location = new System.Drawing.Point(306, 36);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(273, 20);
+            this.txtNombreCompleto.Size = new System.Drawing.Size(273, 26);
             this.txtNombreCompleto.TabIndex = 32;
             // 
             // btnBuscarCliente
@@ -101,7 +103,7 @@
             // 
             this.lblMesa.BackColor = System.Drawing.Color.Transparent;
             this.lblMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMesa.Location = new System.Drawing.Point(303, 162);
+            this.lblMesa.Location = new System.Drawing.Point(303, 160);
             this.lblMesa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMesa.Name = "lblMesa";
             this.lblMesa.Size = new System.Drawing.Size(99, 24);
@@ -110,9 +112,10 @@
             // 
             // txtMesa
             // 
+            this.txtMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMesa.Location = new System.Drawing.Point(306, 180);
             this.txtMesa.Name = "txtMesa";
-            this.txtMesa.Size = new System.Drawing.Size(273, 20);
+            this.txtMesa.Size = new System.Drawing.Size(273, 26);
             this.txtMesa.TabIndex = 37;
             // 
             // btnAgregarReservacion
@@ -122,7 +125,7 @@
             this.btnAgregarReservacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarReservacion.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarReservacion.Location = new System.Drawing.Point(306, 206);
+            this.btnAgregarReservacion.Location = new System.Drawing.Point(306, 210);
             this.btnAgregarReservacion.Name = "btnAgregarReservacion";
             this.btnAgregarReservacion.Size = new System.Drawing.Size(273, 42);
             this.btnAgregarReservacion.TabIndex = 38;
@@ -149,12 +152,12 @@
             this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregar.IconSize = 36;
+            this.btnAgregar.IconSize = 52;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregar.Location = new System.Drawing.Point(582, 269);
+            this.btnAgregar.Location = new System.Drawing.Point(577, 257);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(0);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(41, 38);
+            this.btnAgregar.Size = new System.Drawing.Size(46, 50);
             this.btnAgregar.TabIndex = 41;
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -167,12 +170,12 @@
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 36;
+            this.btnEliminar.IconSize = 52;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(632, 269);
+            this.btnEliminar.Location = new System.Drawing.Point(623, 257);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(41, 38);
+            this.btnEliminar.Size = new System.Drawing.Size(50, 50);
             this.btnEliminar.TabIndex = 42;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.UseVisualStyleBackColor = false;
