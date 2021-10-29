@@ -37,11 +37,9 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnNuevo = new FontAwesome.Sharp.IconPictureBox();
-            this.btnEliminar = new FontAwesome.Sharp.IconPictureBox();
+            this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dvComida)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             this.SuspendLayout();
             // 
             // dvComida
@@ -60,7 +58,7 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(83, 224);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -70,7 +68,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(83, 147);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -81,7 +79,7 @@
             // txtNombre
             // 
             this.txtNombre.AllowDrop = true;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(87, 91);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
@@ -91,7 +89,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(83, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -104,9 +102,9 @@
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
             this.btnIngresar.FlatAppearance.BorderSize = 0;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnIngresar.Location = new System.Drawing.Point(87, 307);
+            this.btnIngresar.Location = new System.Drawing.Point(86, 325);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(250, 32);
@@ -119,6 +117,7 @@
             // txtPrecio
             // 
             this.txtPrecio.AllowDrop = true;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.Location = new System.Drawing.Point(87, 173);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Multiline = true;
@@ -130,6 +129,7 @@
             // 
             this.cmbTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "Comida",
@@ -138,44 +138,49 @@
             this.cmbTipo.Location = new System.Drawing.Point(87, 250);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(250, 21);
+            this.cmbTipo.Size = new System.Drawing.Size(250, 28);
             this.cmbTipo.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(450, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 20);
+            this.label4.Size = new System.Drawing.Size(111, 18);
             this.label4.TabIndex = 39;
             this.label4.Text = "Todo el menú";
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.White;
-            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnNuevo.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevo.Location = new System.Drawing.Point(736, 57);
+            this.btnNuevo.IconSize = 52;
+            this.btnNuevo.Location = new System.Drawing.Point(720, 47);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(32, 32);
-            this.btnNuevo.TabIndex = 40;
-            this.btnNuevo.TabStop = false;
+            this.btnNuevo.Size = new System.Drawing.Size(39, 42);
+            this.btnNuevo.TabIndex = 42;
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.SystemColors.ControlText;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.Location = new System.Drawing.Point(774, 57);
+            this.btnEliminar.IconSize = 52;
+            this.btnEliminar.Location = new System.Drawing.Point(767, 47);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(32, 32);
-            this.btnEliminar.TabIndex = 41;
-            this.btnEliminar.TabStop = false;
+            this.btnEliminar.Size = new System.Drawing.Size(39, 42);
+            this.btnEliminar.TabIndex = 43;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // Ingreso_Carta
             // 
@@ -201,8 +206,6 @@
             this.Text = "Ingreso_Comida";
             this.Load += new System.EventHandler(this.Ingreso_Comida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvComida)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,7 +221,7 @@
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Label label4;
-        private FontAwesome.Sharp.IconPictureBox btnNuevo;
-        private FontAwesome.Sharp.IconPictureBox btnEliminar;
+        private FontAwesome.Sharp.IconButton btnNuevo;
+        private FontAwesome.Sharp.IconButton btnEliminar;
     }
 }
