@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Monte_Carlos.Carta
 {
-    public partial class Ingreso_Comida : Form
+    public partial class Ingreso_Carta : Form
     {
         MonteCarlo Variables = new MonteCarlo();
         long idComidaBebida = 0;
         bool editar = false;
         int log;
 
-        public Ingreso_Comida()
+        public Ingreso_Carta()
         {
             InitializeComponent();
 
@@ -108,12 +108,12 @@ namespace Monte_Carlos.Carta
     
         private void Ingreso_Comida_Load(object sender, EventArgs e)
         {
-            CargaDv();
-            dvComida.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            idComidaBebida = 0;
-            Limpiar();
-            editar = false;
-            log = 1;
+          //  CargaDv();
+            //dvComida.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //idComidaBebida = 0;
+            //Limpiar();
+            //editar = false;
+            //log = 1;
         }
         private void dvComida_SelectionChanged(object sender, EventArgs e)
         {

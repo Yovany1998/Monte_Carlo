@@ -29,18 +29,28 @@ namespace Monte_Carlos.Demas
             
         }
 
-     /*   private void IBtnNormal_Click(object sender, EventArgs e)
+        private void lblHora_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            IBtnMax.Visible = true;
-            IBtnNormal.Visible = false;
+
         }
 
-        private void IBtnMax_Click(object sender, EventArgs e)
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            IBtnMax.Visible = false;
-            IBtnNormal.Visible = true;
-        }*/
+
+        }
+
+        /*   private void IBtnNormal_Click(object sender, EventArgs e)
+           {
+               this.WindowState = FormWindowState.Maximized;
+               IBtnMax.Visible = true;
+               IBtnNormal.Visible = false;
+           }
+
+           private void IBtnMax_Click(object sender, EventArgs e)
+           {
+               this.WindowState = FormWindowState.Maximized;
+               IBtnMax.Visible = false;
+               IBtnNormal.Visible = true;
+           }*/
     }
 }
