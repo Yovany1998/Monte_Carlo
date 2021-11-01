@@ -16,5 +16,10 @@ namespace Monte_Carlos.Usuarios
         {
             InitializeComponent();
         }
+
+        private void Ingresar_Usuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
