@@ -35,17 +35,17 @@ namespace Monte_Carlos.Empleado
                                 p.FechaIngreso
                             };
 
-            dvEmpleado.DataSource = tEmpleado.CopyAnonymusToDataTable();
+            dgEmpleado.DataSource = tEmpleado.CopyAnonymusToDataTable();
         }
         private void Insertar_Empleado_Load(object sender, EventArgs e)
         {
-            //CargarDv();
-            //dvEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            //idEmpleado = 0;
-            //Limpiar();
-            //editar = false;
-            //Log = 1;
-            //dvEmpleado.ClearSelection();
+            CargarDv();
+            dgEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            idEmpleado = 0;
+            Limpiar();
+            editar = false;
+            Log = 1;
+            dgEmpleado.ClearSelection();
         }
 
         private void btninsertar_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace Monte_Carlos.Empleado
 
         private void Limpiar()
         {
-            dvEmpleado.ClearSelection();
+            dgEmpleado.ClearSelection();
        
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -68,7 +68,7 @@ namespace Monte_Carlos.Empleado
 
             try
             {
-                idEmpleado = Convert.ToInt64(dvEmpleado.SelectedCells[0].Value);
+                idEmpleado = Convert.ToInt64(dgEmpleado.SelectedCells[0].Value);
                 var tEmpleado = Variables.Empleados.FirstOrDefault(x => x.IdEmpleado == idEmpleado);
           
                 txtNombre.Text = tEmpleado.Nombre;
@@ -78,13 +78,13 @@ namespace Monte_Carlos.Empleado
             }
             catch (Exception)
             {
-                dvEmpleado.ClearSelection();
+                dgEmpleado.ClearSelection();
                 editar = false;
             }
 
             if (Log == 1)
             {
-                dvEmpleado.ClearSelection();
+                dgEmpleado.ClearSelection();
                 Limpiar();
             }
         }
