@@ -99,11 +99,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Compra.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Demas\Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Demas\Entrada.Designer.cs">
       <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleDeCompra.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleDeFactura.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityDBMonteCarlo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityDBMonteCarlo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityDBMonteCarlo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityDBMonteCarlo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="LINQTODATATABLE.cs" />
     <Compile Include="Login.cs">
@@ -136,13 +169,22 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Proveedor\CRUD_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proveedor\CRUD_Proveedor.Designer.cs">
       <DependentUpon>CRUD_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservacion.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="Reservaciones\Insertar_Reservaciones.cs">
       <SubType>Form</SubType>
@@ -161,6 +203,9 @@
     </Compile>
     <Compile Include="Salidas\Ingresar_Compras.Designer.cs">
       <DependentUpon>Ingresar_Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\Ingresar_Usuarios.cs">
       <SubType>Form</SubType>
@@ -187,6 +232,13 @@
       <DependentUpon>Generar_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Venta\Validacion.cs" />
+    <EntityDeploy Include="EntityDBMonteCarlo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityDBMonteCarlo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityDBMonteCarlo.edmx.diagram">
+      <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
+    </None>
     <None Include="Resources\LogoFincaMonteCarlo.png" />
     <None Include="Resources\elLogo.png" />
     <None Include="Resources\LogoEnColores.png" />
@@ -242,6 +294,16 @@
     <EmbeddedResource Include="Venta\Generar_Venta.resx">
       <DependentUpon>Generar_Venta.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="EntityDBMonteCarlo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
+      <LastGenOutput>EntityDBMonteCarlo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityDBMonteCarlo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
+      <LastGenOutput>EntityDBMonteCarlo.cs</LastGenOutput>
+    </Content>
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />

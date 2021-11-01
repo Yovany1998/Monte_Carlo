@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="490016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="462368">
       <assemblyIdentity name="Monte_Carlos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eKMSX6Bv7kX707/FKTPC6MT7nHvU7zs+MVwtfQlpQdA=</dsig:DigestValue>
+        <dsig:DigestValue>9KUgdeoXzXtLJE/JClqXpGwuHFlX8Q8qJnFxzY4GyU8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -270,24 +270,6 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Conexiones.Context.tt" size="22934">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>vRjXg1MlBokFrbDYUCXuJESnIvPuyknMgLGy4XpePmU=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Conexiones.tt" size="25279">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jav+8r1Xj/1HVvPsVRS2HQhG8GSdlv5C9u5+LEcsjLI=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Content\font-awesome.css" size="39751">
     <hash>
       <dsig:Transforms>
@@ -304,6 +286,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>gg4WnOJIJAZtmXP9S2Vhqunc1tvvZDXakF1aHWSCmXw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="EntityDBMonteCarlo.Context.tt" size="22942">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cdbHo/odQ6br9+MgBjjiVZsAjIFIvD6iYnA5fYhkusI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="EntityDBMonteCarlo.tt" size="25287">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IFh01jBTj0840JuuJBc5VyGarJE5Eil4KCUIYl95FmI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="fonts\FontAwesome.otf" size="134808">
@@ -369,13 +369,13 @@
       <dsig:DigestValue>4RJ8mbN+PBHmlkROE0uzv9h1GiZezTZ1mtSeVs+wfzw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Monte_Carlos.exe.config" size="3448">
+  <file name="Monte_Carlos.exe.config" size="4263">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HO4MPp97gqtkqCORa8YuWDy7UVuS3PJaTouWHXVqqZI=</dsig:DigestValue>
+      <dsig:DigestValue>4jAabjavqwgM9+cArK2NG1ci7Nv7mqRRldCiTAUh5hs=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

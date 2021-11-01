@@ -19,6 +19,6 @@ namespace Monte_Carlos
         public string Password { get; set; }
         public string UserName { get; set; }
     
-        public virtual Empleado Empleado { get; set; }
+        public virtual Empleados Empleados { get; set; }
     }
 }

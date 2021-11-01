@@ -12,7 +12,8 @@ namespace Monte_Carlos.Carta
 {
     public partial class Ingreso_Carta : Form
     {
-        MonteCarlo Variables = new MonteCarlo();
+        DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+        
         long idComidaBebida = 0;
         bool editar = false;
         int log;
@@ -51,17 +52,17 @@ namespace Monte_Carlos.Carta
 
             if (editar)
             {
-                MessageBox.Show("Menu modificado!");
+                /*MessageBox.Show("Menu modificado!");
                 var tComidaBebida = Variables.Menu.FirstOrDefault(x => x.IdComidaBebida == idComidaBebida);
                 tComidaBebida.Nombre =txtNombre.Text;
                 tComidaBebida.Precio = Convert.ToDouble(txtPrecio.Text);
                 tComidaBebida.Tipo = cmbTipo.SelectedItem.ToString();
-                Variables.SaveChanges();
+                Variables.SaveChanges();*/
             }
             else
             {
 
-                MessageBox.Show("Producto guardado!");
+                /*MessageBox.Show("Producto guardado!");
                 Menu tbMenu = new Menu
                 {
                     Nombre = Convert.ToString(txtNombre.Text),
@@ -69,7 +70,7 @@ namespace Monte_Carlos.Carta
                     Tipo = Convert.ToString(cmbTipo.SelectedItem.ToString())
                 };
                 Variables.Menu.Add(tbMenu);
-                Variables.SaveChanges();
+                Variables.SaveChanges();*/
             }
             
             Limpiar();
@@ -84,7 +85,7 @@ namespace Monte_Carlos.Carta
     
         private void CargaDv()
         {
-            var tbComidaBebida = from p in Variables.Menu
+            /*var tbComidaBebida = from p in Variables.Menu
                                  select new
                                  {
                                      p.IdComidaBebida,
@@ -93,7 +94,7 @@ namespace Monte_Carlos.Carta
                                      p.Tipo,
 
                                  };
-            dvComida.DataSource = tbComidaBebida.CopyAnonymusToDataTable();
+            dvComida.DataSource = tbComidaBebida.CopyAnonymusToDataTable();*/
         }
 
     
@@ -120,12 +121,12 @@ namespace Monte_Carlos.Carta
 
                 try
                 {
-                    idComidaBebida = Convert.ToInt64(dvComida.SelectedCells[0].Value);
+                    /*idComidaBebida = Convert.ToInt64(dvComida.SelectedCells[0].Value);
                     var tComidaBebida = Variables.Menu.FirstOrDefault(x => x.IdComidaBebida == idComidaBebida);
                     txtNombre.Text = tComidaBebida.Nombre;
                     txtPrecio.Text = Convert.ToString(tComidaBebida.Precio);
                     cmbTipo.Text = Convert.ToString(tComidaBebida.Tipo);
-                    editar = true;
+                    editar = true;*/
                 }
                 catch (Exception)
                 {
@@ -159,10 +160,10 @@ namespace Monte_Carlos.Carta
             }
             else
             {
-                Variables.Menu.RemoveRange(Variables.Menu.Where(x => x.IdComidaBebida == idComidaBebida));
+               /* Variables.Menu.RemoveRange(Variables.Menu.Where(x => x.IdComidaBebida == idComidaBebida));
                 Variables.SaveChanges();
                 Limpiar();
-                CargaDv();
+                CargaDv();*/
             }
         }
     

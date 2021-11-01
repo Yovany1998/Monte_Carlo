@@ -12,7 +12,8 @@ namespace Monte_Carlos.Cliente
 {
     public partial class Insertar_Cliente : Form
     {
-        DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+        DBFincaMonteCarloEntities Entity = new DBFincaMonteCarloEntities();
+        
         long idCliente = 0;
         bool editar = false;
         int Log=0;
@@ -122,7 +123,7 @@ namespace Monte_Carlos.Cliente
 
             if (editar)
             {
-                /*MessageBox.Show("Cliente modificado!");
+                MessageBox.Show("Cliente modificado!");
                 var tCliente = Variables.Clientes.FirstOrDefault(x => x.IdCliente == idCliente);
              //   tCliente.Identidad = txtIdentidad.Text;
                 tCliente.Nombre = txtNombre.Text;
@@ -131,7 +132,7 @@ namespace Monte_Carlos.Cliente
                 tCliente.Telefono = Convert.ToInt32(txtTelefono.Text);
               //  tCliente.Correo = txtCorreo.Text;
 
-                Variables.SaveChanges();*/
+                Variables.SaveChanges();
             }
             else
             {
@@ -146,23 +147,23 @@ namespace Monte_Carlos.Cliente
                 MessageBox.Show("Cliente guardado!");
                 Clientes tbClientes = new Clientes
                 {
-                  /*//  Identidad = txtIdentidad.Text,
+                  //  Identidad = txtIdentidad.Text,
                     Nombre = txtNombre.Text,
                     Apellido = txtApellido.Text,
                   //  Edad = Convert.ToInt32(txtEdad.Text),
                     Telefono = Convert.ToInt32(txtTelefono.Text),
-                  //  Correo = txtCorreo.Text*/
+                  //  Correo = txtCorreo.Text
                 };
-                //Variables.Clientes.Add(tbClientes);
+                Variables.Clientes.Add(tbClientes);
 
-                //Variables.SaveChanges();
+                Variables.SaveChanges();
             }
             CargaDv();
             Limpiar();
         }
         private void CargaDv()
         {
-            /*var tClientes = from p in Variables.Clientes
+            var tClientes = from p in Variables.Clientes
                             select new
                             {
                                 p.IdCliente,                                
@@ -170,7 +171,7 @@ namespace Monte_Carlos.Cliente
                                 p.Apellido,
                                 p.Telefono,      
                             };
-            dvClientes.DataSource = tClientes.CopyAnonymusToDataTable();*/
+            dvClientes.DataSource = tClientes.CopyAnonymusToDataTable();
         }
         private void Limpiar()
         {
@@ -202,7 +203,7 @@ namespace Monte_Carlos.Cliente
           
                 try
                 {
-                    /*idCliente = Convert.ToInt64(dvClientes.SelectedCells[0].Value);
+                    idCliente = Convert.ToInt64(dvClientes.SelectedCells[0].Value);
                     var tCliente = Variables.Clientes.FirstOrDefault(x => x.IdCliente == idCliente);
                     //txtIdentidad.Text = tCliente.Identidad;
                     txtNombre.Text = tCliente.Nombre;
@@ -210,7 +211,7 @@ namespace Monte_Carlos.Cliente
                     //txtEdad.Text = Convert.ToString(tCliente.Edad);
                     txtTelefono.Text = Convert.ToString(tCliente.Telefono);
 //txtCorreo.Text = tCliente.Correo;
-                    editar = true;*/
+                    editar = true;
 
                 }
                 catch (Exception)
@@ -244,10 +245,10 @@ namespace Monte_Carlos.Cliente
             }
             else
             {
-                /*Variables.Clientes.RemoveRange(Variables.Clientes.Where(x => x.IdCliente == idCliente));
+                Variables.Clientes.RemoveRange(Variables.Clientes.Where(x => x.IdCliente == idCliente));
                 Variables.SaveChanges();
                 Limpiar();
-                CargaDv();*/
+                CargaDv();
             }
         }
 

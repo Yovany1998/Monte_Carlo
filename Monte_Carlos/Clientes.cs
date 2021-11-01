@@ -12,13 +12,20 @@ namespace Monte_Carlos
     using System;
     using System.Collections.Generic;
     
-    public partial class Reservacion
+    public partial class Clientes
     {
-        public int IdReservacion { get; set; }
-        public int IdCliente { get; set; }
-        public System.DateTime Fecha { get; set; }
-        public int Mesa { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Clientes()
+        {
+            this.Reservacion = new HashSet<Reservacion>();
+        }
     
-        public virtual Clientes Clientes { get; set; }
+        public int IdCliente { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Telefono { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reservacion> Reservacion { get; set; }
     }
 }

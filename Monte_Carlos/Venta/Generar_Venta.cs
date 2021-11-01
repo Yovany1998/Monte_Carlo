@@ -18,7 +18,7 @@ namespace Monte_Carlos.Venta
         double total = 0.0;
         int log;
         int Validar = 0;
-        MonteCarlo Variables = new MonteCarlo();
+        DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
         long idDetalleVenta = 0;
         string nombre = "";
         bool editar = false;

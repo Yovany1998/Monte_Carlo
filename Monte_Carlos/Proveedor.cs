@@ -12,7 +12,7 @@ namespace Monte_Carlos
     using System;
     using System.Collections.Generic;
     
-    public partial class Proveedor
+    public partial class Proveedores
     {
         public int IdProveedor { get; set; }
         public string Empresa { get; set; }

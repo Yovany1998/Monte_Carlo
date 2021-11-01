@@ -15,8 +15,8 @@ namespace Monte_Carlos.Servicio
 
 
         long idVenta = 0;
-        MonteCarlo Variables = new MonteCarlo();
-      
+        DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+
         public Ver_Pedido()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace Monte_Carlos.Servicio
         private void DvClientes()
         {
             //Area de Clientes
-            var tClientes = from p in Variables.Ventas
+            /*var tClientes = from p in Variables.Ventas
                             where p.Fecha == FechaActual
                             select new
                             {
@@ -34,7 +34,7 @@ namespace Monte_Carlos.Servicio
                                 p.Apellido,
                             };
             dvVenta.DataSource = tClientes.CopyAnonymusToDataTable();
-            dvVenta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dvVenta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;*/
        
 
         }
@@ -45,7 +45,7 @@ namespace Monte_Carlos.Servicio
         {
             try
             {
-                idVenta = Convert.ToInt64(dvVenta.SelectedCells[0].Value);
+                /*idVenta = Convert.ToInt64(dvVenta.SelectedCells[0].Value);
                 var tdetalle = from p in Variables.DetalleVenta
                                where p.IdVenta == idVenta
                                select new
@@ -54,7 +54,7 @@ namespace Monte_Carlos.Servicio
                                    p.Cantidad,
                                };
                 dvPedidos.DataSource = tdetalle.CopyAnonymusToDataTable();
-                dvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dvPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;*/
             }
             catch { }
           

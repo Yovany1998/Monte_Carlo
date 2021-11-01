@@ -504,8 +504,6 @@ C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Car
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.AssemblyReference.cache
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe.config
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Demas.Entrada.resources
-C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Demas.Ingresar_Usuario.resources
-C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Comida.resources
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.Insertar_Cliente.resources
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Empleado.Insertar_Empleado.resources
 C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Login.resources
@@ -742,3 +740,7 @@ C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\D
 C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\pc\Documents\UNICAH\Gestion de proyectos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Usuarios.Ingresar_Usuarios.resources
+C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Carta.resources
+C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Proveedor.CRUD_Proveedor.resources
+C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Usuarios.Ingresar_Usuarios.resources
+C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Facturación.resources
