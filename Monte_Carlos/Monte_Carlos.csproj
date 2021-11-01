@@ -99,44 +99,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clientes.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Compras.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexiones.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Conexiones.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexiones.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexiones.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Conexiones.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Demas\Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Demas\Entrada.Designer.cs">
       <DependentUpon>Entrada.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DetalleReservacion.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DetalleVenta.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Empleados.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Facturas.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
     <Compile Include="LINQTODATATABLE.cs" />
     <Compile Include="Login.cs">
@@ -144,9 +111,6 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
     <Compile Include="Carta\crud_carta.cs">
       <SubType>Form</SubType>
@@ -172,9 +136,6 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor\CRUD_Proveedor.cs">
@@ -182,9 +143,6 @@
     </Compile>
     <Compile Include="Proveedor\CRUD_Proveedor.Designer.cs">
       <DependentUpon>CRUD_Proveedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reservacion.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
     <Compile Include="Reservaciones\Insertar_Reservaciones.cs">
       <SubType>Form</SubType>
@@ -204,17 +162,11 @@
     <Compile Include="Salidas\Ingresar_Compras.Designer.cs">
       <DependentUpon>Ingresar_Compras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
     <Compile Include="Usuarios\Ingresar_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Usuarios\Ingresar_Usuarios.Designer.cs">
       <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventas.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
     </Compile>
     <Compile Include="Venta\Factura.cs">
       <SubType>Form</SubType>
@@ -290,13 +242,6 @@
     <EmbeddedResource Include="Venta\Generar_Venta.resx">
       <DependentUpon>Generar_Venta.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Conexiones.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Conexiones.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Conexiones.edmx.diagram">
-      <DependentUpon>Conexiones.edmx</DependentUpon>
-    </None>
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -333,16 +278,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Conexiones.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Conexiones.edmx</DependentUpon>
-      <LastGenOutput>Conexiones.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Conexiones.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Conexiones.edmx</DependentUpon>
-      <LastGenOutput>Conexiones.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
