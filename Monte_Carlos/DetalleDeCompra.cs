@@ -12,15 +12,13 @@ namespace Monte_Carlos
     using System;
     using System.Collections.Generic;
     
-    public partial class Facturas
+    public partial class DetalleDeCompra
     {
-        public int IdFactura { get; set; }
-        public Nullable<int> IdVenta { get; set; }
-        public Nullable<System.DateTime> Fecha { get; set; }
-        public Nullable<int> IdCliente { get; set; }
-        public string NombreCliente { get; set; }
-        public Nullable<double> Subtotal { get; set; }
-        public Nullable<double> Impuesto { get; set; }
-        public Nullable<double> Total { get; set; }
+        public int IdDetalle { get; set; }
+        public int IdCompra { get; set; }
+        public int IdProveedor { get; set; }
+        public string Producto { get; set; }
+        public int Cantidad { get; set; }
+        public decimal PrecioUnitario { get; set; }
     }
 }

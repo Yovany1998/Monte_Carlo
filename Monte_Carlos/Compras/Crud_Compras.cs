@@ -12,7 +12,7 @@ namespace Monte_Carlos.Salidas
 {
     public partial class Ingresar_Compras : Form
     {
-        MonteCarlo Variables = new MonteCarlo();
+        DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
         long idCompras = 0;
         bool editar = false;
         Double Subto;
@@ -89,18 +89,18 @@ namespace Monte_Carlos.Salidas
 
             if (editar)
             {
-                MessageBox.Show("Compra modificada!");
+               /* MessageBox.Show("Compra modificada!");
                 var tCompra = Variables.Compras.FirstOrDefault(x => x.IdCompra == idCompras);
                 tCompra.Producto = txtProducto.Text;
                 tCompra.Precio = Convert.ToDouble(txtPrecio.Text);
                 tCompra.Detalle = txtDetalle.Text;
                 tCompra.Cantidad =Convert.ToInt32(txtCantidad.Text);
                 tCompra.Subtotal = Subto;
-                Variables.SaveChanges();
+                Variables.SaveChanges();*/
             }
             else
             {
-                MessageBox.Show("Compra guardada");
+                /*MessageBox.Show("Compra guardada");
                 Compras tbCompra = new Compras
                 {
                     Producto = txtProducto.Text,
@@ -111,7 +111,7 @@ namespace Monte_Carlos.Salidas
                     Subtotal = Subto
                 };
                 Variables.Compras.Add(tbCompra);
-                Variables.SaveChanges();
+                Variables.SaveChanges();*/
             }
             editar = false;
             idCompras = 0;
@@ -122,7 +122,7 @@ namespace Monte_Carlos.Salidas
         private void CargaDv()
         {
 
-            DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
+            /*DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
             var tCompras = from p in Variables.Compras
                            where p.Fecha == Fechas
                            select new
@@ -134,7 +134,7 @@ namespace Monte_Carlos.Salidas
                                p.Subtotal
                            };
 
-            dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
+            dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -152,10 +152,10 @@ namespace Monte_Carlos.Salidas
                 else
                 {
 
-                    Variables.Compras.RemoveRange(Variables.Compras.Where(x => x.IdCompra == idCompras));
+                    /*Variables.Compras.RemoveRange(Variables.Compras.Where(x => x.IdCompra == idCompras));
                     Variables.SaveChanges();
                     Limpiar();
-                    CargaDv();
+                    CargaDv();*/
                 }
             }
         }
@@ -165,7 +165,7 @@ namespace Monte_Carlos.Salidas
             DateTime Fechas = Convert.ToDateTime(DateTimes.Value.ToString("yyyy/MM/dd 00:00:00"));       
             try
             {
-                var tSalidas = from p in Variables.Compras
+                /*var tSalidas = from p in Variables.Compras
                                where p.Fecha == Fechas
                                select new
                                {
@@ -176,14 +176,14 @@ namespace Monte_Carlos.Salidas
                                    p.Subtotal,
                                };
                 dvCompra.DataSource = tSalidas.CopyAnonymusToDataTable();
-                dvCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dvCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;*/
             }
             catch { }
         }
 
         private void dvCompra_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 idCompras = Convert.ToInt64(dvCompra.SelectedCells[0].Value);
                 var tComidaBebida = Variables.Compras.FirstOrDefault(x => x.IdCompra == idCompras);
@@ -199,7 +199,7 @@ namespace Monte_Carlos.Salidas
             if (log == 1)
             {
                 Limpiar();
-            }
+            }*/
 
         }
 
@@ -243,7 +243,7 @@ namespace Monte_Carlos.Salidas
 
             Subto = Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(txtPrecio.Text);
 
-            if (editar)
+           /* if (editar)
             {
                 MessageBox.Show("Compra modificada!");
                 var tCompra = Variables.Compras.FirstOrDefault(x => x.IdCompra == idCompras);
@@ -272,7 +272,7 @@ namespace Monte_Carlos.Salidas
             editar = false;
             idCompras = 0;
             CargaDv();
-            Limpiar();
+            Limpiar();*/
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -283,7 +283,7 @@ namespace Monte_Carlos.Salidas
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            if (editar == false)
+            /*if (editar == false)
             {
                 MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
             }
@@ -301,7 +301,7 @@ namespace Monte_Carlos.Salidas
                     Limpiar();
                     CargaDv();
                 }
-            }
+            }*/
         }
     }
 }

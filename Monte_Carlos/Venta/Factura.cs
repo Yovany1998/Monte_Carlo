@@ -18,7 +18,7 @@ namespace Monte_Carlos.Venta
         Double sali;
         String LaFecha = "";
         private double total;
-        MonteCarlo Variables = new MonteCarlo();
+        DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
         string imagen = @"C:\Users\Hernandez Garcia\Desktop\Repositorio nuevo\FincaMonteCarlo\Monte_Carlo\Monte_Carlos\Resources\Logo.jpeg";
 
         public Factura()
@@ -36,14 +36,14 @@ namespace Monte_Carlos.Venta
 
         private void Factura_Load(object sender, EventArgs e)
         {
-            var tMod = from mod in Variables.Facturas
+            /*var tMod = from mod in Variables.Facturas
                        select new
                        {
                            mod.IdFactura,
                            mod.Fecha,
                        };
 
-            DataTable dtMod = tMod.CopyAnonymusToDataTable();
+            DataTable dtMod = tMod.CopyAnonymusToDataTable();*/
          
         }
 
@@ -67,7 +67,7 @@ namespace Monte_Carlos.Venta
             DateTime Fechas = Convert.ToDateTime (DateTimes.Value.ToString("yyyy/MM/dd 00:00:00"));
 
             //  Int64 Fechas = Convert.ToInt64(Fecha);           
-            try
+           /* try
             {
                 var tFactura = from p in Variables.Facturas
                                     where p.Fecha == Fechas
@@ -91,7 +91,7 @@ namespace Monte_Carlos.Venta
             {
                 Limpiar();
                 MessageBox.Show("Esa fecha no tiene registro");
-            }
+            }*/
             
          
             try
@@ -109,7 +109,7 @@ namespace Monte_Carlos.Venta
             //   total = 0;
 
             //Todo esto es de salidas
-            try
+            /*try
             {
                 var tCompras= from p in Variables.Compras
                                where p.Fecha == Fechas
@@ -126,7 +126,7 @@ namespace Monte_Carlos.Venta
             catch
             {
                 MessageBox.Show("Esa fecha no tiene registro");
-            }
+            }*/
             try
             {
 

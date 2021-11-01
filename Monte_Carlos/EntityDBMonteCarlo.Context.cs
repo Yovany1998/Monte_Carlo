@@ -13,10 +13,10 @@ namespace Monte_Carlos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MonteCarlo : DbContext
+    public partial class DBFincaMonteCarloEntities1 : DbContext
     {
-        public MonteCarlo()
-            : base("name=MonteCarlo")
+        public DBFincaMonteCarloEntities1()
+            : base("name=DBFincaMonteCarloEntities1")
         {
         }
     
@@ -26,15 +26,14 @@ namespace Monte_Carlos
         }
     
         public virtual DbSet<Clientes> Clientes { get; set; }
+        public virtual DbSet<Compra> Compra { get; set; }
+        public virtual DbSet<DetalleDeCompra> DetalleDeCompra { get; set; }
+        public virtual DbSet<DetalleDeFactura> DetalleDeFactura { get; set; }
         public virtual DbSet<Empleados> Empleados { get; set; }
-        public virtual DbSet<Pedidos> Pedidos { get; set; }
-        public virtual DbSet<Usuario> Usuario { get; set; }
-        public virtual DbSet<Compras> Compras { get; set; }
-        public virtual DbSet<Reservacion> Reservacion { get; set; }
-        public virtual DbSet<DetalleVenta> DetalleVenta { get; set; }
-        public virtual DbSet<Ventas> Ventas { get; set; }
-        public virtual DbSet<DetalleReservacion> DetalleReservacion { get; set; }
+        public virtual DbSet<Factura> Factura { get; set; }
         public virtual DbSet<Menu> Menu { get; set; }
-        public virtual DbSet<Facturas> Facturas { get; set; }
+        public virtual DbSet<Proveedores> Proveedor { get; set; }
+        public virtual DbSet<Reservacion> Reservacion { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

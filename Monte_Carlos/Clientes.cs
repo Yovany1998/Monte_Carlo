@@ -17,18 +17,15 @@ namespace Monte_Carlos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Clientes()
         {
-            this.DetalleVenta = new HashSet<DetalleVenta>();
+            this.Reservacion = new HashSet<Reservacion>();
         }
     
         public int IdCliente { get; set; }
-        public string Identidad { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public Nullable<int> Edad { get; set; }
-        public Nullable<int> Telefono { get; set; }
-        public string Correo { get; set; }
+        public string Telefono { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetalleVenta> DetalleVenta { get; set; }
+        public virtual ICollection<Reservacion> Reservacion { get; set; }
     }
 }

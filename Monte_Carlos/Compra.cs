@@ -12,12 +12,10 @@ namespace Monte_Carlos
     using System;
     using System.Collections.Generic;
     
-    public partial class DetalleReservacion
+    public partial class Compra
     {
-        public int IdDetalleReservacion { get; set; }
-        public Nullable<System.DateTime> Fecha { get; set; }
-        public Nullable<int> IdReservacion { get; set; }
-        public string Pedido { get; set; }
-        public Nullable<int> Cantidad { get; set; }
+        public int IdCompra { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public string Observacion { get; set; }
     }
 }

@@ -12,21 +12,20 @@ namespace Monte_Carlos
     using System;
     using System.Collections.Generic;
     
-    public partial class DetalleVenta
+    public partial class Factura
     {
-        public int IdDetalleVentas { get; set; }
-        public Nullable<System.DateTime> Fecha { get; set; }
-        public int IdVenta { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Factura()
+        {
+            this.DetalleDeFactura = new HashSet<DetalleDeFactura>();
+        }
+    
         public int IdFactura { get; set; }
         public int IdCliente { get; set; }
-        public int IdComidaBebida { get; set; }
-        public string Comida { get; set; }
-        public Nullable<double> PrecioComidaBebida { get; set; }
-        public Nullable<int> Cantidad { get; set; }
-        public Nullable<double> Subtotal { get; set; }
-        public Nullable<double> Impuesto { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public bool Estado { get; set; }
     
-        public virtual Clientes Clientes { get; set; }
-        public virtual Menu Menu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DetalleDeFactura> DetalleDeFactura { get; set; }
     }
 }

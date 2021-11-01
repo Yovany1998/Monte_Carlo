@@ -12,10 +12,10 @@ namespace Monte_Carlos
     using System;
     using System.Collections.Generic;
     
-    public partial class Empleados
+    public partial class Empleado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Empleados()
+        public Empleado()
         {
             this.Usuario = new HashSet<Usuario>();
         }

@@ -12,13 +12,13 @@ namespace Monte_Carlos
     using System;
     using System.Collections.Generic;
     
-    public partial class Ventas
+    public partial class Proveedores
     {
-        public int IdVenta { get; set; }
-        public Nullable<System.DateTime> Fecha { get; set; }
-        public int IdCliente { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Pagado { get; set; }
+        public int IdProveedor { get; set; }
+        public string Empresa { get; set; }
+        public string NumeroDeTelefono { get; set; }
+        public string NombreDeContacto { get; set; }
+        public string RTN { get; set; }
+        public string Observacion { get; set; }
     }
 }
