@@ -120,7 +120,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Reservacion_Cliente">
+  <Association Name="FK_Factura_Clientes">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservacion_Clientes">
     <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
     <End Role="Reservacion" Type="Self.Reservacion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -132,7 +144,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Usuario_Empleado">
+  <Association Name="FK_Usuario_Empleados">
     <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
     <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
     <ReferentialConstraint>
@@ -163,11 +175,15 @@
       <End Role="Menu" EntitySet="Menu" />
       <End Role="DetalleDeFactura" EntitySet="DetalleDeFactura" />
     </AssociationSet>
-    <AssociationSet Name="FK_Reservacion_Cliente" Association="Self.FK_Reservacion_Cliente">
+    <AssociationSet Name="FK_Factura_Clientes" Association="Self.FK_Factura_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservacion_Clientes" Association="Self.FK_Reservacion_Clientes">
       <End Role="Clientes" EntitySet="Clientes" />
       <End Role="Reservacion" EntitySet="Reservacion" />
     </AssociationSet>
-    <AssociationSet Name="FK_Usuario_Empleado" Association="Self.FK_Usuario_Empleado">
+    <AssociationSet Name="FK_Usuario_Empleados" Association="Self.FK_Usuario_Empleados">
       <End Role="Empleados" EntitySet="Empleados" />
       <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>

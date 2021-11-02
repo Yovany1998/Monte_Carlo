@@ -27,5 +27,6 @@ namespace Monte_Carlos
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleDeFactura> DetalleDeFactura { get; set; }
+        public virtual Clientes Clientes { get; set; }
     }
 }

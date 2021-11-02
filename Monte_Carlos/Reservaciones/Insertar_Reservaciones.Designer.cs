@@ -98,6 +98,7 @@
             this.btnBuscarCliente.Text = "Buscar Cliente";
             this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // lblMesa
             // 
