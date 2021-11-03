@@ -111,6 +111,10 @@
     <Compile Include="Compra.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Compras\Crud_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Crud_Compras.Designer.cs" />
     <Compile Include="Demas\Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,12 +208,6 @@
     <Compile Include="Pedidos\Ver_Pedido.Designer.cs">
       <DependentUpon>Ver_Pedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Salidas\Ingresar_Compras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Salidas\Ingresar_Compras.Designer.cs">
-      <DependentUpon>Ingresar_Compras.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usuario.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
@@ -251,6 +249,7 @@
     <EmbeddedResource Include="Cliente\BusquedaClientes.resx">
       <DependentUpon>BusquedaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Crud_Compras.resx" />
     <EmbeddedResource Include="Demas\Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,9 +286,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pedidos\Ver_Pedido.resx">
       <DependentUpon>Ver_Pedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Salidas\Ingresar_Compras.resx">
-      <DependentUpon>Ingresar_Compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Ingresar_Usuarios.resx">
       <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>

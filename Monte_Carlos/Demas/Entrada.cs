@@ -15,8 +15,8 @@ namespace Monte_Carlos.Demas
         public Entrada()
         {
             InitializeComponent();
-            lblHora.Text = DateTime.Now.ToShortTimeString();
-            lblFecha.Text = DateTime.Now.ToLongDateString();
+            Hora.Text = DateTime.Now.ToShortTimeString();
+            Fecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -29,15 +29,7 @@ namespace Monte_Carlos.Demas
             
         }
 
-        private void lblHora_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         /*   private void IBtnNormal_Click(object sender, EventArgs e)
            {
