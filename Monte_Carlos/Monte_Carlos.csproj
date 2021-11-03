@@ -78,6 +78,7 @@
     <Reference Include="MySqlConnector, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlConnector.1.3.10\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -198,12 +199,6 @@
     <Compile Include="Pedidos\Ver_Pedido.Designer.cs">
       <DependentUpon>Ver_Pedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Salidas\Ingresar_Compras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Salidas\Ingresar_Compras.Designer.cs">
-      <DependentUpon>Ingresar_Compras.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usuario.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
@@ -278,9 +273,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pedidos\Ver_Pedido.resx">
       <DependentUpon>Ver_Pedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Salidas\Ingresar_Compras.resx">
-      <DependentUpon>Ingresar_Compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Ingresar_Usuarios.resx">
       <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>

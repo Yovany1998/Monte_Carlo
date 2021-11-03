@@ -140,7 +140,7 @@ namespace Monte_Carlos
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Salidas.Ingresar_Compras());
+          //  AbrirFormEnPanel(new Salidas.Ingresar_Compras());
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -203,7 +203,7 @@ namespace Monte_Carlos
 
         private void IBtnCompra_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Salidas.Ingresar_Compras());
+           // AbrirFormEnPanel(new Salidas.Ingresar_Compras());
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
