@@ -19,6 +19,7 @@
         <AssociationConnector Association="DBFincaMonteCarloModel.FK_DetalleDeFactura_Factura" ManuallyRouted="false" />
         <AssociationConnector Association="DBFincaMonteCarloModel.FK_DetalleDeFactura_Menu" ManuallyRouted="false" />
         <AssociationConnector Association="DBFincaMonteCarloModel.FK_Usuario_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DBFincaMonteCarloModel.FK_Factura_Clientes" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

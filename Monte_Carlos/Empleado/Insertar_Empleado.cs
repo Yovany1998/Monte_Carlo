@@ -52,7 +52,7 @@ namespace Monte_Carlos.Empleado
 
         private void Limpiar()
         {
-            dvEmpleado.ClearSelection();
+            //dvEmpleado.ClearSelection();
        
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -76,13 +76,13 @@ namespace Monte_Carlos.Empleado
             }
             catch (Exception)
             {
-                dvEmpleado.ClearSelection();
+                //dvEmpleado.ClearSelection();
                 editar = false;
             }
 
             if (Log == 1)
             {
-                dvEmpleado.ClearSelection();
+                //dvEmpleado.ClearSelection();
                 Limpiar();
             }
         }

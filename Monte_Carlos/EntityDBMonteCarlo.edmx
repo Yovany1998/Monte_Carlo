@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBFincaMonteCarloModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBFincaMonteCarloModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Clientes">
           <Key>
             <PropertyRef Name="IdCliente" />
@@ -125,7 +125,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Reservacion_Cliente">
+        <Association Name="FK_Factura_Clientes">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+          <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="Factura">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservacion_Clientes">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
           <End Role="Reservacion" Type="Self.Reservacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -137,7 +149,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Usuario_Empleado">
+        <Association Name="FK_Usuario_Empleados">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -168,17 +180,20 @@
             <End Role="Menu" EntitySet="Menu" />
             <End Role="DetalleDeFactura" EntitySet="DetalleDeFactura" />
           </AssociationSet>
-          <AssociationSet Name="FK_Reservacion_Cliente" Association="Self.FK_Reservacion_Cliente">
+          <AssociationSet Name="FK_Factura_Clientes" Association="Self.FK_Factura_Clientes">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Factura" EntitySet="Factura" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservacion_Clientes" Association="Self.FK_Reservacion_Clientes">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="Reservacion" EntitySet="Reservacion" />
           </AssociationSet>
-          <AssociationSet Name="FK_Usuario_Empleado" Association="Self.FK_Usuario_Empleado">
+          <AssociationSet Name="FK_Usuario_Empleados" Association="Self.FK_Usuario_Empleados">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBFincaMonteCarloModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -191,6 +206,7 @@
           <Property Name="Apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Telefono" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Reservacion" Relationship="Self.FK_Reservacion_Cliente" FromRole="Clientes" ToRole="Reservacion" />
+          <NavigationProperty Name="Factura" Relationship="DBFincaMonteCarloModel.FK_Factura_Clientes" FromRole="Clientes" ToRole="Factura" />
         </EntityType>
         <EntityType Name="Compra">
           <Key>
@@ -243,6 +259,7 @@
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Estado" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="DetalleDeFactura" Relationship="Self.FK_DetalleDeFactura_Factura" FromRole="Factura" ToRole="DetalleDeFactura" />
+          <NavigationProperty Name="Clientes" Relationship="DBFincaMonteCarloModel.FK_Factura_Clientes" FromRole="Factura" ToRole="Clientes" />
         </EntityType>
         <EntityType Name="Menu">
           <Key>
@@ -361,7 +378,23 @@
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
+          <AssociationSet Name="FK_Factura_Clientes" Association="DBFincaMonteCarloModel.FK_Factura_Clientes">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Factura" EntitySet="Factura" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Factura_Clientes">
+          <End Type="DBFincaMonteCarloModel.Clientes" Role="Clientes" Multiplicity="1" />
+          <End Type="DBFincaMonteCarloModel.Factura" Role="Factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="Factura">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

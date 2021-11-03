@@ -103,9 +103,19 @@
     <Compile Include="Clientes.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cliente\BusquedaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\BusquedaClientes.Designer.cs">
+      <DependentUpon>BusquedaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compra.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Compras\Crud_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Crud_Compras.Designer.cs" />
     <Compile Include="Demas\Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +247,10 @@
     <None Include="Resources\LogoFincaMonteCarlo.png" />
     <None Include="Resources\elLogo.png" />
     <None Include="Resources\LogoEnColores.png" />
+    <EmbeddedResource Include="Cliente\BusquedaClientes.resx">
+      <DependentUpon>BusquedaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Crud_Compras.resx" />
     <EmbeddedResource Include="Demas\Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
