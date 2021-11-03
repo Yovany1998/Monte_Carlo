@@ -15,7 +15,6 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 
-
 namespace Monte_Carlos
 {
     public partial class Inicio : Form
@@ -35,11 +34,11 @@ namespace Monte_Carlos
       
          if(Contador < 100)
             {
-                Barras.Value = 0;
+              
                 Contador++;
                 for (int x = 0; x < 100; x++)
                 {
-                    Barras.Value++;
+                
 
                 }
                 Form fh = formhija as Form;
@@ -55,7 +54,7 @@ namespace Monte_Carlos
                 Contador = 0;
             }
 
-            Barras.Visible = true;
+       
           
            
 
@@ -89,12 +88,6 @@ namespace Monte_Carlos
             AbrirFormEnPanel(new Reservaciones.Insertar_Reservaciones());
         }
 
-        private void horafecha_Tick(object sender, EventArgs e)
-        {
-            lblHora.Text = DateTime.Now.ToShortTimeString();
-            lblFecha.Text = DateTime.Now.ToLongDateString();
-        }
-
         private void lblFecha_Click(object sender, EventArgs e)
         {
 
@@ -105,7 +98,7 @@ namespace Monte_Carlos
         private void button1_Click(object sender, EventArgs e)
         {
     
-            AbrirFormEnPanel(new Ingreso_Comida());
+            AbrirFormEnPanel(new Ingreso_Carta());
 
         }
 
@@ -120,22 +113,9 @@ namespace Monte_Carlos
 
         private void Cerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+          
         }
 
-        private void GrandePeque_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            GrandePeque.Visible = false;
-            Peque.Visible = true;
-        }
-
-        private void Peque_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            Peque.Visible = false;
-            GrandePeque.Visible = true;
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -160,12 +140,12 @@ namespace Monte_Carlos
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Salidas.Ingresar_Compras());
+            //AbrirFormEnPanel(new Salidas.Ingresar_Compras());
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Demas.Ingresar_Usuario());
+            AbrirFormEnPanel(new Usuarios.Ingresar_Usuarios());
         }
 
         private void Minimizar_Click(object sender, EventArgs e)
@@ -196,5 +176,105 @@ namespace Monte_Carlos
             
         }
 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Carta.Ingreso_Carta());
+        }
+
+        private void IBtnEmpleado_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Insertar_Empleado());
+        }
+
+        private void IBtnVenta_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Generar_Venta());
+        }
+
+        private void IBtnReservacion_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Reservaciones.Insertar_Reservaciones());
+        }
+
+        private void IBtnCliente_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Cliente.Insertar_Cliente());
+        }
+
+        private void IBtnCompra_Click(object sender, EventArgs e)
+        {
+            //AbrirFormEnPanel(new Compras.Crud_Compras());
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login ventana = new Login();
+            ventana.Show();
+        }
+
+        private void ProgesoBarra_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton3_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void IBtnProveedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Proveedor.CRUD_Proveedor());
+        }
+
+        private void IBtnUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Usuarios.Ingresar_Usuarios());
+        }
+
+        private void IBtnProveedor_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Proveedor.CRUD_Proveedor());
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Usuarios.Ingresar_Usuarios());
+        }
+
+        /*private void IBtnNormal_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            IBtnMax.Visible = true;
+            IBtnNormal.Visible = false;
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void IBtnMax_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            IBtnMax.Visible = false;
+            IBtnNormal.Visible = true;
+        }*/
     }
 }

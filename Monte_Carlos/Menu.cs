@@ -17,15 +17,16 @@ namespace Monte_Carlos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Menu()
         {
-            this.DetalleVenta = new HashSet<DetalleVenta>();
+            this.DetalleDeFactura = new HashSet<DetalleDeFactura>();
         }
     
-        public int IdComidaBebida { get; set; }
+        public int IdMenu { get; set; }
         public string Nombre { get; set; }
-        public Nullable<double> Precio { get; set; }
+        public decimal Precio { get; set; }
         public string Tipo { get; set; }
+        public bool Disponible { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetalleVenta> DetalleVenta { get; set; }
+        public virtual ICollection<DetalleDeFactura> DetalleDeFactura { get; set; }
     }
 }

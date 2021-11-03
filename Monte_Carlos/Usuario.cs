@@ -14,10 +14,11 @@ namespace Monte_Carlos
     
     public partial class Usuario
     {
-        public long IdUsuario { get; set; }
-        public string NIdentidad { get; set; }
-        public string Nombre { get; set; }
-        public Nullable<bool> Estado { get; set; }
-        public string Contrasena { get; set; }
+        public int IdUsuario { get; set; }
+        public int IdEmpleado { get; set; }
+        public string Password { get; set; }
+        public string UserName { get; set; }
+    
+        public virtual Empleados Empleados { get; set; }
     }
 }
