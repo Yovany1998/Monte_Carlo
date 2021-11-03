@@ -98,7 +98,7 @@ namespace Monte_Carlos.Usuarios
             }
             catch
             {
-                MessageBox.Show("El usuario no Empleado no esta registrado revise");
+                MessageBox.Show("El Empleado no esta registrado revise");
                 txtUsername.Focus();
                 return;
             }
