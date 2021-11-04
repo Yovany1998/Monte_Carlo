@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Monte_Carlos.exe.manifest" size="20437">
+    <dependentAssembly dependencyType="install" codebase="Monte_Carlos.exe.manifest" size="20365">
       <assemblyIdentity name="Monte_Carlos.exe" version="1.0.0.10" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Xap8CqbfhZ5NLzkFfaTDlw2bMePx7uWb2ANfHDVRQno=</dsig:DigestValue>
+        <dsig:DigestValue>OR+ryGUU4uwyYtZW46KRaKUEbZ+GZI0VwOsIy/vIiVE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

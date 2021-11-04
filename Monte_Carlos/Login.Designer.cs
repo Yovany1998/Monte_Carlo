@@ -92,6 +92,7 @@ namespace Monte_Carlos
             this.txtContraseña.TabIndex = 27;
             this.txtContraseña.Tag = "";
             this.txtContraseña.Text = "Contraseña";
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // btnIniciar
             // 
