@@ -59,13 +59,7 @@ namespace Monte_Carlos.Cliente
             {
                 MessageBox.Show("Por favor ingresar el Apellido");
                 return;
-            }
-           /* if (txtEdad.Text.Equals(""))
-            {
-                MessageBox.Show("Por favor ingresar la edad");
-                return;
-            }
-           */
+            }           
             if (txtTelefono.Text.Equals(""))
             {
                 MessageBox.Show("Por favor ingresar el numero telefonico");
@@ -98,71 +92,38 @@ namespace Monte_Carlos.Cliente
                 }
               
             }
-            /*if (txtCorreo.Text != "")
-            {
-                int NArroba = 0;
-               // var TamanoCorreo = txtCorreo.TextLength;
-                for (int r=0; r < TamanoCorreo; r++) {
-                  //  char Arroba = txtCorreo.Text[r];
-                    if ( Arroba == Convert.ToChar("@"))
-                    {
-                         NArroba ++;
-                    }
-
-                }
-
-                if(NArroba == 0)
-                {
-                    MessageBox.Show("El correo ingresado debe llevar @");
-                  //  txtCorreo.Focus();
-                    return;
-                }
-            }*/
        
 
             if (editar)
             {
-                /*MessageBox.Show("Cliente modificado!");
-                var tCliente = Variables.Clientes.FirstOrDefault(x => x.IdCliente == idCliente);
-             //   tCliente.Identidad = txtIdentidad.Text;
+                MessageBox.Show("Cliente modificado!");
+                var tCliente = Entity.Clientes.FirstOrDefault(x => x.IdCliente == idCliente);            
                 tCliente.Nombre = txtNombre.Text;
-                tCliente.Apellido = txtApellido.Text;
-               // tCliente.Edad = Convert.ToInt32(txtEdad.Text);
-                tCliente.Telefono = Convert.ToInt32(txtTelefono.Text);
-              //  tCliente.Correo = txtCorreo.Text;
+                tCliente.Apellido = txtApellido.Text;               
+                tCliente.Telefono = txtTelefono.Text;                
 
-                Variables.SaveChanges();*/
+                Entity.SaveChanges();
             }
             else
             {
-              /*  var tClientee = Variables.Clientes.FirstOrDefault(x => x.Identidad == Identidad);
-
-                if (tClientee != null)
-                {
-                    MessageBox.Show("El numero de identidad ya existe");
-                   // txtIdentidad.Focus();
-                    return;
-                }*/
+               
                 MessageBox.Show("Cliente guardado!");
                 Clientes tbClientes = new Clientes
-                {
-                  /*//  Identidad = txtIdentidad.Text,
+                {                  
                     Nombre = txtNombre.Text,
-                    Apellido = txtApellido.Text,
-                  //  Edad = Convert.ToInt32(txtEdad.Text),
-                    Telefono = Convert.ToInt32(txtTelefono.Text),
-                  //  Correo = txtCorreo.Text*/
+                    Apellido = txtApellido.Text,                 
+                    Telefono = txtTelefono.Text,                  
                 };
-                //Variables.Clientes.Add(tbClientes);
+                Entity.Clientes.Add(tbClientes);
 
-                //Variables.SaveChanges();
+                Entity.SaveChanges();
             }
             CargaDv();
             Limpiar();
         }
         private void CargaDv()
         {
-            /*var tClientes = from p in Variables.Clientes
+            var tClientes = from p in Entity.Clientes
                             select new
                             {
                                 p.IdCliente,                                
@@ -170,29 +131,24 @@ namespace Monte_Carlos.Cliente
                                 p.Apellido,
                                 p.Telefono,      
                             };
-            dvClientes.DataSource = tClientes.CopyAnonymusToDataTable();*/
+            dvClientes.DataSource = tClientes.CopyAnonymusToDataTable();
         }
         private void Limpiar()
-        {
-          //  txtIdentidad.Text = "";
+        {          
             txtNombre.Text = "";
-            txtApellido.Text = "";
-            //txtEdad.Text = "";
-            txtTelefono.Text = "";
-           // txtCorreo.Text = "";
+            txtApellido.Text = "";            
+            txtTelefono.Text = "";           
             idCliente = 0;
             editar = false;
             dvClientes.ClearSelection();
-
-
         }
 
         private void Insertar_Cliente_Load(object sender, EventArgs e)
         {
-          //  Log = 1;
-            //CargaDv();
-            //dvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            //Limpiar();
+            Log = 1;
+            CargaDv();
+            dvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            Limpiar();
         }
 
        
@@ -202,15 +158,12 @@ namespace Monte_Carlos.Cliente
           
                 try
                 {
-                    /*idCliente = Convert.ToInt64(dvClientes.SelectedCells[0].Value);
-                    var tCliente = Variables.Clientes.FirstOrDefault(x => x.IdCliente == idCliente);
-                    //txtIdentidad.Text = tCliente.Identidad;
+                    idCliente = Convert.ToInt64(dvClientes.SelectedCells[0].Value);
+                    var tCliente = Entity.Clientes.FirstOrDefault(x => x.IdCliente == idCliente);                    
                     txtNombre.Text = tCliente.Nombre;
-                    txtApellido.Text = tCliente.Apellido;
-                    //txtEdad.Text = Convert.ToString(tCliente.Edad);
-                    txtTelefono.Text = Convert.ToString(tCliente.Telefono);
-//txtCorreo.Text = tCliente.Correo;
-                    editar = true;*/
+                    txtApellido.Text = tCliente.Apellido;                    
+                    txtTelefono.Text = tCliente.Telefono;
+                    editar = true;
 
                 }
                 catch (Exception)
@@ -244,10 +197,10 @@ namespace Monte_Carlos.Cliente
             }
             else
             {
-                /*Variables.Clientes.RemoveRange(Variables.Clientes.Where(x => x.IdCliente == idCliente));
-                Variables.SaveChanges();
+                Entity.Clientes.RemoveRange(Entity.Clientes.Where(x => x.IdCliente == idCliente));
+                Entity.SaveChanges();
                 Limpiar();
-                CargaDv();*/
+                CargaDv();
             }
         }
 
