@@ -212,6 +212,12 @@
     <Compile Include="Usuario.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\Administrar_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Administrar_Usuarios.Designer.cs">
+      <DependentUpon>Administrar_Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\Ingresar_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pedidos\Ver_Pedido.resx">
       <DependentUpon>Ver_Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Administrar_Usuarios.resx">
+      <DependentUpon>Administrar_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Ingresar_Usuarios.resx">
       <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>

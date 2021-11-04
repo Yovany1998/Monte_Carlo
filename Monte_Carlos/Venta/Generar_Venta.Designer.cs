@@ -53,9 +53,10 @@
             this.lblDetallesPedido.BackColor = System.Drawing.Color.Transparent;
             this.lblDetallesPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetallesPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDetallesPedido.Location = new System.Drawing.Point(229, 99);
+            this.lblDetallesPedido.Location = new System.Drawing.Point(305, 122);
+            this.lblDetallesPedido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetallesPedido.Name = "lblDetallesPedido";
-            this.lblDetallesPedido.Size = new System.Drawing.Size(151, 18);
+            this.lblDetallesPedido.Size = new System.Drawing.Size(190, 24);
             this.lblDetallesPedido.TabIndex = 41;
             this.lblDetallesPedido.Text = "Detalles del pedido";
             // 
@@ -64,15 +65,19 @@
             this.dgBebidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBebidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dgBebidas.Location = new System.Drawing.Point(227, 186);
+            this.dgBebidas.Location = new System.Drawing.Point(303, 229);
+            this.dgBebidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgBebidas.Name = "dgBebidas";
-            this.dgBebidas.Size = new System.Drawing.Size(377, 150);
+            this.dgBebidas.RowHeadersWidth = 51;
+            this.dgBebidas.Size = new System.Drawing.Size(503, 185);
             this.dgBebidas.TabIndex = 44;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // btnBuscarCliente
             // 
@@ -84,10 +89,10 @@
             this.btnBuscarCliente.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBuscarCliente.IconColor = System.Drawing.Color.Black;
             this.btnBuscarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(232, 62);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(309, 76);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(0, 4, 4, 4);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(193, 32);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(257, 39);
             this.btnBuscarCliente.TabIndex = 47;
             this.btnBuscarCliente.Text = "Buscar Cliente";
             this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,18 +101,18 @@
             // txtNombreCompleto
             // 
             this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCompleto.Location = new System.Drawing.Point(232, 30);
+            this.txtNombreCompleto.Location = new System.Drawing.Point(309, 37);
+            this.txtNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(372, 26);
+            this.txtNombreCompleto.Size = new System.Drawing.Size(495, 30);
             this.txtNombreCompleto.TabIndex = 46;
             // 
             // lblNombre
             // 
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(229, 9);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(305, 11);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(99, 24);
+            this.lblNombre.Size = new System.Drawing.Size(132, 30);
             this.lblNombre.TabIndex = 45;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -115,9 +120,10 @@
             // 
             this.txtBuscarComidaOBebida.Enabled = false;
             this.txtBuscarComidaOBebida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarComidaOBebida.Location = new System.Drawing.Point(290, 127);
+            this.txtBuscarComidaOBebida.Location = new System.Drawing.Point(387, 156);
+            this.txtBuscarComidaOBebida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscarComidaOBebida.Name = "txtBuscarComidaOBebida";
-            this.txtBuscarComidaOBebida.Size = new System.Drawing.Size(222, 26);
+            this.txtBuscarComidaOBebida.Size = new System.Drawing.Size(295, 30);
             this.txtBuscarComidaOBebida.TabIndex = 48;
             // 
             // icoBuscarComidaObebida
@@ -127,12 +133,14 @@
             this.icoBuscarComidaObebida.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.icoBuscarComidaObebida.IconColor = System.Drawing.SystemColors.ControlText;
             this.icoBuscarComidaObebida.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoBuscarComidaObebida.IconSize = 36;
-            this.icoBuscarComidaObebida.Location = new System.Drawing.Point(252, 120);
+            this.icoBuscarComidaObebida.IconSize = 39;
+            this.icoBuscarComidaObebida.Location = new System.Drawing.Point(336, 148);
+            this.icoBuscarComidaObebida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.icoBuscarComidaObebida.Name = "icoBuscarComidaObebida";
-            this.icoBuscarComidaObebida.Size = new System.Drawing.Size(32, 32);
+            this.icoBuscarComidaObebida.Size = new System.Drawing.Size(43, 39);
             this.icoBuscarComidaObebida.TabIndex = 49;
             this.icoBuscarComidaObebida.TabStop = false;
+            this.icoBuscarComidaObebida.Click += new System.EventHandler(this.icoBuscarComidaObebida_Click);
             // 
             // btnOrdenesEnEspera
             // 
@@ -143,9 +151,10 @@
             this.btnOrdenesEnEspera.IconColor = System.Drawing.Color.Black;
             this.btnOrdenesEnEspera.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOrdenesEnEspera.IconSize = 52;
-            this.btnOrdenesEnEspera.Location = new System.Drawing.Point(518, 113);
+            this.btnOrdenesEnEspera.Location = new System.Drawing.Point(691, 139);
+            this.btnOrdenesEnEspera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOrdenesEnEspera.Name = "btnOrdenesEnEspera";
-            this.btnOrdenesEnEspera.Size = new System.Drawing.Size(86, 47);
+            this.btnOrdenesEnEspera.Size = new System.Drawing.Size(115, 58);
             this.btnOrdenesEnEspera.TabIndex = 50;
             this.btnOrdenesEnEspera.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdenesEnEspera.UseVisualStyleBackColor = true;
@@ -156,9 +165,10 @@
             this.lblBebidas.BackColor = System.Drawing.Color.Transparent;
             this.lblBebidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBebidas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBebidas.Location = new System.Drawing.Point(229, 165);
+            this.lblBebidas.Location = new System.Drawing.Point(305, 203);
+            this.lblBebidas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBebidas.Name = "lblBebidas";
-            this.lblBebidas.Size = new System.Drawing.Size(68, 18);
+            this.lblBebidas.Size = new System.Drawing.Size(85, 24);
             this.lblBebidas.TabIndex = 51;
             this.lblBebidas.Text = "Bebidas";
             // 
@@ -168,9 +178,10 @@
             this.lblComidas.BackColor = System.Drawing.Color.Transparent;
             this.lblComidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComidas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblComidas.Location = new System.Drawing.Point(229, 348);
+            this.lblComidas.Location = new System.Drawing.Point(305, 428);
+            this.lblComidas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComidas.Name = "lblComidas";
-            this.lblComidas.Size = new System.Drawing.Size(75, 18);
+            this.lblComidas.Size = new System.Drawing.Size(91, 24);
             this.lblComidas.TabIndex = 53;
             this.lblComidas.Text = "Comidas";
             // 
@@ -179,15 +190,19 @@
             this.dgComidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgComidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewCheckBoxColumn1});
-            this.dgComidas.Location = new System.Drawing.Point(227, 369);
+            this.dgComidas.Location = new System.Drawing.Point(303, 454);
+            this.dgComidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgComidas.Name = "dgComidas";
-            this.dgComidas.Size = new System.Drawing.Size(377, 150);
+            this.dgComidas.RowHeadersWidth = 51;
+            this.dgComidas.Size = new System.Drawing.Size(503, 185);
             this.dgComidas.TabIndex = 52;
             // 
             // dataGridViewCheckBoxColumn1
             // 
             this.dataGridViewCheckBoxColumn1.HeaderText = "";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
             // btnContinuar
             // 
@@ -196,9 +211,10 @@
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.ForeColor = System.Drawing.Color.Black;
-            this.btnContinuar.Location = new System.Drawing.Point(426, 525);
+            this.btnContinuar.Location = new System.Drawing.Point(568, 646);
+            this.btnContinuar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(178, 30);
+            this.btnContinuar.Size = new System.Drawing.Size(237, 37);
             this.btnContinuar.TabIndex = 54;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = false;
@@ -206,10 +222,10 @@
             // 
             // Generar_Venta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(902, 572);
+            this.ClientSize = new System.Drawing.Size(1203, 704);
             this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.lblComidas);
             this.Controls.Add(this.dgComidas);
@@ -223,6 +239,7 @@
             this.Controls.Add(this.dgBebidas);
             this.Controls.Add(this.lblDetallesPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Generar_Venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generar_Venta";

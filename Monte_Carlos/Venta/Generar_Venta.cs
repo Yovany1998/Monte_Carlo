@@ -80,5 +80,10 @@ namespace Monte_Carlos.Venta
         {
 
         }
+
+        private void icoBuscarComidaObebida_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

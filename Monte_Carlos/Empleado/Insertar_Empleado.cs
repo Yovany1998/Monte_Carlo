@@ -71,7 +71,7 @@ namespace Monte_Carlos.Empleado
                 var tEmpleado = Entity.Empleados.FirstOrDefault(x => x.IdEmpleado == idEmpleado);
                 txtNombre.Text = tEmpleado.Nombre;
                 txtApellido.Text = tEmpleado.Apellido;
-               
+
                 editar = true;
             }
             catch (Exception)
@@ -85,6 +85,7 @@ namespace Monte_Carlos.Empleado
                 //dvEmpleado.ClearSelection();
                 Limpiar();
             }
+            
         }
 
         private void dvEmpleado_MouseClick(object sender, MouseEventArgs e)

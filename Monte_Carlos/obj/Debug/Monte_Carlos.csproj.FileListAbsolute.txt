@@ -510,6 +510,7 @@ D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Ca
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Properties.Resources.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Reservaciones.Insertar_Reservaciones.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Servicio.Ver_Pedido.resources
+D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Salidas.Ingresar_Compras.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Factura.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Generar_Venta.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.GenerateResource.cache
@@ -544,6 +545,10 @@ D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Ca
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\MySqlConnector.xml
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\MySql.Data.xml
+D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\Google.Protobuf.xml
+D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Compression.LZ4.xml
+D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Hash.xxHash.xml
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe.manifest
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.application
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Carta.resources
@@ -777,5 +782,56 @@ C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debu
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CopyComplete
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
-D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.BusquedaClientes.resources
-D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Compras.Crud_Compras.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\Monte_Carlos.exe.config
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\Monte_Carlos.exe.manifest
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\Monte_Carlos.application
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\Monte_Carlos.exe
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\Monte_Carlos.pdb
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\EntityFramework.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\MySqlConnector.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\MySql.Data.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\System.Memory.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\System.Buffers.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\Google.Protobuf.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\Zstandard.Net.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\EntityFramework.xml
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\MySql.Web.xml
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\MySqlConnector.xml
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\bin\Debug\MySql.Data.xml
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe.config
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.BusquedaClientes.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Compras.Crud_Compras.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Demas.Entrada.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Carta.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.Insertar_Cliente.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Empleado.Insertar_Empleado.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Inicio.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Login.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Properties.Resources.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Proveedor.CRUD_Proveedor.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Reservaciones.Insertar_Reservaciones.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Servicio.Ver_Pedido.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Usuarios.Ingresar_Usuarios.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Factura.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Facturación.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Generar_Venta.resources
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe.manifest
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.application
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
+C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Usuarios.Administrar_Usuarios.resources
