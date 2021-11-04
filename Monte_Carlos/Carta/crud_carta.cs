@@ -13,7 +13,6 @@ namespace Monte_Carlos.Carta
     public partial class Ingreso_Carta : Form
     {
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
-        
         long idComidaBebida = 0;
         bool editar = false;
         int log;
@@ -46,7 +45,7 @@ namespace Monte_Carlos.Carta
             }
             if (cmbTipo.SelectedItem.ToString().Equals(""))
             {
-                MessageBox.Show("Por favor seleccione el tipo");
+                MessageBox.Show("Asignar un tipo de comida");
                 return;
             }
 
