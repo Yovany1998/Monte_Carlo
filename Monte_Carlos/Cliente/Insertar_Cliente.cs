@@ -43,7 +43,7 @@ namespace Monte_Carlos.Cliente
                 return;
             }
             var TamanoTelefono = txtTelefono.TextLength;
-            if (TamanoTelefono < 8)
+            if (TamanoTelefono < 9)
             {
                 MessageBox.Show("El numero de telefono es muy corto");
                 txtTelefono.Focus();
