@@ -66,9 +66,9 @@ namespace Monte_Carlos.Proveedor
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtEmpresa);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(302, 33);
+            this.panel1.Location = new System.Drawing.Point(49, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 956);
+            this.panel1.Size = new System.Drawing.Size(1066, 956);
             this.panel1.TabIndex = 2;
             // 
             // btnEliminar
@@ -79,36 +79,39 @@ namespace Monte_Carlos.Proveedor
             this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 52;
-            this.btnEliminar.Location = new System.Drawing.Point(454, 681);
+            this.btnEliminar.Location = new System.Drawing.Point(1010, 517);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(52, 52);
-            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.TabIndex = 8;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Broom;
             this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.IconSize = 52;
-            this.btnNuevo.Location = new System.Drawing.Point(385, 681);
+            this.btnNuevo.Location = new System.Drawing.Point(941, 517);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(52, 52);
-            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.TabIndex = 7;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgProvedores
             // 
             this.dgProvedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProvedores.Location = new System.Drawing.Point(6, 735);
+            this.dgProvedores.Location = new System.Drawing.Point(3, 575);
             this.dgProvedores.Name = "dgProvedores";
             this.dgProvedores.RowHeadersWidth = 51;
             this.dgProvedores.RowTemplate.Height = 24;
-            this.dgProvedores.Size = new System.Drawing.Size(507, 191);
-            this.dgProvedores.TabIndex = 3;
+            this.dgProvedores.Size = new System.Drawing.Size(1059, 334);
+            this.dgProvedores.TabIndex = 9;
+            this.dgProvedores.SelectionChanged += new System.EventHandler(this.dgProvedores_SelectionChanged);
             // 
             // btnAgregar
             // 
@@ -116,27 +119,28 @@ namespace Monte_Carlos.Proveedor
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(6, 540);
+            this.btnAgregar.Location = new System.Drawing.Point(3, 374);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(507, 36);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Size = new System.Drawing.Size(1059, 36);
+            this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtObservacion
             // 
             this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacion.Location = new System.Drawing.Point(3, 397);
+            this.txtObservacion.Location = new System.Drawing.Point(3, 229);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(513, 119);
-            this.txtObservacion.TabIndex = 1;
+            this.txtObservacion.Size = new System.Drawing.Size(1059, 119);
+            this.txtObservacion.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 688);
+            this.label5.Location = new System.Drawing.Point(-2, 528);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(260, 29);
             this.label5.TabIndex = 0;
@@ -145,16 +149,18 @@ namespace Monte_Carlos.Proveedor
             // txtRTN
             // 
             this.txtRTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRTN.Location = new System.Drawing.Point(0, 297);
+            this.txtRTN.Location = new System.Drawing.Point(549, 145);
+            this.txtRTN.MaxLength = 14;
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(513, 30);
-            this.txtRTN.TabIndex = 1;
+            this.txtRTN.TabIndex = 4;
+            this.txtRTN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRTN_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(-1, 370);
+            this.label6.Location = new System.Drawing.Point(-1, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 24);
             this.label6.TabIndex = 0;
@@ -164,7 +170,7 @@ namespace Monte_Carlos.Proveedor
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-1, 270);
+            this.label4.Location = new System.Drawing.Point(548, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 24);
             this.label4.TabIndex = 0;
@@ -173,16 +179,17 @@ namespace Monte_Carlos.Proveedor
             // txtNombreDeContacto
             // 
             this.txtNombreDeContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreDeContacto.Location = new System.Drawing.Point(3, 204);
+            this.txtNombreDeContacto.Location = new System.Drawing.Point(3, 145);
             this.txtNombreDeContacto.Name = "txtNombreDeContacto";
             this.txtNombreDeContacto.Size = new System.Drawing.Size(513, 30);
-            this.txtNombreDeContacto.TabIndex = 1;
+            this.txtNombreDeContacto.TabIndex = 3;
+            this.txtNombreDeContacto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreDeContacto_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-1, 177);
+            this.label3.Location = new System.Drawing.Point(-1, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 24);
             this.label3.TabIndex = 0;
@@ -191,16 +198,18 @@ namespace Monte_Carlos.Proveedor
             // txtNumeroTelefono
             // 
             this.txtNumeroTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroTelefono.Location = new System.Drawing.Point(3, 121);
+            this.txtNumeroTelefono.Location = new System.Drawing.Point(549, 48);
+            this.txtNumeroTelefono.MaxLength = 9;
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(513, 30);
-            this.txtNumeroTelefono.TabIndex = 1;
+            this.txtNumeroTelefono.TabIndex = 2;
+            this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTelefono_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-1, 94);
+            this.label2.Location = new System.Drawing.Point(545, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(196, 24);
             this.label2.TabIndex = 0;
@@ -213,6 +222,7 @@ namespace Monte_Carlos.Proveedor
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(513, 30);
             this.txtEmpresa.TabIndex = 1;
+            this.txtEmpresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpresa_KeyPress);
             // 
             // label1
             // 
@@ -230,11 +240,12 @@ namespace Monte_Carlos.Proveedor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1163, 593);
+            this.ClientSize = new System.Drawing.Size(1205, 593);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CRUD_Proveedor";
             this.Text = "CRUD_Proveedor";
+            this.Load += new System.EventHandler(this.CRUD_Proveedor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProvedores)).EndInit();
