@@ -75,7 +75,7 @@
     <Property Name="Disponible" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="DetalleDeFactura" Relationship="Self.FK_DetalleDeFactura_Menu" FromRole="Menu" ToRole="DetalleDeFactura" />
   </EntityType>
-  <EntityType Name="Proveedor">
+  <EntityType Name="Proveedores">
     <Key>
       <PropertyRef Name="IdProveedor" />
     </Key>
@@ -162,7 +162,7 @@
     <EntitySet Name="Empleados" EntityType="Self.Empleados" />
     <EntitySet Name="Factura" EntityType="Self.Factura" />
     <EntitySet Name="Menu" EntityType="Self.Menu" />
-    <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
+    <EntitySet Name="Proveedor" EntityType="DBFincaMonteCarloModel.Proveedores" />
     <EntitySet Name="Reservacion" EntityType="Self.Reservacion" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <AssociationSet Name="FK_Reservacion_Cliente" Association="Self.FK_Reservacion_Cliente">

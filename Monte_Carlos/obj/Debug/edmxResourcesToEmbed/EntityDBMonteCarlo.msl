@@ -76,7 +76,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Proveedor">
-      <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Proveedor">
+      <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Proveedores">
         <MappingFragment StoreEntitySet="Proveedor">
           <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
           <ScalarProperty Name="Empresa" ColumnName="Empresa" />
