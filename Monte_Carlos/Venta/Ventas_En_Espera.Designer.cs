@@ -33,6 +33,8 @@ namespace Monte_Carlos.Venta
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.icoBuscarComidaObebida = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -77,12 +79,50 @@ namespace Monte_Carlos.Venta
             this.dataGridView1.Size = new System.Drawing.Size(600, 255);
             this.dataGridView1.TabIndex = 52;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNuevo.IconColor = System.Drawing.Color.Black;
+            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevo.IconSize = 52;
+            this.btnNuevo.Location = new System.Drawing.Point(636, 116);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.btnNuevo.Size = new System.Drawing.Size(52, 52);
+            this.btnNuevo.TabIndex = 94;
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 52;
+            this.btnEliminar.Location = new System.Drawing.Point(687, 116);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(52, 52);
+            this.btnEliminar.TabIndex = 95;
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // Ventas_En_Espera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(886, 533);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.icoBuscarComidaObebida);
@@ -90,6 +130,7 @@ namespace Monte_Carlos.Venta
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ventas_En_Espera";
             this.Text = "Ventas_En_Espera";
+            this.Load += new System.EventHandler(this.Ventas_En_Espera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -103,5 +144,7 @@ namespace Monte_Carlos.Venta
         private FontAwesome.Sharp.IconPictureBox icoBuscarComidaObebida;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton btnNuevo;
+        private FontAwesome.Sharp.IconButton btnEliminar;
     }
 }
