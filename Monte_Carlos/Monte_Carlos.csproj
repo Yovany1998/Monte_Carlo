@@ -184,7 +184,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proveedor.cs">
+    <Compile Include="Proveedores.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="Proveedor\CRUD_Proveedor.cs">

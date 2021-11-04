@@ -29,20 +29,21 @@ namespace Monte_Carlos.Proveedor
 
         private void SelectAll()
         {
-            var tablaProveedor = from columna in entity.Proveedor
-                                 select new
-                                 {
-                                     columna.IdProveedor,
-                                     columna.Empresa,
-                                     columna.NumeroDeTelefono,
-                                     columna.NombreDeContacto,
-                                     columna.RTN,
-                                     columna.Observacion
-                                 };
-            dgProvedores.DataSource = tablaProveedor.CopyAnonymusToDataTable();
-            dgProvedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-            
+                var tablaProveedor = from columna in entity.Proveedor
+                                     select new
+                                     {
+                                         columna.IdProveedor,
+                                         columna.Empresa,
+                                         columna.NumeroDeTelefono,
+                                         columna.NombreDeContacto,
+                                         columna.RTN,
+                                         columna.Observacion
+                                     };
+                dgProvedores.DataSource = tablaProveedor.CopyAnonymusToDataTable();
+                dgProvedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+       
+
         }
 
         private void LimpiarTextBoxs()
