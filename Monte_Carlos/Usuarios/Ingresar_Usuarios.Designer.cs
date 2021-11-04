@@ -33,7 +33,7 @@ namespace Monte_Carlos.Usuarios
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtInsertarCliente = new System.Windows.Forms.Button();
+            this.txtGuardar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,20 +83,21 @@ namespace Monte_Carlos.Usuarios
             this.label4.TabIndex = 67;
             this.label4.Text = "Username";
             // 
-            // txtInsertarCliente
+            // txtGuardar
             // 
-            this.txtInsertarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
-            this.txtInsertarCliente.FlatAppearance.BorderSize = 0;
-            this.txtInsertarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtInsertarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInsertarCliente.ForeColor = System.Drawing.Color.Black;
-            this.txtInsertarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.txtInsertarCliente.Location = new System.Drawing.Point(226, 316);
-            this.txtInsertarCliente.Name = "txtInsertarCliente";
-            this.txtInsertarCliente.Size = new System.Drawing.Size(351, 37);
-            this.txtInsertarCliente.TabIndex = 68;
-            this.txtInsertarCliente.Text = "Guardar";
-            this.txtInsertarCliente.UseVisualStyleBackColor = false;
+            this.txtGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.txtGuardar.FlatAppearance.BorderSize = 0;
+            this.txtGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGuardar.ForeColor = System.Drawing.Color.Black;
+            this.txtGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txtGuardar.Location = new System.Drawing.Point(226, 316);
+            this.txtGuardar.Name = "txtGuardar";
+            this.txtGuardar.Size = new System.Drawing.Size(351, 37);
+            this.txtGuardar.TabIndex = 68;
+            this.txtGuardar.Text = "Guardar";
+            this.txtGuardar.UseVisualStyleBackColor = false;
+            this.txtGuardar.Click += new System.EventHandler(this.txtGuardar_Click);
             // 
             // label5
             // 
@@ -137,13 +138,14 @@ namespace Monte_Carlos.Usuarios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtInsertarCliente);
+            this.Controls.Add(this.txtGuardar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtRepetirContrasena);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ingresar_Usuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar_Usuarios";
             this.Load += new System.EventHandler(this.Ingresar_Usuarios_Load);
             this.ResumeLayout(false);
@@ -156,7 +158,7 @@ namespace Monte_Carlos.Usuarios
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button txtInsertarCliente;
+        private System.Windows.Forms.Button txtGuardar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
