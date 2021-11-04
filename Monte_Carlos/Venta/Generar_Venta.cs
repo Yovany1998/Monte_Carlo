@@ -16,6 +16,8 @@ namespace Monte_Carlos.Venta
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
         public string nombreCliente = string.Empty;
         public int idCliente = 0;
+        public int codigoFactura = 0;
+        
 
         public Generar_Venta()
         {
@@ -66,7 +68,9 @@ namespace Monte_Carlos.Venta
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            
+            ObtenerCodigoFactura();
+            InsertarFactura();
+            InsertarDetallesPedido();
 
         }
 
@@ -74,6 +78,7 @@ namespace Monte_Carlos.Venta
         {
             CargarComida();
             CargarBebida();
+            
         }
 
         //Cargamos los datos de las comidas que esten disponibles
@@ -108,14 +113,6 @@ namespace Monte_Carlos.Venta
             dgBebidas.DataSource = tBebidas.CopyAnonymusToDataTable();
             dgBebidas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-        }
-
-        private void InsertarComida()
-        {
-            int indiceComida = dgComidas.Rows.Count;
-            
-
-            
         }
 
         private void dgBebidas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -190,5 +187,86 @@ namespace Monte_Carlos.Venta
                 MessageBox.Show("No selecciono ningun cliente");
             }
         }
+
+        private void InsertarFactura()
+        {
+            if (idCliente !=0 && txtNombreCompleto.Text != string.Empty)
+            {
+                Facturas tFactura = new Facturas();
+
+                tFactura.IdCliente = idCliente;
+                tFactura.Fecha = dtpFecha.Value;
+                tFactura.Estado = false;
+
+                Entity.Facturas.Add(tFactura);
+                Entity.SaveChanges();
+            }
+            else
+            {
+                MessageBox.Show("Faltan datos para realizar la insercion");
+            }
+
+            MessageBox.Show("la factura se inserto sin problemas");
+        }
+
+        private void InsertarDetallesPedido()
+        {
+            int indice = dgDetallesPedido.Rows.Count;
+            DetalleDeFactura tDetallesFactura = new DetalleDeFactura();
+
+            if (indice > 0)
+            {
+                for (int i = 0; i <= indice -2; i++)
+                {
+                    tDetallesFactura.IdFactura = codigoFactura;
+                    tDetallesFactura.IdMenu = Convert.ToInt32(dgDetallesPedido.Rows[i].Cells[0].Value.ToString());
+                    tDetallesFactura.Cantidad = Convert.ToInt32(dgDetallesPedido.Rows[i].Cells[3].Value.ToString());
+
+                    Entity.DetalleDeFactura.Add(tDetallesFactura);
+                    Entity.SaveChanges();
+                }
+            }
+
+            MessageBox.Show("Los detalles se insertaron sin problemas");
+        }
+
+        private void ObtenerCodigoFactura()
+        {
+            string cadena = "";
+            string[] valores;
+            string[] valorFinal;
+            int ultimoCodigo = 0;
+            int siguienteCodigo = 0;
+
+
+            var tFacturas = (from Facturas in Entity.Facturas
+                             orderby Facturas.IdFactura descending
+                             select new
+                             {
+                                 Facturas.IdFactura
+                             }).Take(1);
+                                    
+
+
+            //Extraemos el codigo mediante dos splits(Posible mejora futura)
+            if (tFacturas.ToList().Count > 0)
+            {
+                cadena = tFacturas.ToList()[0].ToString();
+                valores = cadena.Split('=');
+                valorFinal = valores[1].Split('}');
+                ultimoCodigo = Convert.ToInt32(valorFinal[0]);
+                siguienteCodigo = ultimoCodigo + 1;
+            }
+            else
+            {
+                ultimoCodigo = 0;
+                siguienteCodigo = ultimoCodigo + 1;
+            }
+
+            codigoFactura = Convert.ToInt32(siguienteCodigo.ToString());
+
+            MessageBox.Show("El codigo de facturo se genero corretamente");
+        }
+
     }
 }

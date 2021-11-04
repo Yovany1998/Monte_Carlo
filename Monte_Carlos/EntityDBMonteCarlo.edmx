@@ -53,7 +53,7 @@
           <Property Name="Cargo" Type="nvarchar" MaxLength="45" Nullable="false" />
           <Property Name="FechaDeIngreso" Type="date" Nullable="false" />
         </EntityType>
-        <EntityType Name="Factura">
+        <EntityType Name="Facturas">
           <Key>
             <PropertyRef Name="IdFactura" />
           </Key>
@@ -101,11 +101,11 @@
           <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK_DetalleDeFactura_Factura">
-          <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
+        <Association Name="FK_DetalleDeFactura_Facturas">
+          <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
           <End Role="DetalleDeFactura" Type="Self.DetalleDeFactura" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Factura">
+            <Principal Role="Facturas">
               <PropertyRef Name="IdFactura" />
             </Principal>
             <Dependent Role="DetalleDeFactura">
@@ -125,14 +125,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Factura_Clientes">
+        <Association Name="FK_Facturas_Clientes">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
-          <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+          <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clientes">
               <PropertyRef Name="IdCliente" />
             </Principal>
-            <Dependent Role="Factura">
+            <Dependent Role="Facturas">
               <PropertyRef Name="IdCliente" />
             </Dependent>
           </ReferentialConstraint>
@@ -167,22 +167,22 @@
           <EntitySet Name="DetalleDeCompra" EntityType="Self.DetalleDeCompra" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DetalleDeFactura" EntityType="Self.DetalleDeFactura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Empleados" EntityType="Self.Empleados" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reservacion" EntityType="Self.Reservacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_DetalleDeFactura_Factura" Association="Self.FK_DetalleDeFactura_Factura">
-            <End Role="Factura" EntitySet="Factura" />
+          <AssociationSet Name="FK_DetalleDeFactura_Facturas" Association="Self.FK_DetalleDeFactura_Facturas">
+            <End Role="Facturas" EntitySet="Facturas" />
             <End Role="DetalleDeFactura" EntitySet="DetalleDeFactura" />
           </AssociationSet>
           <AssociationSet Name="FK_DetalleDeFactura_Menu" Association="Self.FK_DetalleDeFactura_Menu">
             <End Role="Menu" EntitySet="Menu" />
             <End Role="DetalleDeFactura" EntitySet="DetalleDeFactura" />
           </AssociationSet>
-          <AssociationSet Name="FK_Factura_Clientes" Association="Self.FK_Factura_Clientes">
+          <AssociationSet Name="FK_Facturas_Clientes" Association="Self.FK_Facturas_Clientes">
             <End Role="Clientes" EntitySet="Clientes" />
-            <End Role="Factura" EntitySet="Factura" />
+            <End Role="Facturas" EntitySet="Facturas" />
           </AssociationSet>
           <AssociationSet Name="FK_Reservacion_Clientes" Association="Self.FK_Reservacion_Clientes">
             <End Role="Clientes" EntitySet="Clientes" />
@@ -206,7 +206,7 @@
           <Property Name="Apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Telefono" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Reservacion" Relationship="Self.FK_Reservacion_Cliente" FromRole="Clientes" ToRole="Reservacion" />
-          <NavigationProperty Name="Factura" Relationship="DBFincaMonteCarloModel.FK_Factura_Clientes" FromRole="Clientes" ToRole="Factura" />
+          <NavigationProperty Name="Facturas" Relationship="DBFincaMonteCarloModel.FK_Facturas_Clientes" FromRole="Clientes" ToRole="Facturas" />
         </EntityType>
         <EntityType Name="Compra">
           <Key>
@@ -235,8 +235,8 @@
           <Property Name="IdFactura" Type="Int32" Nullable="false" />
           <Property Name="IdMenu" Type="Int32" Nullable="false" />
           <Property Name="Cantidad" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Factura" Relationship="Self.FK_DetalleDeFactura_Factura" FromRole="DetalleDeFactura" ToRole="Factura" />
           <NavigationProperty Name="Menu" Relationship="Self.FK_DetalleDeFactura_Menu" FromRole="DetalleDeFactura" ToRole="Menu" />
+          <NavigationProperty Name="Facturas" Relationship="DBFincaMonteCarloModel.FK_DetalleDeFactura_Facturas" FromRole="DetalleDeFactura" ToRole="Facturas" />
         </EntityType>
         <EntityType Name="Empleados">
           <Key>
@@ -249,17 +249,6 @@
           <Property Name="Cargo" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="FechaDeIngreso" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Empleado" FromRole="Empleados" ToRole="Usuario" />
-        </EntityType>
-        <EntityType Name="Factura">
-          <Key>
-            <PropertyRef Name="IdFactura" />
-          </Key>
-          <Property Name="IdFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdCliente" Type="Int32" Nullable="false" />
-          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Estado" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="DetalleDeFactura" Relationship="Self.FK_DetalleDeFactura_Factura" FromRole="Factura" ToRole="DetalleDeFactura" />
-          <NavigationProperty Name="Clientes" Relationship="DBFincaMonteCarloModel.FK_Factura_Clientes" FromRole="Factura" ToRole="Clientes" />
         </EntityType>
         <EntityType Name="Menu">
           <Key>
@@ -315,18 +304,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DetalleDeFactura_Factura">
-          <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
-          <End Role="DetalleDeFactura" Type="Self.DetalleDeFactura" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Factura">
-              <PropertyRef Name="IdFactura" />
-            </Principal>
-            <Dependent Role="DetalleDeFactura">
-              <PropertyRef Name="IdFactura" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_DetalleDeFactura_Menu">
           <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
           <End Role="DetalleDeFactura" Type="Self.DetalleDeFactura" Multiplicity="*" />
@@ -357,7 +334,6 @@
           <EntitySet Name="DetalleDeCompra" EntityType="Self.DetalleDeCompra" />
           <EntitySet Name="DetalleDeFactura" EntityType="Self.DetalleDeFactura" />
           <EntitySet Name="Empleados" EntityType="Self.Empleados" />
-          <EntitySet Name="Factura" EntityType="Self.Factura" />
           <EntitySet Name="Menu" EntityType="Self.Menu" />
           <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
           <EntitySet Name="Reservacion" EntityType="Self.Reservacion" />
@@ -365,10 +341,6 @@
           <AssociationSet Name="FK_Reservacion_Cliente" Association="Self.FK_Reservacion_Cliente">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="Reservacion" EntitySet="Reservacion" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DetalleDeFactura_Factura" Association="Self.FK_DetalleDeFactura_Factura">
-            <End Role="Factura" EntitySet="Factura" />
-            <End Role="DetalleDeFactura" EntitySet="DetalleDeFactura" />
           </AssociationSet>
           <AssociationSet Name="FK_DetalleDeFactura_Menu" Association="Self.FK_DetalleDeFactura_Menu">
             <End Role="Menu" EntitySet="Menu" />
@@ -378,20 +350,48 @@
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-          <AssociationSet Name="FK_Factura_Clientes" Association="DBFincaMonteCarloModel.FK_Factura_Clientes">
+          <EntitySet Name="Facturas" EntityType="DBFincaMonteCarloModel.Facturas" />
+          <AssociationSet Name="FK_Facturas_Clientes" Association="DBFincaMonteCarloModel.FK_Facturas_Clientes">
             <End Role="Clientes" EntitySet="Clientes" />
-            <End Role="Factura" EntitySet="Factura" />
+            <End Role="Facturas" EntitySet="Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetalleDeFactura_Facturas" Association="DBFincaMonteCarloModel.FK_DetalleDeFactura_Facturas">
+            <End Role="Facturas" EntitySet="Facturas" />
+            <End Role="DetalleDeFactura" EntitySet="DetalleDeFactura" />
           </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_Factura_Clientes">
+        <EntityType Name="Facturas">
+          <Key>
+            <PropertyRef Name="IdFactura" />
+          </Key>
+          <Property Name="IdFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCliente" Type="Int32" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Clientes" Relationship="DBFincaMonteCarloModel.FK_Facturas_Clientes" FromRole="Facturas" ToRole="Clientes" />
+          <NavigationProperty Name="DetalleDeFactura" Relationship="DBFincaMonteCarloModel.FK_DetalleDeFactura_Facturas" FromRole="Facturas" ToRole="DetalleDeFactura" />
+        </EntityType>
+        <Association Name="FK_Facturas_Clientes">
           <End Type="DBFincaMonteCarloModel.Clientes" Role="Clientes" Multiplicity="1" />
-          <End Type="DBFincaMonteCarloModel.Factura" Role="Factura" Multiplicity="*" />
+          <End Type="DBFincaMonteCarloModel.Facturas" Role="Facturas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clientes">
               <PropertyRef Name="IdCliente" />
             </Principal>
-            <Dependent Role="Factura">
+            <Dependent Role="Facturas">
               <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetalleDeFactura_Facturas">
+          <End Type="DBFincaMonteCarloModel.Facturas" Role="Facturas" Multiplicity="1" />
+          <End Type="DBFincaMonteCarloModel.DetalleDeFactura" Role="DetalleDeFactura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Facturas">
+              <PropertyRef Name="IdFactura" />
+            </Principal>
+            <Dependent Role="DetalleDeFactura">
+              <PropertyRef Name="IdFactura" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -454,16 +454,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Factura">
-            <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Factura">
-              <MappingFragment StoreEntitySet="Factura">
-                <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
-                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Menu">
             <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Menu">
               <MappingFragment StoreEntitySet="Menu">
@@ -504,6 +494,16 @@
                 <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Facturas">
+            <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Facturas">
+              <MappingFragment StoreEntitySet="Facturas">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

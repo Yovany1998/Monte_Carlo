@@ -18,7 +18,7 @@ namespace Monte_Carlos
         public Clientes()
         {
             this.Reservacion = new HashSet<Reservacion>();
-            this.Factura = new HashSet<Factura>();
+            this.Facturas = new HashSet<Facturas>();
         }
     
         public int IdCliente { get; set; }
@@ -29,6 +29,6 @@ namespace Monte_Carlos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reservacion> Reservacion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Factura> Factura { get; set; }
+        public virtual ICollection<Facturas> Facturas { get; set; }
     }
 }
