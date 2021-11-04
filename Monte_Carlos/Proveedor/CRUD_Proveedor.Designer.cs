@@ -82,9 +82,10 @@ namespace Monte_Carlos.Proveedor
             this.btnEliminar.Location = new System.Drawing.Point(454, 681);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(52, 52);
-            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.TabIndex = 8;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -97,8 +98,9 @@ namespace Monte_Carlos.Proveedor
             this.btnNuevo.Location = new System.Drawing.Point(385, 681);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(52, 52);
-            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.TabIndex = 7;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgProvedores
             // 
@@ -108,7 +110,8 @@ namespace Monte_Carlos.Proveedor
             this.dgProvedores.RowHeadersWidth = 51;
             this.dgProvedores.RowTemplate.Height = 24;
             this.dgProvedores.Size = new System.Drawing.Size(507, 191);
-            this.dgProvedores.TabIndex = 3;
+            this.dgProvedores.TabIndex = 9;
+            this.dgProvedores.SelectionChanged += new System.EventHandler(this.dgProvedores_SelectionChanged);
             // 
             // btnAgregar
             // 
@@ -119,9 +122,10 @@ namespace Monte_Carlos.Proveedor
             this.btnAgregar.Location = new System.Drawing.Point(6, 540);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(507, 36);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtObservacion
             // 
@@ -130,7 +134,7 @@ namespace Monte_Carlos.Proveedor
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.Size = new System.Drawing.Size(513, 119);
-            this.txtObservacion.TabIndex = 1;
+            this.txtObservacion.TabIndex = 5;
             // 
             // label5
             // 
@@ -146,9 +150,11 @@ namespace Monte_Carlos.Proveedor
             // 
             this.txtRTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRTN.Location = new System.Drawing.Point(0, 297);
+            this.txtRTN.MaxLength = 14;
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(513, 30);
-            this.txtRTN.TabIndex = 1;
+            this.txtRTN.TabIndex = 4;
+            this.txtRTN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRTN_KeyPress);
             // 
             // label6
             // 
@@ -176,7 +182,8 @@ namespace Monte_Carlos.Proveedor
             this.txtNombreDeContacto.Location = new System.Drawing.Point(3, 204);
             this.txtNombreDeContacto.Name = "txtNombreDeContacto";
             this.txtNombreDeContacto.Size = new System.Drawing.Size(513, 30);
-            this.txtNombreDeContacto.TabIndex = 1;
+            this.txtNombreDeContacto.TabIndex = 3;
+            this.txtNombreDeContacto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreDeContacto_KeyPress);
             // 
             // label3
             // 
@@ -192,9 +199,11 @@ namespace Monte_Carlos.Proveedor
             // 
             this.txtNumeroTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroTelefono.Location = new System.Drawing.Point(3, 121);
+            this.txtNumeroTelefono.MaxLength = 9;
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(513, 30);
-            this.txtNumeroTelefono.TabIndex = 1;
+            this.txtNumeroTelefono.TabIndex = 2;
+            this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTelefono_KeyPress);
             // 
             // label2
             // 
@@ -213,6 +222,7 @@ namespace Monte_Carlos.Proveedor
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(513, 30);
             this.txtEmpresa.TabIndex = 1;
+            this.txtEmpresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpresa_KeyPress);
             // 
             // label1
             // 
@@ -230,11 +240,12 @@ namespace Monte_Carlos.Proveedor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1163, 593);
+            this.ClientSize = new System.Drawing.Size(1205, 593);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CRUD_Proveedor";
             this.Text = "CRUD_Proveedor";
+            this.Load += new System.EventHandler(this.CRUD_Proveedor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProvedores)).EndInit();
