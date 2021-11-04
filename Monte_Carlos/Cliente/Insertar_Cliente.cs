@@ -26,30 +26,7 @@ namespace Monte_Carlos.Cliente
 
         private void txtInsertarCliente_Click(object sender, EventArgs e)
         {
-            /*String Identidad = txtIdentidad.Text;
-            var TamanoIdentidad = txtIdentidad.TextLength;
-            if (TamanoIdentidad < 15)
-            {
-                MessageBox.Show("El numero de identidad es muy corto");
-               // txtIdentidad.Focus();
-                return;
-            }
-
-            char guion = Convert.ToChar("-");
-            char Guion1 = txtIdentidad.Text[4];
-            char Guion2 = txtIdentidad.Text[9];
-       if(Guion1 != guion ||  Guion2 != guion) {
-                MessageBox.Show("El numero de idententidad debe llevar guiones o esta mal escrito");
-             //   txtIdentidad.Focus();
-                return;
-            }
-            */
-
-         /*   if (txtIdentidad.Text.Equals(""))
-            {
-                MessageBox.Show("Por favor ingrese el numero de identidad");
-                return;
-            }*/
+            
             if (txtNombre.Text.Equals(""))
             {
                 MessageBox.Show("Por favor ingresar el nombre");

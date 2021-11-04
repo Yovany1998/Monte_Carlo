@@ -510,7 +510,6 @@ D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Ca
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Properties.Resources.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Reservaciones.Insertar_Reservaciones.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Servicio.Ver_Pedido.resources
-D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Salidas.Ingresar_Compras.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Factura.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Generar_Venta.resources
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.GenerateResource.cache
@@ -545,10 +544,6 @@ D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Ca
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\MySqlConnector.xml
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\MySql.Data.xml
-D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\Google.Protobuf.xml
-D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Compression.LZ4.Streams.xml
-D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Compression.LZ4.xml
-D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Hash.xxHash.xml
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe.manifest
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.application
 D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Carta.resources
@@ -782,3 +777,5 @@ C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debu
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CopyComplete
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
+D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.BusquedaClientes.resources
+D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Compras.Crud_Compras.resources
