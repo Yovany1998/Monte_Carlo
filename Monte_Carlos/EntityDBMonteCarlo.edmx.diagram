@@ -10,16 +10,16 @@
         <EntityTypeShape EntityType="DBFincaMonteCarloModel.DetalleDeCompra" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBFincaMonteCarloModel.DetalleDeFactura" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DBFincaMonteCarloModel.Empleados" Width="1.5" PointX="2.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBFincaMonteCarloModel.Factura" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DBFincaMonteCarloModel.Menu" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DBFincaMonteCarloModel.Proveedores" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBFincaMonteCarloModel.Reservacion" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DBFincaMonteCarloModel.Usuario" Width="1.5" PointX="5" PointY="5.125" IsExpanded="true" />
         <AssociationConnector Association="DBFincaMonteCarloModel.FK_Reservacion_Cliente" ManuallyRouted="false" />
-        <AssociationConnector Association="DBFincaMonteCarloModel.FK_DetalleDeFactura_Factura" ManuallyRouted="false" />
         <AssociationConnector Association="DBFincaMonteCarloModel.FK_DetalleDeFactura_Menu" ManuallyRouted="false" />
         <AssociationConnector Association="DBFincaMonteCarloModel.FK_Usuario_Empleado" ManuallyRouted="false" />
-        <AssociationConnector Association="DBFincaMonteCarloModel.FK_Factura_Clientes" />
+        <EntityTypeShape EntityType="DBFincaMonteCarloModel.Facturas" Width="1.5" PointX="8" PointY="10" />
+        <AssociationConnector Association="DBFincaMonteCarloModel.FK_Facturas_Clientes" />
+        <AssociationConnector Association="DBFincaMonteCarloModel.FK_DetalleDeFactura_Facturas" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

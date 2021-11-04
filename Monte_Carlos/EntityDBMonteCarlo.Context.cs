@@ -30,10 +30,10 @@ namespace Monte_Carlos
         public virtual DbSet<DetalleDeCompra> DetalleDeCompra { get; set; }
         public virtual DbSet<DetalleDeFactura> DetalleDeFactura { get; set; }
         public virtual DbSet<Empleados> Empleados { get; set; }
-        public virtual DbSet<Factura> Factura { get; set; }
         public virtual DbSet<Menu> Menu { get; set; }
         public virtual DbSet<Proveedores> Proveedor { get; set; }
         public virtual DbSet<Reservacion> Reservacion { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Facturas> Facturas { get; set; }
     }
 }

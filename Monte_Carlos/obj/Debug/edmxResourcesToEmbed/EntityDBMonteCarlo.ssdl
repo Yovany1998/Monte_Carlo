@@ -48,7 +48,7 @@
     <Property Name="Cargo" Type="nvarchar" MaxLength="45" Nullable="false" />
     <Property Name="FechaDeIngreso" Type="date" Nullable="false" />
   </EntityType>
-  <EntityType Name="Factura">
+  <EntityType Name="Facturas">
     <Key>
       <PropertyRef Name="IdFactura" />
     </Key>
@@ -96,11 +96,11 @@
     <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK_DetalleDeFactura_Factura">
-    <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
+  <Association Name="FK_DetalleDeFactura_Facturas">
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
     <End Role="DetalleDeFactura" Type="Self.DetalleDeFactura" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Factura">
+      <Principal Role="Facturas">
         <PropertyRef Name="IdFactura" />
       </Principal>
       <Dependent Role="DetalleDeFactura">
@@ -120,14 +120,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Factura_Clientes">
+  <Association Name="FK_Facturas_Clientes">
     <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
-    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Clientes">
         <PropertyRef Name="IdCliente" />
       </Principal>
-      <Dependent Role="Factura">
+      <Dependent Role="Facturas">
         <PropertyRef Name="IdCliente" />
       </Dependent>
     </ReferentialConstraint>
@@ -162,22 +162,22 @@
     <EntitySet Name="DetalleDeCompra" EntityType="Self.DetalleDeCompra" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DetalleDeFactura" EntityType="Self.DetalleDeFactura" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Empleados" EntityType="Self.Empleados" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Reservacion" EntityType="Self.Reservacion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_DetalleDeFactura_Factura" Association="Self.FK_DetalleDeFactura_Factura">
-      <End Role="Factura" EntitySet="Factura" />
+    <AssociationSet Name="FK_DetalleDeFactura_Facturas" Association="Self.FK_DetalleDeFactura_Facturas">
+      <End Role="Facturas" EntitySet="Facturas" />
       <End Role="DetalleDeFactura" EntitySet="DetalleDeFactura" />
     </AssociationSet>
     <AssociationSet Name="FK_DetalleDeFactura_Menu" Association="Self.FK_DetalleDeFactura_Menu">
       <End Role="Menu" EntitySet="Menu" />
       <End Role="DetalleDeFactura" EntitySet="DetalleDeFactura" />
     </AssociationSet>
-    <AssociationSet Name="FK_Factura_Clientes" Association="Self.FK_Factura_Clientes">
+    <AssociationSet Name="FK_Facturas_Clientes" Association="Self.FK_Facturas_Clientes">
       <End Role="Clientes" EntitySet="Clientes" />
-      <End Role="Factura" EntitySet="Factura" />
+      <End Role="Facturas" EntitySet="Facturas" />
     </AssociationSet>
     <AssociationSet Name="FK_Reservacion_Clientes" Association="Self.FK_Reservacion_Clientes">
       <End Role="Clientes" EntitySet="Clientes" />

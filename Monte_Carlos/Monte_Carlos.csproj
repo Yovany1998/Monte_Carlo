@@ -146,7 +146,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Factura.cs">
+    <Compile Include="Facturas.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="LINQTODATATABLE.cs" />
@@ -223,6 +223,12 @@
     </Compile>
     <Compile Include="Usuarios\Ingresar_Usuarios.Designer.cs">
       <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\CantidadProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\CantidadProducto.Designer.cs">
+      <DependentUpon>CantidadProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Venta\Factura.cs">
       <SubType>Form</SubType>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Ingresar_Usuarios.resx">
       <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\CantidadProducto.resx">
+      <DependentUpon>CantidadProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
