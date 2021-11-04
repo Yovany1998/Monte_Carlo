@@ -832,6 +832,6 @@ C:\Users\Ariel Mejia\Desktop\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csp
 C:\Users\Ariel Mejia\Desktop\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CoreCompileInputs.cache
 C:\Users\Ariel Mejia\Desktop\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe.manifest
 C:\Users\Ariel Mejia\Desktop\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.application
-C:\Users\Ariel Mejia\Desktop\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CopyComplete
 C:\Users\Ariel Mejia\Desktop\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\Ariel Mejia\Desktop\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
+C:\Users\Ariel Mejia\Desktop\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Ventas_En_Espera.resources

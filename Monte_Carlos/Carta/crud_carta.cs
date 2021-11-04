@@ -13,7 +13,7 @@ namespace Monte_Carlos.Carta
     public partial class Ingreso_Carta : Form
     {
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
-        long idComidaBebida = 0;
+        long idMenu = 0;
         bool editar = false;
         int log;
 
@@ -51,30 +51,30 @@ namespace Monte_Carlos.Carta
 
             if (editar)
             {
-                /*MessageBox.Show("Menu modificado!");
-                var tComidaBebida = Variables.Menu.FirstOrDefault(x => x.IdComidaBebida == idComidaBebida);
-                tComidaBebida.Nombre =txtNombre.Text;
-                tComidaBebida.Precio = Convert.ToDouble(txtPrecio.Text);
-                tComidaBebida.Tipo = cmbTipo.SelectedItem.ToString();
-                Variables.SaveChanges();*/
+                MessageBox.Show("Menu modificado!");
+                var tMenu = Entity.Menu.FirstOrDefault(x => x.IdMenu == idMenu);
+                tMenu.Nombre =txtNombre.Text;
+                //tMenu.Precio = Convert.ToDouble(txtPrecio.Text);
+                tMenu.Tipo = cmbTipo.SelectedItem.ToString();
+                Entity.SaveChanges();
             }
             else
             {
 
-                /*MessageBox.Show("Producto guardado!");
+                MessageBox.Show("Menu guardado!");
                 Menu tbMenu = new Menu
                 {
                     Nombre = Convert.ToString(txtNombre.Text),
-                    Precio = Convert.ToDouble(txtPrecio.Text),
+                    //Precio = Convert.ToDouble(txtPrecio.Text),
                     Tipo = Convert.ToString(cmbTipo.SelectedItem.ToString())
                 };
-                Variables.Menu.Add(tbMenu);
-                Variables.SaveChanges();*/
+                Entity.Menu.Add(tbMenu);
+                Entity.SaveChanges();
             }
             
             Limpiar();
             editar = false;
-            idComidaBebida = 0;
+            idMenu = 0;
 
             CargaDv();
 
@@ -84,16 +84,16 @@ namespace Monte_Carlos.Carta
     
         private void CargaDv()
         {
-            /*var tbComidaBebida = from p in Variables.Menu
+            var tbComidaBebida = from p in Entity.Menu
                                  select new
                                  {
-                                     p.IdComidaBebida,
+                                     p.IdMenu,
                                      p.Nombre,
                                      p.Precio,
                                      p.Tipo,
 
                                  };
-            dvComida.DataSource = tbComidaBebida.CopyAnonymusToDataTable();*/
+            dvComida.DataSource = tbComidaBebida.CopyAnonymusToDataTable();
         }
 
     
@@ -108,12 +108,12 @@ namespace Monte_Carlos.Carta
     
         private void Ingreso_Comida_Load(object sender, EventArgs e)
         {
-          //  CargaDv();
-            //dvComida.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            //idComidaBebida = 0;
-            //Limpiar();
-            //editar = false;
-            //log = 1;
+            CargaDv();
+            dvComida.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            idMenu = 0;
+            Limpiar();
+            editar = false;
+            log = 1;
         }
         private void dvComida_SelectionChanged(object sender, EventArgs e)
         {
@@ -165,6 +165,15 @@ namespace Monte_Carlos.Carta
                 CargaDv();*/
             }
         }
-    
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
