@@ -62,10 +62,10 @@ namespace Monte_Carlos.Venta
             this.icoBuscarComidaObebida.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.icoBuscarComidaObebida.IconColor = System.Drawing.SystemColors.ControlText;
             this.icoBuscarComidaObebida.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoBuscarComidaObebida.IconSize = 47;
-            this.icoBuscarComidaObebida.Location = new System.Drawing.Point(139, 110);
+            this.icoBuscarComidaObebida.IconSize = 35;
+            this.icoBuscarComidaObebida.Location = new System.Drawing.Point(149, 122);
             this.icoBuscarComidaObebida.Name = "icoBuscarComidaObebida";
-            this.icoBuscarComidaObebida.Size = new System.Drawing.Size(55, 47);
+            this.icoBuscarComidaObebida.Size = new System.Drawing.Size(45, 35);
             this.icoBuscarComidaObebida.TabIndex = 50;
             this.icoBuscarComidaObebida.TabStop = false;
             // 
