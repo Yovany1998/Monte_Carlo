@@ -99,7 +99,7 @@
             this.txtInsertarCliente.Location = new System.Drawing.Point(278, 216);
             this.txtInsertarCliente.Name = "txtInsertarCliente";
             this.txtInsertarCliente.Size = new System.Drawing.Size(351, 37);
-            this.txtInsertarCliente.TabIndex = 6;
+            this.txtInsertarCliente.TabIndex = 4;
             this.txtInsertarCliente.Text = "Agregar";
             this.txtInsertarCliente.UseVisualStyleBackColor = false;
             this.txtInsertarCliente.Click += new System.EventHandler(this.txtInsertarCliente_Click);
@@ -128,7 +128,7 @@
             this.dvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvClientes.RowHeadersWidth = 51;
             this.dvClientes.Size = new System.Drawing.Size(351, 154);
-            this.dvClientes.TabIndex = 44;
+            this.dvClientes.TabIndex = 7;
             this.dvClientes.SelectionChanged += new System.EventHandler(this.dvClientes_SelectionChanged);
             this.dvClientes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvClientes_MouseClick);
             // 
@@ -167,7 +167,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.btnEliminar.Size = new System.Drawing.Size(39, 41);
-            this.btnEliminar.TabIndex = 46;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -185,7 +185,7 @@
             this.btnNuevo1.Name = "btnNuevo1";
             this.btnNuevo1.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.btnNuevo1.Size = new System.Drawing.Size(39, 41);
-            this.btnNuevo1.TabIndex = 47;
+            this.btnNuevo1.TabIndex = 5;
             this.btnNuevo1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo1.UseVisualStyleBackColor = true;
             this.btnNuevo1.Click += new System.EventHandler(this.btnNuevo1_Click);
