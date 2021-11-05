@@ -54,16 +54,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Factura">
-      <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Factura">
-        <MappingFragment StoreEntitySet="Factura">
-          <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
-          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Menu">
       <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Menu">
         <MappingFragment StoreEntitySet="Menu">
@@ -76,7 +66,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Proveedor">
-      <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Proveedor">
+      <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Proveedores">
         <MappingFragment StoreEntitySet="Proveedor">
           <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
           <ScalarProperty Name="Empresa" ColumnName="Empresa" />
@@ -104,6 +94,16 @@
           <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturas">
+      <EntityTypeMapping TypeName="DBFincaMonteCarloModel.Facturas">
+        <MappingFragment StoreEntitySet="Facturas">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

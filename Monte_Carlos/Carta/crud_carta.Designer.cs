@@ -165,6 +165,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(39, 42);
             this.btnNuevo.TabIndex = 42;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // btnEliminar
             // 
@@ -181,6 +182,7 @@
             this.btnEliminar.TabIndex = 43;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // Ingreso_Carta
             // 

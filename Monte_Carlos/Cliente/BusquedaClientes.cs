@@ -17,6 +17,7 @@ namespace Monte_Carlos.Cliente
         //Variables que almacenaran los datos del cliente para la reservacion
         public string nombreCliente = string.Empty;
         public int idCliente = 0;
+        public string apellidoCliente = string.Empty;
         public BusquedaClientes()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace Monte_Carlos.Cliente
             int indice = dgClientes.CurrentCell.RowIndex;
             idCliente = Convert.ToInt32(dgClientes.Rows[indice].Cells[0].Value.ToString());
             nombreCliente = dgClientes.Rows[indice].Cells[1].Value.ToString();
+            apellidoCliente = dgClientes.Rows[indice].Cells[2].Value.ToString();
 
             this.Close();
         }

@@ -140,7 +140,7 @@ namespace Monte_Carlos
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Salidas.Ingresar_Compras());
+            //AbrirFormEnPanel(new Salidas.Ingresar_Compras());
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -203,7 +203,7 @@ namespace Monte_Carlos
 
         private void IBtnCompra_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Salidas.Ingresar_Compras());
+            //AbrirFormEnPanel(new Compras.Crud_Compras());
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -244,6 +244,16 @@ namespace Monte_Carlos
         }
 
         private void IBtnUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Usuarios.Ingresar_Usuarios());
+        }
+
+        private void IBtnProveedor_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Proveedor.CRUD_Proveedor());
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Usuarios.Ingresar_Usuarios());
         }

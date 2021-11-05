@@ -19,7 +19,7 @@ namespace Monte_Carlos
         public int IdMenu { get; set; }
         public int Cantidad { get; set; }
     
-        public virtual Factura Factura { get; set; }
         public virtual Menu Menu { get; set; }
+        public virtual Facturas Facturas { get; set; }
     }
 }

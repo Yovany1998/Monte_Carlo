@@ -12,6 +12,7 @@ namespace Monte_Carlos
 {
     public partial class Login : Form
     {
+        DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
         public Login()
         {
             InitializeComponent();
@@ -22,11 +23,43 @@ namespace Monte_Carlos
 
         }
 
+        private void Limpiar()
+        {
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
+        }
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio ventana = new Inicio();
-            ventana.Show();
+            if (txtUsuario.Text == string.Empty)
+            {
+                MessageBox.Show("Ingrese usuario");
+                return;
+            }
+
+            if (txtContraseña.Text == string.Empty)
+            {
+                MessageBox.Show("Ingrese contraseña");
+                return;
+            }
+
+            var tUsuarios = Entity.Usuario.FirstOrDefault(x => x.UserName == txtUsuario.Text && x.Password == txtContraseña.Text);
+
+            if (tUsuarios == null)
+            {
+                MessageBox.Show("Usuario o Contrasenia incorrecto");
+                Limpiar();
+                return;
+            }
+            else
+            {
+                Limpiar();
+
+                this.Hide();
+                Inicio ventana = new Inicio();
+                ventana.Show();
+
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -35,9 +68,16 @@ namespace Monte_Carlos
             lblSistema.BackColor = Color.Transparent;
         }
 
+        
+
         private void lblIngresar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+            txtContraseña.PasswordChar = '●';
         }
     }
 }
