@@ -255,6 +255,9 @@
     <Compile Include="Venta\Ventas_En_Espera.Designer.cs">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Venta\CantidadProducto.resx">
+      <DependentUpon>CantidadProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Venta\Ventas_En_Espera.resx">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Ingresar_Usuarios.resx">
       <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Venta\CantidadProducto.resx">
-      <DependentUpon>CantidadProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>

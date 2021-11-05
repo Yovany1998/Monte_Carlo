@@ -218,7 +218,6 @@
             // 
             // btnOrdenesEnEspera
             // 
-            this.btnOrdenesEnEspera.Enabled = false;
             this.btnOrdenesEnEspera.FlatAppearance.BorderSize = 0;
             this.btnOrdenesEnEspera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdenesEnEspera.IconChar = FontAwesome.Sharp.IconChar.ConciergeBell;
@@ -231,6 +230,7 @@
             this.btnOrdenesEnEspera.TabIndex = 50;
             this.btnOrdenesEnEspera.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdenesEnEspera.UseVisualStyleBackColor = true;
+            this.btnOrdenesEnEspera.Click += new System.EventHandler(this.btnOrdenesEnEspera_Click);
             // 
             // icoBuscarComidaObebida
             // 
