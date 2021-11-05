@@ -47,6 +47,7 @@ namespace Monte_Carlos.Usuarios
             this.txtRepetirContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtRepetirContrasena.Multiline = true;
             this.txtRepetirContrasena.Name = "txtRepetirContrasena";
+            this.txtRepetirContrasena.PasswordChar = '*';
             this.txtRepetirContrasena.Size = new System.Drawing.Size(351, 24);
             this.txtRepetirContrasena.TabIndex = 61;
             // 
@@ -59,6 +60,7 @@ namespace Monte_Carlos.Usuarios
             this.txtPassword.MaxLength = 15;
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(351, 24);
             this.txtPassword.TabIndex = 60;
             // 

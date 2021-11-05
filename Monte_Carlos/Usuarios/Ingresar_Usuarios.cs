@@ -35,7 +35,16 @@ namespace Monte_Carlos.Usuarios
                 return hashStr;
             }
         }
+        private void Limpiar()
+        {
+            //dvEmpleado.ClearSelection();
 
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtRepetirContrasena.Text = "";
+          
+
+        }
         private void Ingresar_Usuarios_Load(object sender, EventArgs e)
         {
 
@@ -84,6 +93,12 @@ namespace Monte_Carlos.Usuarios
             var EmpleadoBuscar = Entity.Empleados.FirstOrDefault(x => x.Nombre == txtUsername.Text);
             int EmpleadoGuardar;
             EmpleadoGuardar = EmpleadoBuscar.IdEmpleado;
+                string Departamento = EmpleadoBuscar.Cargo;
+
+                if(Departamento=="Mesero" || Departamento == "Cocinero" || Departamento == "TI")
+                {
+                    MessageBox.Show("El empleado no tiene la autoridad suficiente para tener acceso al sistema");
+                }
 
                 Usuario Uusuario = new Usuario
                 {
@@ -102,15 +117,9 @@ namespace Monte_Carlos.Usuarios
                 txtUsername.Focus();
                 return;
             }
-
-         
-          
-
-            MessageBox.Show("Usuario guardado!");
-        }
-
-                
-           
+            Limpiar();
+            MessageBox.Show("Usuario guardado!");   
+        }      
     }
 }
 
