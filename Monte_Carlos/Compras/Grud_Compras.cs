@@ -16,5 +16,10 @@ namespace Monte_Carlos.Compras
         {
             InitializeComponent();
         }
+
+        private void Grud_Compras_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
