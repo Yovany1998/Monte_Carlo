@@ -12,14 +12,20 @@ namespace Monte_Carlos.Usuarios
 {
     public partial class Administrar_Usuarios : Form
     {
+        
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+        public long enviar;
         long idUsuario = 0;
         bool editar = false;
+        internal static int idUser;
+        
         public Administrar_Usuarios()
         {
             InitializeComponent();
+            
         }
 
+        
         private void CargarDv()
         {
             var tUsuario = from p in Entity.Usuario
@@ -97,15 +103,34 @@ namespace Monte_Carlos.Usuarios
 
         private void icoActualizarUsusario_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Ingresar_Usuarios ventana = new Ingresar_Usuarios();
-            ventana.Show();
+            
 
-            int indice = dgUsuarios.CurrentCell.RowIndex;
-            /*idCliente = Convert.ToInt32(dgClientes.Rows[indice].Cells[0].Value.ToString());
-            nombreCliente = dgClientes.Rows[indice].Cells[1].Value.ToString();
-            apellidoCliente = dgClientes.Rows[indice].Cells[2].Value.ToString();*/
+            Usuarios.Ingresar_Usuarios User = new Usuarios.Ingresar_Usuarios();
+            User.ShowDialog();
+            
+            var tUsuario = from p in Entity.Usuario
+                           select new
+                           {
+                               p.IdUsuario,
+                               p.IdEmpleado,
+                               p.UserName,
+                               p.Password
+                           };
 
+            dgUsuarios.DataSource = tUsuario.CopyAnonymusToDataTable();
+            dgUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            if(dgUsuarios.RowCount > 0)
+            {
+                try
+                {
+                    var taUsuario = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == idUsuario);
+                    lblIdUser.Text = taUsuario.IdUsuario.ToString();
+                }
+                catch (Exception)
+                {
+                    
+                }
+            }
         }
 
         private void dgUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

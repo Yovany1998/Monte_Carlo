@@ -35,6 +35,7 @@ namespace Monte_Carlos.Usuarios
             this.dgUsuarios = new System.Windows.Forms.DataGridView();
             this.btnBorrarUsusario = new FontAwesome.Sharp.IconButton();
             this.icoActualizarUsusario = new FontAwesome.Sharp.IconButton();
+            this.lblIdUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.icoBuscarUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -125,12 +126,22 @@ namespace Monte_Carlos.Usuarios
             this.icoActualizarUsusario.UseVisualStyleBackColor = true;
             this.icoActualizarUsusario.Click += new System.EventHandler(this.icoActualizarUsusario_Click);
             // 
+            // lblIdUser
+            // 
+            this.lblIdUser.AutoSize = true;
+            this.lblIdUser.Location = new System.Drawing.Point(802, 131);
+            this.lblIdUser.Name = "lblIdUser";
+            this.lblIdUser.Size = new System.Drawing.Size(46, 17);
+            this.lblIdUser.TabIndex = 55;
+            this.lblIdUser.Text = "label1";
+            // 
             // Administrar_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1049, 507);
+            this.Controls.Add(this.lblIdUser);
             this.Controls.Add(this.icoActualizarUsusario);
             this.Controls.Add(this.btnBorrarUsusario);
             this.Controls.Add(this.dgUsuarios);
@@ -156,5 +167,6 @@ namespace Monte_Carlos.Usuarios
         private System.Windows.Forms.DataGridView dgUsuarios;
         private FontAwesome.Sharp.IconButton btnBorrarUsusario;
         private FontAwesome.Sharp.IconButton icoActualizarUsusario;
+        private System.Windows.Forms.Label lblIdUser;
     }
 }
