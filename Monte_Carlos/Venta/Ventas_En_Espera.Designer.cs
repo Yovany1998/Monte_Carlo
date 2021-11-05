@@ -80,6 +80,7 @@ namespace Monte_Carlos.Venta
             this.dvVentaEspera.Name = "dvVentaEspera";
             this.dvVentaEspera.Size = new System.Drawing.Size(600, 255);
             this.dvVentaEspera.TabIndex = 52;
+            this.dvVentaEspera.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvVentaEspera_CellDoubleClick);
             // 
             // btnNuevo
             // 

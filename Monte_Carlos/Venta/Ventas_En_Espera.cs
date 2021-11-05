@@ -13,6 +13,7 @@ namespace Monte_Carlos.Venta
     public partial class Ventas_En_Espera : Form
     {
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+        public int codigoVenta;
         public Ventas_En_Espera()
         {
             InitializeComponent();
@@ -70,6 +71,14 @@ namespace Monte_Carlos.Venta
                             select new { ID = t.Key.IdFactura, Cliente = t.Key.Nombre + " " + t.Key.Apellido };
             dvVentaEspera.DataSource = tFacturas.CopyAnonymusToDataTable();
             dvVentaEspera.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void dvVentaEspera_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indice = dvVentaEspera.CurrentCell.RowIndex;
+            codigoVenta = Convert.ToInt32(dvVentaEspera.Rows[indice].Cells[0].Value.ToString());
+            Facturación factura = new Facturación();
+            factura.ShowDialog();
         }
     }
 }
