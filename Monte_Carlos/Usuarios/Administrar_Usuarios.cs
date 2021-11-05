@@ -49,7 +49,18 @@ namespace Monte_Carlos.Usuarios
 
         private void txtBuscarUsuarios_TextChanged(object sender, EventArgs e)
         {
+            string User = txtBuscarUsuarios.Text;
+            var tUsuario = from p in Entity.Usuario
+                           where p.UserName.Contains(User)
+                           select new
+                           {
+                               p.IdUsuario,
+                               p.IdEmpleado,
+                               p.UserName,
+                               p.Password
+                           };
 
+            dgUsuarios.DataSource = tUsuario.CopyAnonymusToDataTable();
         }
 
 

@@ -30,11 +30,9 @@ namespace Monte_Carlos.Empleado
         private void InitializeComponent()
         {
             this.dgProveedores = new System.Windows.Forms.DataGridView();
-            this.icoBuscarProveedores = new FontAwesome.Sharp.IconPictureBox();
             this.txtBuscarProveedores = new System.Windows.Forms.TextBox();
             this.lblListaProveedores = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgProveedores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscarProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // dgProveedores
@@ -46,30 +44,17 @@ namespace Monte_Carlos.Empleado
             this.dgProveedores.RowHeadersWidth = 51;
             this.dgProveedores.Size = new System.Drawing.Size(523, 211);
             this.dgProveedores.TabIndex = 56;
-            // 
-            // icoBuscarProveedores
-            // 
-            this.icoBuscarProveedores.BackColor = System.Drawing.Color.White;
-            this.icoBuscarProveedores.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.icoBuscarProveedores.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.icoBuscarProveedores.IconColor = System.Drawing.SystemColors.ControlText;
-            this.icoBuscarProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoBuscarProveedores.IconSize = 39;
-            this.icoBuscarProveedores.Location = new System.Drawing.Point(265, 135);
-            this.icoBuscarProveedores.Margin = new System.Windows.Forms.Padding(4);
-            this.icoBuscarProveedores.Name = "icoBuscarProveedores";
-            this.icoBuscarProveedores.Size = new System.Drawing.Size(43, 39);
-            this.icoBuscarProveedores.TabIndex = 55;
-            this.icoBuscarProveedores.TabStop = false;
+            this.dgProveedores.SelectionChanged += new System.EventHandler(this.dgProveedores_SelectionChanged);
             // 
             // txtBuscarProveedores
             // 
             this.txtBuscarProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarProveedores.Location = new System.Drawing.Point(332, 135);
+            this.txtBuscarProveedores.Location = new System.Drawing.Point(265, 141);
             this.txtBuscarProveedores.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarProveedores.Name = "txtBuscarProveedores";
             this.txtBuscarProveedores.Size = new System.Drawing.Size(327, 30);
             this.txtBuscarProveedores.TabIndex = 54;
+            this.txtBuscarProveedores.TextChanged += new System.EventHandler(this.txtBuscarProveedores_TextChanged);
             // 
             // lblListaProveedores
             // 
@@ -91,14 +76,14 @@ namespace Monte_Carlos.Empleado
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1049, 507);
             this.Controls.Add(this.dgProveedores);
-            this.Controls.Add(this.icoBuscarProveedores);
             this.Controls.Add(this.txtBuscarProveedores);
             this.Controls.Add(this.lblListaProveedores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Lista_de_Proveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista_de_Proveedores";
+            this.Load += new System.EventHandler(this.Lista_de_Proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgProveedores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscarProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,7 +92,6 @@ namespace Monte_Carlos.Empleado
         #endregion
 
         private System.Windows.Forms.DataGridView dgProveedores;
-        private FontAwesome.Sharp.IconPictureBox icoBuscarProveedores;
         private System.Windows.Forms.TextBox txtBuscarProveedores;
         private System.Windows.Forms.Label lblListaProveedores;
     }

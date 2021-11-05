@@ -30,13 +30,11 @@ namespace Monte_Carlos.Usuarios
         private void InitializeComponent()
         {
             this.lblAdministrarUsusarios = new System.Windows.Forms.Label();
-            this.icoBuscarUsuarios = new FontAwesome.Sharp.IconPictureBox();
             this.txtBuscarUsuarios = new System.Windows.Forms.TextBox();
             this.dgUsuarios = new System.Windows.Forms.DataGridView();
             this.btnBorrarUsusario = new FontAwesome.Sharp.IconButton();
             this.icoActualizarUsusario = new FontAwesome.Sharp.IconButton();
             this.lblIdUser = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscarUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,29 +51,13 @@ namespace Monte_Carlos.Usuarios
             this.lblAdministrarUsusarios.TabIndex = 42;
             this.lblAdministrarUsusarios.Text = "Administracion de Ususarios";
             // 
-            // icoBuscarUsuarios
-            // 
-            this.icoBuscarUsuarios.BackColor = System.Drawing.Color.White;
-            this.icoBuscarUsuarios.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.icoBuscarUsuarios.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.icoBuscarUsuarios.IconColor = System.Drawing.SystemColors.ControlText;
-            this.icoBuscarUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoBuscarUsuarios.IconSize = 39;
-            this.icoBuscarUsuarios.Location = new System.Drawing.Point(261, 110);
-            this.icoBuscarUsuarios.Margin = new System.Windows.Forms.Padding(4);
-            this.icoBuscarUsuarios.Name = "icoBuscarUsuarios";
-            this.icoBuscarUsuarios.Size = new System.Drawing.Size(43, 39);
-            this.icoBuscarUsuarios.TabIndex = 51;
-            this.icoBuscarUsuarios.TabStop = false;
-            this.icoBuscarUsuarios.Click += new System.EventHandler(this.icoBuscarUsuarios_Click);
-            // 
             // txtBuscarUsuarios
             // 
             this.txtBuscarUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarUsuarios.Location = new System.Drawing.Point(328, 110);
+            this.txtBuscarUsuarios.Location = new System.Drawing.Point(261, 118);
             this.txtBuscarUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarUsuarios.Name = "txtBuscarUsuarios";
-            this.txtBuscarUsuarios.Size = new System.Drawing.Size(327, 30);
+            this.txtBuscarUsuarios.Size = new System.Drawing.Size(373, 30);
             this.txtBuscarUsuarios.TabIndex = 50;
             this.txtBuscarUsuarios.TextChanged += new System.EventHandler(this.txtBuscarUsuarios_TextChanged);
             // 
@@ -146,14 +128,13 @@ namespace Monte_Carlos.Usuarios
             this.Controls.Add(this.icoActualizarUsusario);
             this.Controls.Add(this.btnBorrarUsusario);
             this.Controls.Add(this.dgUsuarios);
-            this.Controls.Add(this.icoBuscarUsuarios);
             this.Controls.Add(this.txtBuscarUsuarios);
             this.Controls.Add(this.lblAdministrarUsusarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Administrar_Usuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar_Usuarios";
             this.Load += new System.EventHandler(this.Administrar_Usuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscarUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,7 +144,6 @@ namespace Monte_Carlos.Usuarios
         #endregion
 
         private System.Windows.Forms.Label lblAdministrarUsusarios;
-        private FontAwesome.Sharp.IconPictureBox icoBuscarUsuarios;
         private System.Windows.Forms.TextBox txtBuscarUsuarios;
         private System.Windows.Forms.DataGridView dgUsuarios;
         private FontAwesome.Sharp.IconButton btnBorrarUsusario;
