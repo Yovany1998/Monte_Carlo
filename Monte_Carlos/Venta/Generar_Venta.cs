@@ -268,5 +268,19 @@ namespace Monte_Carlos.Venta
             MessageBox.Show("El codigo de facturo se genero corretamente");
         }
 
+        private void icoBuscarComidaObebida_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarComidaOBebida_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreCompleto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -131,6 +131,12 @@
     <Compile Include="Empleados.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Empleado\Lista_de_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\Lista_de_Proveedores.Designer.cs">
+      <DependentUpon>Lista_de_Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="EntityDBMonteCarlo.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -255,6 +261,9 @@
     <Compile Include="Venta\Ventas_En_Espera.Designer.cs">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Empleado\Lista_de_Proveedores.resx">
+      <DependentUpon>Lista_de_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Venta\Ventas_En_Espera.resx">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
     </EmbeddedResource>

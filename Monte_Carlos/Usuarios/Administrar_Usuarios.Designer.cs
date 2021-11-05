@@ -66,10 +66,10 @@ namespace Monte_Carlos.Usuarios
             this.icoBuscarUsuarios.Size = new System.Drawing.Size(43, 39);
             this.icoBuscarUsuarios.TabIndex = 51;
             this.icoBuscarUsuarios.TabStop = false;
+            this.icoBuscarUsuarios.Click += new System.EventHandler(this.icoBuscarUsuarios_Click);
             // 
             // txtBuscarUsuarios
             // 
-            this.txtBuscarUsuarios.Enabled = false;
             this.txtBuscarUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarUsuarios.Location = new System.Drawing.Point(328, 110);
             this.txtBuscarUsuarios.Margin = new System.Windows.Forms.Padding(4);
@@ -87,6 +87,7 @@ namespace Monte_Carlos.Usuarios
             this.dgUsuarios.RowHeadersWidth = 51;
             this.dgUsuarios.Size = new System.Drawing.Size(523, 211);
             this.dgUsuarios.TabIndex = 52;
+            this.dgUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUsuarios_CellDoubleClick);
             this.dgUsuarios.SelectionChanged += new System.EventHandler(this.dgUsuarios_SelectionChanged);
             this.dgUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgUsuarios_MouseClick);
             // 
@@ -111,7 +112,7 @@ namespace Monte_Carlos.Usuarios
             // 
             this.icoActualizarUsusario.FlatAppearance.BorderSize = 0;
             this.icoActualizarUsusario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icoActualizarUsusario.IconChar = FontAwesome.Sharp.IconChar.Radiation;
+            this.icoActualizarUsusario.IconChar = FontAwesome.Sharp.IconChar.Wrench;
             this.icoActualizarUsusario.IconColor = System.Drawing.Color.Black;
             this.icoActualizarUsusario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icoActualizarUsusario.IconSize = 52;
@@ -122,6 +123,7 @@ namespace Monte_Carlos.Usuarios
             this.icoActualizarUsusario.TabIndex = 54;
             this.icoActualizarUsusario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icoActualizarUsusario.UseVisualStyleBackColor = true;
+            this.icoActualizarUsusario.Click += new System.EventHandler(this.icoActualizarUsusario_Click);
             // 
             // Administrar_Usuarios
             // 

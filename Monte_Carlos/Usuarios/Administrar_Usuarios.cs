@@ -89,5 +89,28 @@ namespace Monte_Carlos.Usuarios
                 editar = false;
             }
         }
+
+        private void icoBuscarUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void icoActualizarUsusario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ingresar_Usuarios ventana = new Ingresar_Usuarios();
+            ventana.Show();
+
+            int indice = dgUsuarios.CurrentCell.RowIndex;
+            /*idCliente = Convert.ToInt32(dgClientes.Rows[indice].Cells[0].Value.ToString());
+            nombreCliente = dgClientes.Rows[indice].Cells[1].Value.ToString();
+            apellidoCliente = dgClientes.Rows[indice].Cells[2].Value.ToString();*/
+
+        }
+
+        private void dgUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }
