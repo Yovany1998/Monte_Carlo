@@ -47,5 +47,10 @@ namespace Monte_Carlos.Venta
             dvVentaEspera.DataSource = tFacturas.CopyAnonymusToDataTable();
             dvVentaEspera.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
