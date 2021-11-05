@@ -15,10 +15,10 @@ namespace Monte_Carlos
     public partial class Reservacion
     {
         public int IdReservacion { get; set; }
-        public string Cliente { get; set; }
-        public string Apellido { get; set; }
-        public string Zona { get; set; }
-        public Nullable<System.DateTime> Fecha { get; set; }
-        public string Hora { get; set; }
+        public int IdCliente { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public int Mesa { get; set; }
+    
+        public virtual Clientes Clientes { get; set; }
     }
 }

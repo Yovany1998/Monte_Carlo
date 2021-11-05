@@ -100,25 +100,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clientes.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Compras.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+    <Compile Include="Cliente\BusquedaClientes.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Conexiones.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Conexiones.Context.tt</DependentUpon>
+    <Compile Include="Cliente\BusquedaClientes.Designer.cs">
+      <DependentUpon>BusquedaClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conexiones.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexiones.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Conexiones.edmx</DependentUpon>
+    <Compile Include="Compra.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="Demas\Entrada.cs">
       <SubType>Form</SubType>
@@ -126,33 +117,45 @@
     <Compile Include="Demas\Entrada.Designer.cs">
       <DependentUpon>Entrada.cs</DependentUpon>
     </Compile>
-    <Compile Include="Demas\Ingresar_Usuario.cs">
-      <SubType>Form</SubType>
+    <Compile Include="DetalleDeCompra.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Demas\Ingresar_Usuario.Designer.cs">
-      <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DetalleReservacion.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DetalleVenta.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+    <Compile Include="DetalleDeFactura.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="Empleados.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Facturas.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+    <Compile Include="EntityDBMonteCarlo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityDBMonteCarlo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityDBMonteCarlo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityDBMonteCarlo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="LINQTODATATABLE.cs" />
-    <Compile Include="Menu.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Menu\Ingreso_Comida-Bebida.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\Ingreso_Comida-Bebida.Designer.cs">
-      <DependentUpon>Ingreso_Comida-Bebida.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carta\crud_carta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carta\crud_carta.Designer.cs">
+      <DependentUpon>crud_carta.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente\Insertar_Cliente.cs">
       <SubType>Form</SubType>
@@ -166,25 +169,28 @@
     <Compile Include="Empleado\Insertar_Empleado.Designer.cs">
       <DependentUpon>Insertar_Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+    <Compile Include="Menu.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs">
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\CRUD_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\CRUD_Proveedor.Designer.cs">
+      <DependentUpon>CRUD_Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reservacion.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
     <Compile Include="Reservaciones\Insertar_Reservaciones.cs">
       <SubType>Form</SubType>
@@ -205,16 +211,25 @@
       <DependentUpon>Crud_compras.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+      <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Ventas.cs">
-      <DependentUpon>Conexiones.tt</DependentUpon>
+    <Compile Include="Usuarios\Ingresar_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Ingresar_Usuarios.Designer.cs">
+      <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Venta\Factura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Venta\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\Facturación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Facturación.Designer.cs">
+      <DependentUpon>Facturación.cs</DependentUpon>
     </Compile>
     <Compile Include="Venta\Generar_Venta.cs">
       <SubType>Form</SubType>
@@ -223,14 +238,24 @@
       <DependentUpon>Generar_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Venta\Validacion.cs" />
+    <EntityDeploy Include="EntityDBMonteCarlo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityDBMonteCarlo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityDBMonteCarlo.edmx.diagram">
+      <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
+    </None>
+    <None Include="Resources\LogoFincaMonteCarlo.png" />
+    <None Include="Resources\elLogo.png" />
+    <None Include="Resources\LogoEnColores.png" />
+    <EmbeddedResource Include="Cliente\BusquedaClientes.resx">
+      <DependentUpon>BusquedaClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Demas\Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Demas\Ingresar_Usuario.resx">
-      <DependentUpon>Ingresar_Usuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu\Ingreso_Comida-Bebida.resx">
-      <DependentUpon>Ingreso_Comida-Bebida.cs</DependentUpon>
+    <EmbeddedResource Include="Carta\crud_carta.resx">
+      <DependentUpon>crud_carta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\Insertar_Cliente.resx">
       <DependentUpon>Insertar_Cliente.cs</DependentUpon>
@@ -238,11 +263,11 @@
     <EmbeddedResource Include="Empleado\Insertar_Empleado.resx">
       <DependentUpon>Insertar_Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -254,6 +279,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Proveedor\CRUD_Proveedor.resx">
+      <DependentUpon>CRUD_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reservaciones\Insertar_Reservaciones.resx">
       <DependentUpon>Insertar_Reservaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,19 +291,28 @@
     <EmbeddedResource Include="Compras\Crud_compras.resx">
       <DependentUpon>Crud_compras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Ingresar_Usuarios.resx">
+      <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Venta\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Facturación.resx">
+      <DependentUpon>Facturación.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Generar_Venta.resx">
       <DependentUpon>Generar_Venta.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Conexiones.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Conexiones.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Conexiones.edmx.diagram">
-      <DependentUpon>Conexiones.edmx</DependentUpon>
-    </None>
+    <Content Include="EntityDBMonteCarlo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
+      <LastGenOutput>EntityDBMonteCarlo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityDBMonteCarlo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityDBMonteCarlo.edmx</DependentUpon>
+      <LastGenOutput>EntityDBMonteCarlo.cs</LastGenOutput>
+    </Content>
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -312,16 +349,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Conexiones.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Conexiones.edmx</DependentUpon>
-      <LastGenOutput>Conexiones.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Conexiones.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Conexiones.edmx</DependentUpon>
-      <LastGenOutput>Conexiones.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />

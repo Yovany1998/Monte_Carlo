@@ -28,357 +28,209 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Insertar_Reservaciones));
-            this.dvReservacion = new System.Windows.Forms.DataGridView();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtHora = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.Fecha = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtLugar = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbCliente = new System.Windows.Forms.ComboBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbComida = new System.Windows.Forms.ComboBox();
-            this.dvRegistro = new System.Windows.Forms.DataGridView();
-            this.Pedidos = new System.Windows.Forms.GroupBox();
-            this.btnLimpiarPedido = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnElimicar = new System.Windows.Forms.Button();
-            this.btnInsertar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dvReservacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dvRegistro)).BeginInit();
-            this.Pedidos.SuspendLayout();
+            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
+            this.btnBuscarCliente = new FontAwesome.Sharp.IconButton();
+            this.lblMesa = new System.Windows.Forms.Label();
+            this.txtMesa = new System.Windows.Forms.TextBox();
+            this.btnAgregarReservacion = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.dgListaReservaciones = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaReservaciones)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dvReservacion
-            // 
-            this.dvReservacion.BackgroundColor = System.Drawing.Color.White;
-            this.dvReservacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvReservacion.Location = new System.Drawing.Point(577, 242);
-            this.dvReservacion.Name = "dvReservacion";
-            this.dvReservacion.RowHeadersWidth = 51;
-            this.dvReservacion.Size = new System.Drawing.Size(318, 218);
-            this.dvReservacion.TabIndex = 8;
-            this.dvReservacion.SelectionChanged += new System.EventHandler(this.dvReservacion_SelectionChanged);
-            this.dvReservacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvReservacion_MouseClick);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.AllowDrop = true;
-            this.txtCantidad.Location = new System.Drawing.Point(188, 58);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCantidad.Multiline = true;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(132, 24);
-            this.txtCantidad.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 58);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 24);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Cantidad:";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 24);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 24);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Pedido:";
-            // 
-            // txtHora
-            // 
-            this.txtHora.AllowDrop = true;
-            this.txtHora.Location = new System.Drawing.Point(420, 75);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(2);
-            this.txtHora.Multiline = true;
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(132, 24);
-            this.txtHora.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(313, 75);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 24);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Hora:";
             // 
             // Fecha
             // 
-            this.Fecha.Location = new System.Drawing.Point(141, 79);
+            this.Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fecha.Location = new System.Drawing.Point(306, 115);
             this.Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.Fecha.Name = "Fecha";
-            this.Fecha.Size = new System.Drawing.Size(132, 20);
+            this.Fecha.Size = new System.Drawing.Size(273, 26);
             this.Fecha.TabIndex = 3;
             // 
-            // label3
+            // lblFecha
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 79);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 24);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Fecha:";
-            // 
-            // txtLugar
-            // 
-            this.txtLugar.AllowDrop = true;
-            this.txtLugar.Location = new System.Drawing.Point(699, 26);
-            this.txtLugar.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLugar.Multiline = true;
-            this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(132, 24);
-            this.txtLugar.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(574, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 24);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Reserva zona:";
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(303, 96);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(99, 24);
+            this.lblFecha.TabIndex = 31;
+            this.lblFecha.Text = "Fecha:";
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 26);
+            this.label1.Location = new System.Drawing.Point(303, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 24);
+            this.label1.Size = new System.Drawing.Size(99, 24);
             this.label1.TabIndex = 26;
             this.label1.Text = "Nombre:";
             // 
-            // cmbCliente
+            // txtNombreCompleto
             // 
-            this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(143, 26);
-            this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(130, 21);
-            this.cmbCliente.TabIndex = 0;
-            this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
+            this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCompleto.Location = new System.Drawing.Point(306, 36);
+            this.txtNombreCompleto.Name = "txtNombreCompleto";
+            this.txtNombreCompleto.Size = new System.Drawing.Size(273, 26);
+            this.txtNombreCompleto.TabIndex = 32;
             // 
-            // txtApellido
+            // btnBuscarCliente
             // 
-            this.txtApellido.AllowDrop = true;
-            this.txtApellido.Enabled = false;
-            this.txtApellido.Location = new System.Drawing.Point(420, 26);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
-            this.txtApellido.Multiline = true;
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(132, 24);
-            this.txtApellido.TabIndex = 1;
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.btnBuscarCliente.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnBuscarCliente.IconColor = System.Drawing.Color.Black;
+            this.btnBuscarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(306, 62);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(193, 32);
+            this.btnBuscarCliente.TabIndex = 33;
+            this.btnBuscarCliente.Text = "Buscar Cliente";
+            this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
-            // label6
+            // lblMesa
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(313, 26);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 24);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Apellido:";
+            this.lblMesa.BackColor = System.Drawing.Color.Transparent;
+            this.lblMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMesa.Location = new System.Drawing.Point(303, 160);
+            this.lblMesa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMesa.Name = "lblMesa";
+            this.lblMesa.Size = new System.Drawing.Size(99, 24);
+            this.lblMesa.TabIndex = 36;
+            this.lblMesa.Text = "Mesa";
             // 
-            // cmbComida
+            // txtMesa
             // 
-            this.cmbComida.FormattingEnabled = true;
-            this.cmbComida.Location = new System.Drawing.Point(189, 27);
-            this.cmbComida.Name = "cmbComida";
-            this.cmbComida.Size = new System.Drawing.Size(130, 21);
-            this.cmbComida.TabIndex = 0;
+            this.txtMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMesa.Location = new System.Drawing.Point(306, 180);
+            this.txtMesa.Name = "txtMesa";
+            this.txtMesa.Size = new System.Drawing.Size(273, 26);
+            this.txtMesa.TabIndex = 37;
             // 
-            // dvRegistro
+            // btnAgregarReservacion
             // 
-            this.dvRegistro.BackgroundColor = System.Drawing.Color.White;
-            this.dvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvRegistro.Location = new System.Drawing.Point(5, 205);
-            this.dvRegistro.Name = "dvRegistro";
-            this.dvRegistro.RowHeadersWidth = 51;
-            this.dvRegistro.Size = new System.Drawing.Size(544, 255);
-            this.dvRegistro.TabIndex = 9;
-            this.dvRegistro.SelectionChanged += new System.EventHandler(this.dvRegistro_SelectionChanged);
-            this.dvRegistro.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvRegistro_MouseClick);
+            this.btnAgregarReservacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.btnAgregarReservacion.FlatAppearance.BorderSize = 0;
+            this.btnAgregarReservacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarReservacion.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarReservacion.Location = new System.Drawing.Point(306, 210);
+            this.btnAgregarReservacion.Name = "btnAgregarReservacion";
+            this.btnAgregarReservacion.Size = new System.Drawing.Size(273, 42);
+            this.btnAgregarReservacion.TabIndex = 38;
+            this.btnAgregarReservacion.Text = "Agregar";
+            this.btnAgregarReservacion.UseVisualStyleBackColor = false;
+            this.btnAgregarReservacion.Click += new System.EventHandler(this.btnAgregarReservacion_Click);
             // 
-            // Pedidos
+            // label2
             // 
-            this.Pedidos.BackColor = System.Drawing.Color.Goldenrod;
-            this.Pedidos.Controls.Add(this.btnLimpiarPedido);
-            this.Pedidos.Controls.Add(this.button1);
-            this.Pedidos.Controls.Add(this.cmbComida);
-            this.Pedidos.Controls.Add(this.button2);
-            this.Pedidos.Controls.Add(this.label4);
-            this.Pedidos.Controls.Add(this.label7);
-            this.Pedidos.Controls.Add(this.txtCantidad);
-            this.Pedidos.Location = new System.Drawing.Point(566, 55);
-            this.Pedidos.Name = "Pedidos";
-            this.Pedidos.Size = new System.Drawing.Size(335, 401);
-            this.Pedidos.TabIndex = 49;
-            this.Pedidos.TabStop = false;
-            this.Pedidos.Text = "Area de pedidos de la reservacion";
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(227, 279);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(196, 24);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Lista de reservaciones";
             // 
-            // btnLimpiarPedido
+            // btnAgregar
             // 
-            this.btnLimpiarPedido.BackColor = System.Drawing.Color.Peru;
-            this.btnLimpiarPedido.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpiarPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarPedido.Image")));
-            this.btnLimpiarPedido.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiarPedido.Location = new System.Drawing.Point(125, 132);
-            this.btnLimpiarPedido.Name = "btnLimpiarPedido";
-            this.btnLimpiarPedido.Size = new System.Drawing.Size(97, 49);
-            this.btnLimpiarPedido.TabIndex = 3;
-            this.btnLimpiarPedido.Text = "Nuevo";
-            this.btnLimpiarPedido.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLimpiarPedido.UseVisualStyleBackColor = false;
-            this.btnLimpiarPedido.Click += new System.EventHandler(this.btnLimpiarPedido_Click);
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAgregar.IconColor = System.Drawing.Color.Black;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 52;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregar.Location = new System.Drawing.Point(577, 257);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(46, 50);
+            this.btnAgregar.TabIndex = 41;
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnEliminar
             // 
-            this.button1.BackColor = System.Drawing.Color.Peru;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(11, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 49);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Eliminar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 52;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(623, 257);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 50);
+            this.btnEliminar.TabIndex = 42;
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // dgListaReservaciones
             // 
-            this.button2.BackColor = System.Drawing.Color.Peru;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(228, 132);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 49);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Insertar ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Peru;
-            this.btnNuevo.ForeColor = System.Drawing.Color.Black;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.Location = new System.Drawing.Point(39, 133);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(98, 49);
-            this.btnNuevo.TabIndex = 7;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnElimicar
-            // 
-            this.btnElimicar.BackColor = System.Drawing.Color.Peru;
-            this.btnElimicar.ForeColor = System.Drawing.Color.Black;
-            this.btnElimicar.Image = ((System.Drawing.Image)(resources.GetObject("btnElimicar.Image")));
-            this.btnElimicar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnElimicar.Location = new System.Drawing.Point(206, 133);
-            this.btnElimicar.Name = "btnElimicar";
-            this.btnElimicar.Size = new System.Drawing.Size(98, 49);
-            this.btnElimicar.TabIndex = 6;
-            this.btnElimicar.Text = "Eliminar";
-            this.btnElimicar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnElimicar.UseVisualStyleBackColor = false;
-            // 
-            // btnInsertar
-            // 
-            this.btnInsertar.BackColor = System.Drawing.Color.Peru;
-            this.btnInsertar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertar.Image")));
-            this.btnInsertar.Location = new System.Drawing.Point(375, 133);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(129, 49);
-            this.btnInsertar.TabIndex = 5;
-            this.btnInsertar.Text = "Insertar Reservacion";
-            this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnInsertar.UseVisualStyleBackColor = false;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click_1);
+            this.dgListaReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListaReservaciones.Location = new System.Drawing.Point(230, 306);
+            this.dgListaReservaciones.Name = "dgListaReservaciones";
+            this.dgListaReservaciones.Size = new System.Drawing.Size(448, 150);
+            this.dgListaReservaciones.TabIndex = 43;
             // 
             // Insertar_Reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(902, 468);
-            this.Controls.Add(this.dvRegistro);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.cmbCliente);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnElimicar);
-            this.Controls.Add(this.dvReservacion);
-            this.Controls.Add(this.btnInsertar);
-            this.Controls.Add(this.txtHora);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.Fecha);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtLugar);
+            this.ClientSize = new System.Drawing.Size(902, 499);
+            this.Controls.Add(this.dgListaReservaciones);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnAgregarReservacion);
+            this.Controls.Add(this.txtMesa);
+            this.Controls.Add(this.lblMesa);
+            this.Controls.Add(this.btnBuscarCliente);
+            this.Controls.Add(this.txtNombreCompleto);
+            this.Controls.Add(this.Fecha);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Pedidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Insertar_Reservaciones";
             this.Text = "Insertar_Reservaciones";
             this.Load += new System.EventHandler(this.Insertar_Reservaciones_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dvReservacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dvRegistro)).EndInit();
-            this.Pedidos.ResumeLayout(false);
-            this.Pedidos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaReservaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dvReservacion;
-        private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.TextBox txtHora;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker Fecha;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtLugar;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnElimicar;
-        private System.Windows.Forms.ComboBox cmbCliente;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbComida;
-        private System.Windows.Forms.DataGridView dvRegistro;
-        private System.Windows.Forms.GroupBox Pedidos;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnLimpiarPedido;
+        private System.Windows.Forms.TextBox txtNombreCompleto;
+        private FontAwesome.Sharp.IconButton btnBuscarCliente;
+        private System.Windows.Forms.Label lblMesa;
+        private System.Windows.Forms.TextBox txtMesa;
+        private System.Windows.Forms.Button btnAgregarReservacion;
+        private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconButton btnAgregar;
+        private FontAwesome.Sharp.IconButton btnEliminar;
+        private System.Windows.Forms.DataGridView dgListaReservaciones;
     }
 }
