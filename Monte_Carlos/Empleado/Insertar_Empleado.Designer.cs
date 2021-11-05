@@ -74,7 +74,7 @@
             this.CmbCargo.Location = new System.Drawing.Point(152, 342);
             this.CmbCargo.Name = "CmbCargo";
             this.CmbCargo.Size = new System.Drawing.Size(396, 28);
-            this.CmbCargo.TabIndex = 82;
+            this.CmbCargo.TabIndex = 3;
             // 
             // Ingreso
             // 
@@ -82,7 +82,7 @@
             this.Ingreso.Location = new System.Drawing.Point(152, 406);
             this.Ingreso.Name = "Ingreso";
             this.Ingreso.Size = new System.Drawing.Size(396, 26);
-            this.Ingreso.TabIndex = 80;
+            this.Ingreso.TabIndex = 4;
             // 
             // label3
             // 
@@ -100,7 +100,7 @@
             this.Nacimiento.Location = new System.Drawing.Point(152, 222);
             this.Nacimiento.Name = "Nacimiento";
             this.Nacimiento.Size = new System.Drawing.Size(396, 26);
-            this.Nacimiento.TabIndex = 78;
+            this.Nacimiento.TabIndex = 2;
             // 
             // label6
             // 
@@ -119,7 +119,7 @@
             this.btninsertar.Location = new System.Drawing.Point(152, 444);
             this.btninsertar.Name = "btninsertar";
             this.btninsertar.Size = new System.Drawing.Size(396, 44);
-            this.btninsertar.TabIndex = 72;
+            this.btninsertar.TabIndex = 5;
             this.btninsertar.Text = "Agregar";
             this.btninsertar.UseVisualStyleBackColor = false;
             this.btninsertar.Click += new System.EventHandler(this.btninsertar_Click_1);
@@ -134,7 +134,7 @@
             this.dvEmpleado.RowHeadersWidth = 51;
             this.dvEmpleado.RowTemplate.Height = 24;
             this.dvEmpleado.Size = new System.Drawing.Size(396, 170);
-            this.dvEmpleado.TabIndex = 73;
+            this.dvEmpleado.TabIndex = 8;
             this.dvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvEmpleado_CellContentClick);
             this.dvEmpleado.SelectionChanged += new System.EventHandler(this.dvEmpleado_SelectionChanged_1);
             this.dvEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvEmpleado_MouseClick_1);
@@ -148,7 +148,7 @@
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(396, 24);
-            this.txtApellido.TabIndex = 71;
+            this.txtApellido.TabIndex = 1;
             // 
             // txtNombre
             // 
@@ -159,7 +159,7 @@
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(396, 24);
-            this.txtNombre.TabIndex = 70;
+            this.txtNombre.TabIndex = 0;
             // 
             // label9
             // 
@@ -224,7 +224,7 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.btnNuevo.Size = new System.Drawing.Size(52, 52);
-            this.btnNuevo.TabIndex = 93;
+            this.btnNuevo.TabIndex = 6;
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
@@ -242,7 +242,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.btnEliminar.Size = new System.Drawing.Size(52, 52);
-            this.btnEliminar.TabIndex = 92;
+            this.btnEliminar.TabIndex = 7;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
