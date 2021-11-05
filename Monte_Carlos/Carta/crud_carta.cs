@@ -37,15 +37,13 @@ namespace Monte_Carlos.Carta
                 return;
             }
 
-            //Letra
-            if (Convert.ToInt32(txtPrecio.Text) <= 0)
+            if (Convert.ToDecimal(txtPrecio.Text) <= 0)
             {
                 MessageBox.Show("El precio no puede ser menor o igual a 0");
                 return;
             }
 
-            //Si se deja vacio
-            if (cmbTipo.SelectedItem.ToString().Equals(""))
+            if (cmbTipo.SelectedIndex == -1)
             {
                 MessageBox.Show("Asignar un tipo de comida");
                 return;
@@ -96,6 +94,8 @@ namespace Monte_Carlos.Carta
 
                                  };
             dvComida.DataSource = tbComidaBebida.CopyAnonymusToDataTable();
+            
+
         }
 
         private void Limpiar()
@@ -114,6 +114,7 @@ namespace Monte_Carlos.Carta
             Limpiar();
             editar = false;
             log = 1;
+            cmbTipo.Text = "Seleccionar";
         }
         
         private void dvComida_SelectionChanged(object sender, EventArgs e)
@@ -174,6 +175,57 @@ namespace Monte_Carlos.Carta
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validarSoloNumeros(e);
+        }
+
+        public static void validarSoloNumeros(KeyPressEventArgs n)
+        {
+            if (char.IsDigit(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else if (char.IsSeparator(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else if (char.IsControl(n.KeyChar) || n.KeyChar.ToString().Equals("."))
+            {
+                n.Handled = false;
+            }
+            else
+            {
+                n.Handled = true;
+                MessageBox.Show("Solo se permite ingresar numeros", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public static void validarSoloLetras(KeyPressEventArgs n)
+        {
+            if (Char.IsLetter(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else if (Char.IsControl(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else if (Char.IsSeparator(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else
+            {
+                n.Handled = true;
+                MessageBox.Show("Solo se permite ingresar letras", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validarSoloLetras(e);
         }
     }
 }
