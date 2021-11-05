@@ -267,6 +267,10 @@ namespace Monte_Carlos.Venta
 
             MessageBox.Show("El codigo de facturo se genero corretamente");
         }
-
+        private void btnOrdenesEnEspera_Click(object sender, EventArgs e)
+        {
+            Venta.Ventas_En_Espera ventaEspera = new Venta.Ventas_En_Espera();
+            ventaEspera.Show();
+        }
     }
 }

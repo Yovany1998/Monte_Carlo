@@ -112,12 +112,10 @@
     <Compile Include="Compra.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Compras\Grud_Compras.cs">
+    <Compile Include="Compras\Crud_Compras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Compras\Grud_Compras.Designer.cs">
-      <DependentUpon>Grud_Compras.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Compras\Crud_Compras.Designer.cs" />
     <Compile Include="Demas\Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,8 +255,8 @@
     <Compile Include="Venta\Ventas_En_Espera.Designer.cs">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Compras\Grud_Compras.resx">
-      <DependentUpon>Grud_Compras.cs</DependentUpon>
+    <EmbeddedResource Include="Venta\CantidadProducto.resx">
+      <DependentUpon>CantidadProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Ventas_En_Espera.resx">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
@@ -276,6 +274,7 @@
     <EmbeddedResource Include="Cliente\BusquedaClientes.resx">
       <DependentUpon>BusquedaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Crud_Compras.resx" />
     <EmbeddedResource Include="Demas\Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Ingresar_Usuarios.resx">
       <DependentUpon>Ingresar_Usuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Venta\CantidadProducto.resx">
-      <DependentUpon>CantidadProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>

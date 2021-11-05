@@ -32,11 +32,12 @@ namespace Monte_Carlos.Venta
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.icoBuscarComidaObebida = new FontAwesome.Sharp.IconPictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvVentaEspera = new System.Windows.Forms.DataGridView();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvVentaEspera)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +57,7 @@ namespace Monte_Carlos.Venta
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(255, 26);
             this.textBox1.TabIndex = 51;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // icoBuscarComidaObebida
             // 
@@ -71,13 +73,14 @@ namespace Monte_Carlos.Venta
             this.icoBuscarComidaObebida.TabIndex = 50;
             this.icoBuscarComidaObebida.TabStop = false;
             // 
-            // dataGridView1
+            // dvVentaEspera
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(139, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(600, 255);
-            this.dataGridView1.TabIndex = 52;
+            this.dvVentaEspera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvVentaEspera.Location = new System.Drawing.Point(139, 174);
+            this.dvVentaEspera.Name = "dvVentaEspera";
+            this.dvVentaEspera.Size = new System.Drawing.Size(600, 255);
+            this.dvVentaEspera.TabIndex = 52;
+            this.dvVentaEspera.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvVentaEspera_CellDoubleClick);
             // 
             // btnNuevo
             // 
@@ -115,24 +118,40 @@ namespace Monte_Carlos.Venta
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(139, 447);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 32);
+            this.button1.TabIndex = 96;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Ventas_En_Espera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(886, 533);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvVentaEspera);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.icoBuscarComidaObebida);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ventas_En_Espera";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas_En_Espera";
             this.Load += new System.EventHandler(this.Ventas_En_Espera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvVentaEspera)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,8 +162,9 @@ namespace Monte_Carlos.Venta
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox icoBuscarComidaObebida;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvVentaEspera;
         private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton btnEliminar;
+        private System.Windows.Forms.Button button1;
     }
 }

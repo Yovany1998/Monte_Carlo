@@ -23,8 +23,6 @@ namespace Monte_Carlos.Carta
 
         }
 
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Equals(""))
@@ -32,18 +30,20 @@ namespace Monte_Carlos.Carta
                 MessageBox.Show("Por favor ingrese el Nombre");
                 return;
             }
+
             if (txtPrecio.Text.Equals(""))
             {
                 MessageBox.Show("Por favor ingresar el precio");
                 return;
             }
 
-            if (Convert.ToInt32(txtPrecio.Text) <= 0)
+            if (Convert.ToDecimal(txtPrecio.Text) <= 0)
             {
                 MessageBox.Show("El precio no puede ser menor o igual a 0");
                 return;
             }
-            if (cmbTipo.SelectedItem.ToString().Equals(""))
+
+            if (cmbTipo.SelectedIndex == -1)
             {
                 MessageBox.Show("Asignar un tipo de comida");
                 return;
@@ -55,6 +55,7 @@ namespace Monte_Carlos.Carta
                 var tMenu = Entity.Menu.FirstOrDefault(x => x.IdMenu == idMenu);
                 tMenu.Nombre =txtNombre.Text;
                 //tMenu.Precio = Convert.ToDouble(txtPrecio.Text);
+                tMenu.Precio = Convert.ToDecimal(txtPrecio.Text);
                 tMenu.Tipo = cmbTipo.SelectedItem.ToString();
                 Entity.SaveChanges();
             }
@@ -66,6 +67,7 @@ namespace Monte_Carlos.Carta
                 {
                     Nombre = Convert.ToString(txtNombre.Text),
                     //Precio = Convert.ToDouble(txtPrecio.Text),
+                    Precio = Convert.ToDecimal(txtPrecio.Text),
                     Tipo = Convert.ToString(cmbTipo.SelectedItem.ToString())
                 };
                 Entity.Menu.Add(tbMenu);
@@ -77,8 +79,6 @@ namespace Monte_Carlos.Carta
             idMenu = 0;
 
             CargaDv();
-
-            Limpiar();
             
         }
     
@@ -94,10 +94,10 @@ namespace Monte_Carlos.Carta
 
                                  };
             dvComida.DataSource = tbComidaBebida.CopyAnonymusToDataTable();
+            
+
         }
 
-    
-    
         private void Limpiar()
         {
             txtNombre.Text = "";
@@ -105,7 +105,7 @@ namespace Monte_Carlos.Carta
             cmbTipo.SelectedIndex = cmbTipo.SelectedIndex = cmbTipo.SelectedIndex = -1;
             dvComida.ClearSelection();
         }
-    
+        
         private void Ingreso_Comida_Load(object sender, EventArgs e)
         {
             CargaDv();
@@ -114,35 +114,34 @@ namespace Monte_Carlos.Carta
             Limpiar();
             editar = false;
             log = 1;
+            cmbTipo.Text = "Seleccionar";
         }
+        
         private void dvComida_SelectionChanged(object sender, EventArgs e)
         {
-
-                try
+            try
+            {
+                if (log == 1)
                 {
-                    /*idComidaBebida = Convert.ToInt64(dvComida.SelectedCells[0].Value);
-                    var tComidaBebida = Variables.Menu.FirstOrDefault(x => x.IdComidaBebida == idComidaBebida);
-                    txtNombre.Text = tComidaBebida.Nombre;
-                    txtPrecio.Text = Convert.ToString(tComidaBebida.Precio);
-                    cmbTipo.Text = Convert.ToString(tComidaBebida.Tipo);
-                    editar = true;*/
+                    Limpiar();
                 }
-                catch (Exception)
-                {
+
+                idMenu = Convert.ToInt64(dvComida.SelectedCells[0].Value);
+                var tComidaBebida = Entity.Menu.FirstOrDefault(x => x.IdMenu == idMenu);
+                txtNombre.Text = tComidaBebida.Nombre;
+                //txtPrecio.Text = Convert.ToString(tComidaBebida.Precio);
+                txtPrecio.Text = Convert.ToString(tComidaBebida.Precio);
+                cmbTipo.Text = Convert.ToString(tComidaBebida.Tipo);
+                editar = true;
+            }
+            catch (Exception)
+            {
+                dvComida.ClearSelection();
                 editar = false;
             }
-            if (log == 1)
-            {
-                Limpiar();
-            }
+            
+        }
         
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
         private void dvComida_MouseClick(object sender, MouseEventArgs e)
         {
             if (log == 1)
@@ -151,7 +150,14 @@ namespace Monte_Carlos.Carta
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             if (editar == false)
             {
@@ -159,26 +165,67 @@ namespace Monte_Carlos.Carta
             }
             else
             {
-               /* Variables.Menu.RemoveRange(Variables.Menu.Where(x => x.IdComidaBebida == idComidaBebida));
-                Variables.SaveChanges();
-                Limpiar();
-                CargaDv();*/
+                 Entity.Menu.RemoveRange(Entity.Menu.Where(x => x.IdMenu == idMenu));
+                 Entity.SaveChanges();
+                 Limpiar();
+                 CargaDv();
             }
-        }
-
-        private void btnNuevo_Click_1(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
-        private void btnEliminar_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validarSoloNumeros(e);
+        }
+
+        public static void validarSoloNumeros(KeyPressEventArgs n)
+        {
+            if (char.IsDigit(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else if (char.IsSeparator(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else if (char.IsControl(n.KeyChar) || n.KeyChar.ToString().Equals("."))
+            {
+                n.Handled = false;
+            }
+            else
+            {
+                n.Handled = true;
+                MessageBox.Show("Solo se permite ingresar numeros", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public static void validarSoloLetras(KeyPressEventArgs n)
+        {
+            if (Char.IsLetter(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else if (Char.IsControl(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else if (Char.IsSeparator(n.KeyChar))
+            {
+                n.Handled = false;
+            }
+            else
+            {
+                n.Handled = true;
+                MessageBox.Show("Solo se permite ingresar letras", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validarSoloLetras(e);
         }
     }
 }
