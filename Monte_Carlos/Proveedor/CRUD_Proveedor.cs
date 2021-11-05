@@ -170,5 +170,10 @@ namespace Monte_Carlos.Proveedor
                 return;
             }
         }
+
+        private void dgProvedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

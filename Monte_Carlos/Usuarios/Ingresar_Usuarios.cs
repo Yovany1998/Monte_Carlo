@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 
+
 namespace Monte_Carlos.Usuarios
 {
     public partial class Ingresar_Usuarios : Form
     {
+
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+        public long enviar;
+
         public Ingresar_Usuarios()
         {
             InitializeComponent();
@@ -47,7 +51,11 @@ namespace Monte_Carlos.Usuarios
         }
         private void Ingresar_Usuarios_Load(object sender, EventArgs e)
         {
-
+            var Id = 0;
+            lblIdUser.Text = Administrar_Usuarios.idUser.ToString();
+            Id = Convert.ToInt32(lblIdUser.Text);
+            var TUser = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == Id);
+            txtUsername.Text = TUser.UserName;
         }
 
         private void txtGuardar_Click(object sender, EventArgs e)

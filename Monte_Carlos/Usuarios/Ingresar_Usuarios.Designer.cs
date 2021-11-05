@@ -37,51 +37,51 @@ namespace Monte_Carlos.Usuarios
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblIdUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtRepetirContrasena
             // 
             this.txtRepetirContrasena.AllowDrop = true;
             this.txtRepetirContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepetirContrasena.Location = new System.Drawing.Point(226, 275);
-            this.txtRepetirContrasena.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRepetirContrasena.Location = new System.Drawing.Point(301, 338);
+            this.txtRepetirContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRepetirContrasena.Multiline = true;
             this.txtRepetirContrasena.Name = "txtRepetirContrasena";
             this.txtRepetirContrasena.PasswordChar = '*';
-            this.txtRepetirContrasena.Size = new System.Drawing.Size(351, 24);
+            this.txtRepetirContrasena.Size = new System.Drawing.Size(467, 29);
             this.txtRepetirContrasena.TabIndex = 61;
             // 
             // txtPassword
             // 
             this.txtPassword.AllowDrop = true;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(226, 197);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(301, 242);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.MaxLength = 15;
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(351, 24);
+            this.txtPassword.Size = new System.Drawing.Size(467, 29);
             this.txtPassword.TabIndex = 60;
             // 
             // txtUsername
             // 
             this.txtUsername.AllowDrop = true;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(226, 130);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Location = new System.Drawing.Point(301, 160);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(351, 24);
+            this.txtUsername.Size = new System.Drawing.Size(467, 29);
             this.txtUsername.TabIndex = 59;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(222, 104);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(296, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 24);
+            this.label4.Size = new System.Drawing.Size(208, 30);
             this.label4.TabIndex = 67;
             this.label4.Text = "Username";
             // 
@@ -93,9 +93,10 @@ namespace Monte_Carlos.Usuarios
             this.txtGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuardar.ForeColor = System.Drawing.Color.Black;
             this.txtGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.txtGuardar.Location = new System.Drawing.Point(226, 316);
+            this.txtGuardar.Location = new System.Drawing.Point(301, 389);
+            this.txtGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGuardar.Name = "txtGuardar";
-            this.txtGuardar.Size = new System.Drawing.Size(351, 37);
+            this.txtGuardar.Size = new System.Drawing.Size(468, 46);
             this.txtGuardar.TabIndex = 68;
             this.txtGuardar.Text = "Guardar";
             this.txtGuardar.UseVisualStyleBackColor = false;
@@ -104,39 +105,47 @@ namespace Monte_Carlos.Usuarios
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(222, 249);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(296, 306);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(282, 24);
+            this.label5.Size = new System.Drawing.Size(376, 30);
             this.label5.TabIndex = 69;
             this.label5.Text = "Repita la Contraseña";
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(222, 171);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(296, 210);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 24);
+            this.label7.Size = new System.Drawing.Size(208, 30);
             this.label7.TabIndex = 70;
             this.label7.Text = "Password";
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(222, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(296, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 25);
+            this.label1.Size = new System.Drawing.Size(323, 31);
             this.label1.TabIndex = 71;
             this.label1.Text = "Creación de usuarios";
             // 
+            // lblIdUser
+            // 
+            this.lblIdUser.AutoSize = true;
+            this.lblIdUser.Location = new System.Drawing.Point(819, 171);
+            this.lblIdUser.Name = "lblIdUser";
+            this.lblIdUser.Size = new System.Drawing.Size(36, 17);
+            this.lblIdUser.TabIndex = 72;
+            this.lblIdUser.Text = "user";
+            this.lblIdUser.Visible = false;
+            // 
             // Ingresar_Usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lblIdUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -146,6 +155,7 @@ namespace Monte_Carlos.Usuarios
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Ingresar_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar_Usuarios";
@@ -164,5 +174,6 @@ namespace Monte_Carlos.Usuarios
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblIdUser;
     }
 }

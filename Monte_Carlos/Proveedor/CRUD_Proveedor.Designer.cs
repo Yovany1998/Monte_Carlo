@@ -111,6 +111,7 @@ namespace Monte_Carlos.Proveedor
             this.dgProvedores.RowTemplate.Height = 24;
             this.dgProvedores.Size = new System.Drawing.Size(1059, 334);
             this.dgProvedores.TabIndex = 9;
+            this.dgProvedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProvedores_CellContentClick);
             this.dgProvedores.SelectionChanged += new System.EventHandler(this.dgProvedores_SelectionChanged);
             // 
             // btnAgregar

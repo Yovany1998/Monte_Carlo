@@ -12,14 +12,20 @@ namespace Monte_Carlos.Usuarios
 {
     public partial class Administrar_Usuarios : Form
     {
+        
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+        public long enviar;
         long idUsuario = 0;
         bool editar = false;
+        internal static int idUser;
+        
         public Administrar_Usuarios()
         {
             InitializeComponent();
+            
         }
 
+        
         private void CargarDv()
         {
             var tUsuario = from p in Entity.Usuario
@@ -43,7 +49,18 @@ namespace Monte_Carlos.Usuarios
 
         private void txtBuscarUsuarios_TextChanged(object sender, EventArgs e)
         {
+            string User = txtBuscarUsuarios.Text;
+            var tUsuario = from p in Entity.Usuario
+                           where p.UserName.Contains(User)
+                           select new
+                           {
+                               p.IdUsuario,
+                               p.IdEmpleado,
+                               p.UserName,
+                               p.Password
+                           };
 
+            dgUsuarios.DataSource = tUsuario.CopyAnonymusToDataTable();
         }
 
 
@@ -65,15 +82,17 @@ namespace Monte_Carlos.Usuarios
 
         private void dgUsuarios_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (dgUsuarios.RowCount > 0)
             {
-                idUsuario = Convert.ToInt64(dgUsuarios.SelectedCells[0].Value);
-                editar = true;
-            }
-            catch (Exception)
-            {
-                dgUsuarios.ClearSelection();
-                editar = false;
+                try
+                {
+                    var taUsuario = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == idUsuario);
+                    lblIdUser.Text = taUsuario.IdUsuario.ToString();
+                }
+                catch (Exception)
+                {
+
+                }
             }
         }
 
@@ -88,6 +107,25 @@ namespace Monte_Carlos.Usuarios
             {
                 editar = false;
             }
+        }
+
+        private void icoBuscarUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void icoActualizarUsusario_Click(object sender, EventArgs e)
+        {
+            
+
+            Usuarios.Ingresar_Usuarios User = new Usuarios.Ingresar_Usuarios();
+            idUser = Convert.ToInt32(lblIdUser.Text);
+            User.ShowDialog();
+        }
+
+        private void dgUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

@@ -46,5 +46,10 @@ namespace Monte_Carlos.Cliente
 
             this.Close();
         }
+
+        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
