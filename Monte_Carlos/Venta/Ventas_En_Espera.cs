@@ -13,7 +13,7 @@ namespace Monte_Carlos.Venta
     public partial class Ventas_En_Espera : Form
     {
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
-        public int codigoVenta;
+        internal static int codigoVenta;
         public Ventas_En_Espera()
         {
             InitializeComponent();
