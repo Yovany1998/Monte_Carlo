@@ -12,9 +12,290 @@ namespace Monte_Carlos.Compras
 {
     public partial class Grud_Compras : Form
     {
+        DBFincaMonteCarloEntities1 Variables = new DBFincaMonteCarloEntities1();
+        long idCompras = 0;
+        bool editar = false;
+        Double Subto;
+        int log;
         public Grud_Compras()
         {
             InitializeComponent();
+        }
+
+        private void Limpiar()
+        {
+            txtNombre.Text = "";
+            txtObservacion.Text = "";
+            txtProducto.Text = "";
+            txtCantidad.Text = "";
+            txtPrecio.Text = "";
+            editar = false;
+            dvCompra.ClearSelection();
+        }
+        public DateTime FechaActual
+        {
+            get { return DateTime.Today; ; }
+            set { this.FechaActual = value; }
+        }
+        private void Grud_Compras_Load(object sender, EventArgs e)
+        {
+            log = 1;
+            try
+            {
+
+                DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
+                var tCompras = from j in Variables.DetalleDeCompra
+                               select new
+                               {
+                                   j.IdDetalle,
+                                   j.IdCompra,
+                                   j.IdProveedor,
+                                   j.Producto,
+                                   j.PrecioUnitario,
+                                   j.Cantidad,
+                               };
+                dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
+                dvCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            }
+            catch
+            {
+
+            }
+            
+            idCompras = 0;
+            Limpiar();
+            editar = false;
+        }
+        private void CargaDv()
+        {
+
+            DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
+            var tCompras = from p in Variables.Compra
+                           join j in Variables.DetalleDeCompra on p.IdCompra equals j.IdCompra
+                           select new
+                           {
+                               p.IdCompra,
+                               j.IdProveedor,
+                               j.Producto,
+                               j.PrecioUnitario,
+                               j.Cantidad,
+                               p.Observacion
+                           };
+
+            dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (editar == false)
+            {
+                MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
+            }
+            else
+            {
+                if (dvCompra.RowCount == 2)
+                {
+                    MessageBox.Show("Si eliminas este registro no podras acceder al programa");
+                }
+                else
+                {
+
+                    Variables.DetalleDeCompra.RemoveRange(Variables.DetalleDeCompra.Where(x => x.IdCompra == idCompras));
+                    Variables.SaveChanges();
+                    Limpiar();
+                    CargaDv();
+                }
+            }
+        }
+
+
+        private void dvCompra_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                idCompras = Convert.ToInt64(dvCompra.SelectedCells[0].Value);
+                var tComidaBebida = Variables.DetalleDeCompra.FirstOrDefault(x => x.IdCompra == idCompras);
+                txtCantidad.Text = Convert.ToString(tComidaBebida.Cantidad);
+                txtPrecio.Text = Convert.ToString(tComidaBebida.PrecioUnitario);
+                txtProducto.Text = Convert.ToString(tComidaBebida.Producto);
+                editar = true;
+            }
+            catch (Exception)
+            {
+            }
+            if (log == 1)
+            {
+                Limpiar();
+            }
+
+        }
+
+        private void dvCompra_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            if (log == 1)
+            {
+                log = 2;
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            dvCompra.ClearSelection();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            if (txtProducto.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingrese el producto");
+                return;
+            }
+            if (txtPrecio.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingresar el precio");
+                return;
+            }
+            if (Convert.ToInt32(txtPrecio.Text) <= 0)
+            {
+                MessageBox.Show("El precio no puede ser menor o igual a 0");
+                return;
+            }
+            if (txtCantidad.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingresar la cantidad de la compra");
+                return;
+            }
+
+            Subto = Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(txtPrecio.Text);
+
+            if (editar)
+            {
+                MessageBox.Show("Compra modificada!");
+                var tCompra = Variables.DetalleDeCompra.FirstOrDefault(x => x.IdCompra == idCompras);
+                tCompra.Producto = txtProducto.Text;
+                tCompra.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);               
+                tCompra.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                Variables.SaveChanges();
+            }
+            else
+            {
+                MessageBox.Show("Compra guardada");
+                DetalleDeCompra tbCompra = new DetalleDeCompra
+                {
+                    Producto = txtProducto.Text,
+                    PrecioUnitario = Convert.ToInt32(txtPrecio.Text),
+                    Cantidad = Convert.ToInt32(txtCantidad.Text),
+                };
+                Variables.DetalleDeCompra.Add(tbCompra);
+                Variables.SaveChanges();
+            }
+            editar = false;
+            idCompras = 0;
+            CargaDv();
+            Limpiar();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            dvCompra.ClearSelection();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            if (editar == false)
+            {
+                MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
+            }
+            else
+            {
+                if (dvCompra.RowCount == 2)
+                {
+                    MessageBox.Show("Si eliminas este registro no podras acceder al programa");
+                }
+                else
+                {
+
+                    Variables.DetalleDeCompra.RemoveRange(Variables.DetalleDeCompra.Where(x => x.IdCompra == idCompras));
+                    Variables.SaveChanges();
+                    Limpiar();
+                    CargaDv();
+                }
+            }
+        }
+
+        
+
+        private void btninsertar_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor seleccione el proveedor");
+                return;
+            }
+            if (txtProducto.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingrese el producto");
+                return;
+            }
+            if (txtPrecio.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingresar el precio");
+                return;
+            }
+            if (Convert.ToInt32(txtPrecio.Text) <= 0)
+            {
+                MessageBox.Show("El precio no puede ser menor o igual a 0");
+                return;
+            }
+            if (txtCantidad.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor ingresar la cantidad de la compra");
+                return;
+            }
+
+          //  Subto = Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(txtPrecio.Text);
+
+            if (editar)
+            {
+                MessageBox.Show("Compra modificada!");
+                var tDetalleDeCompra = Variables.DetalleDeCompra.FirstOrDefault(x => x.IdCompra == idCompras);
+                var tCompra = Variables.Compra.FirstOrDefault(x => x.IdCompra == idCompras);
+                tDetalleDeCompra.Producto = txtProducto.Text;
+                tDetalleDeCompra.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);
+                tDetalleDeCompra.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                tCompra.Observacion = txtObservacion.Text;
+                Variables.SaveChanges();
+            }
+            else
+            {
+                var proveedor = Variables.Proveedor.FirstOrDefault(x => x.NombreDeContacto == txtNombre.Text);
+                MessageBox.Show("Compra guardada");
+                DetalleDeCompra tbDetalle = new DetalleDeCompra();
+                Compra tbCompra = new Compra();
+                    tbDetalle.IdProveedor = proveedor.IdProveedor;
+                    tbDetalle.Producto = txtProducto.Text;
+                    tbDetalle.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);
+                    tbDetalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    tbCompra.Observacion = txtObservacion.Text;
+                    tbCompra.Fecha = FechaActual;
+                    
+                
+                Variables.DetalleDeCompra.Add(tbDetalle);
+                Variables.Compra.Add(tbCompra);
+                Variables.SaveChanges();
+            }
+            editar = false;
+            idCompras = 0;
+            CargaDv();
+            Limpiar();
+        }
+
+        private void dvCompra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

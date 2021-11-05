@@ -581,15 +581,9 @@ D:\GitHub\Monte_Carlo\Monte_Carlos\bin\Debug\MySql.Web.xml
 D:\GitHub\Monte_Carlo\Monte_Carlos\bin\Debug\MySqlConnector.xml
 D:\GitHub\Monte_Carlo\Monte_Carlos\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\GitHub\Monte_Carlo\Monte_Carlos\bin\Debug\MySql.Data.xml
-D:\GitHub\Monte_Carlo\Monte_Carlos\bin\Debug\Google.Protobuf.xml
-D:\GitHub\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Compression.LZ4.Streams.xml
-D:\GitHub\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Compression.LZ4.xml
-D:\GitHub\Monte_Carlo\Monte_Carlos\bin\Debug\K4os.Hash.xxHash.xml
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.AssemblyReference.cache
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe.config
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Demas.Entrada.resources
-D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Demas.Ingresar_Usuario.resources
-D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Comida.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.Insertar_Cliente.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Empleado.Insertar_Empleado.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Login.resources
@@ -597,7 +591,6 @@ D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Inicio.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Properties.Resources.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Reservaciones.Insertar_Reservaciones.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Servicio.Ver_Pedido.resources
-D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Salidas.Ingresar_Compras.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Factura.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Generar_Venta.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.GenerateResource.cache
@@ -786,3 +779,12 @@ C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debu
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CopyComplete
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\Hernandez Garcia\Desktop\Repositorios\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Compras.Grud_Compras.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Ventas_En_Espera.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.BusquedaClientes.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Proveedor.CRUD_Proveedor.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Usuarios.Administrar_Usuarios.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Usuarios.Ingresar_Usuarios.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.CantidadProducto.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Facturación.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Carta.resources
