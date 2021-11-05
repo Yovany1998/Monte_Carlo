@@ -52,5 +52,24 @@ namespace Monte_Carlos.Venta
         {
             this.Close();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string nombreCliente = textBox1.Text;
+
+            var tFacturas = from Factura in Entity.Facturas
+                            join Detalle in Entity.DetalleDeFactura
+                            on Factura.IdFactura equals Detalle.IdFactura
+                            join Menu in Entity.Menu
+                            on Detalle.IdMenu equals Menu.IdMenu
+                            join Cliente in Entity.Clientes
+                            on Factura.IdCliente equals Cliente.IdCliente
+                            where Factura.Estado == false
+                            where (Cliente.Nombre + " " + Cliente.Apellido).Contains(nombreCliente)
+                            group Factura by new { Factura.IdFactura, Cliente.Nombre, Cliente.Apellido } into t
+                            select new { ID = t.Key.IdFactura, Cliente = t.Key.Nombre + " " + t.Key.Apellido };
+            dvVentaEspera.DataSource = tFacturas.CopyAnonymusToDataTable();
+            dvVentaEspera.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
     }
 }

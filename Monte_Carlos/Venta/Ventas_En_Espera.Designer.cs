@@ -57,6 +57,7 @@ namespace Monte_Carlos.Venta
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(255, 26);
             this.textBox1.TabIndex = 51;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // icoBuscarComidaObebida
             // 
@@ -124,9 +125,9 @@ namespace Monte_Carlos.Venta
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(139, 447);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 27);
+            this.button1.Size = new System.Drawing.Size(107, 32);
             this.button1.TabIndex = 96;
-            this.button1.Text = "Cerrar";
+            this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
