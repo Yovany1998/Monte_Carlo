@@ -37,12 +37,14 @@ namespace Monte_Carlos.Carta
                 return;
             }
 
+            //Letra
             if (Convert.ToInt32(txtPrecio.Text) <= 0)
             {
                 MessageBox.Show("El precio no puede ser menor o igual a 0");
                 return;
             }
 
+            //Si se deja vacio
             if (cmbTipo.SelectedItem.ToString().Equals(""))
             {
                 MessageBox.Show("Asignar un tipo de comida");
@@ -55,6 +57,7 @@ namespace Monte_Carlos.Carta
                 var tMenu = Entity.Menu.FirstOrDefault(x => x.IdMenu == idMenu);
                 tMenu.Nombre =txtNombre.Text;
                 //tMenu.Precio = Convert.ToDouble(txtPrecio.Text);
+                tMenu.Precio = Convert.ToDecimal(txtPrecio.Text);
                 tMenu.Tipo = cmbTipo.SelectedItem.ToString();
                 Entity.SaveChanges();
             }
@@ -66,6 +69,7 @@ namespace Monte_Carlos.Carta
                 {
                     Nombre = Convert.ToString(txtNombre.Text),
                     //Precio = Convert.ToDouble(txtPrecio.Text),
+                    Precio = Convert.ToDecimal(txtPrecio.Text),
                     Tipo = Convert.ToString(cmbTipo.SelectedItem.ToString())
                 };
                 Entity.Menu.Add(tbMenu);
@@ -125,6 +129,7 @@ namespace Monte_Carlos.Carta
                 var tComidaBebida = Entity.Menu.FirstOrDefault(x => x.IdMenu == idMenu);
                 txtNombre.Text = tComidaBebida.Nombre;
                 //txtPrecio.Text = Convert.ToString(tComidaBebida.Precio);
+                txtPrecio.Text = Convert.ToString(tComidaBebida.Precio);
                 cmbTipo.Text = Convert.ToString(tComidaBebida.Tipo);
                 editar = true;
             }
