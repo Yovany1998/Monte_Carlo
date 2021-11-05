@@ -760,7 +760,6 @@ C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.Ass
 C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe.config
 C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Ventas_En_Espera.resources
 C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.BusquedaClientes.resources
-C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Compras.Crud_Compras.resources
 C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Demas.Entrada.resources
 C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Carta.resources
 C:\Users\HP\Desktop\U\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Cliente.Insertar_Cliente.resources

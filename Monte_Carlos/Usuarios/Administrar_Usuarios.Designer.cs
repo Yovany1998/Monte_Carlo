@@ -134,6 +134,7 @@ namespace Monte_Carlos.Usuarios
             this.lblIdUser.Size = new System.Drawing.Size(46, 17);
             this.lblIdUser.TabIndex = 55;
             this.lblIdUser.Text = "label1";
+            this.lblIdUser.Visible = false;
             // 
             // Administrar_Usuarios
             // 

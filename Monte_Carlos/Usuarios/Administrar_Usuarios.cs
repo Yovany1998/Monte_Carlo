@@ -71,15 +71,17 @@ namespace Monte_Carlos.Usuarios
 
         private void dgUsuarios_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (dgUsuarios.RowCount > 0)
             {
-                idUsuario = Convert.ToInt64(dgUsuarios.SelectedCells[0].Value);
-                editar = true;
-            }
-            catch (Exception)
-            {
-                dgUsuarios.ClearSelection();
-                editar = false;
+                try
+                {
+                    var taUsuario = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == idUsuario);
+                    lblIdUser.Text = taUsuario.IdUsuario.ToString();
+                }
+                catch (Exception)
+                {
+
+                }
             }
         }
 
@@ -106,31 +108,8 @@ namespace Monte_Carlos.Usuarios
             
 
             Usuarios.Ingresar_Usuarios User = new Usuarios.Ingresar_Usuarios();
+            idUser = Convert.ToInt32(lblIdUser.Text);
             User.ShowDialog();
-            
-            var tUsuario = from p in Entity.Usuario
-                           select new
-                           {
-                               p.IdUsuario,
-                               p.IdEmpleado,
-                               p.UserName,
-                               p.Password
-                           };
-
-            dgUsuarios.DataSource = tUsuario.CopyAnonymusToDataTable();
-            dgUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            if(dgUsuarios.RowCount > 0)
-            {
-                try
-                {
-                    var taUsuario = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == idUsuario);
-                    lblIdUser.Text = taUsuario.IdUsuario.ToString();
-                }
-                catch (Exception)
-                {
-                    
-                }
-            }
         }
 
         private void dgUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
