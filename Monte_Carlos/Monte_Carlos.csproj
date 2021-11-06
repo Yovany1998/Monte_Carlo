@@ -112,6 +112,18 @@
     <Compile Include="Compra.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Compras\BuscarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\BuscarProveedor.Designer.cs">
+      <DependentUpon>BuscarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Grud_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Grud_Compras.Designer.cs">
+      <DependentUpon>Grud_Compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Demas\Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +138,6 @@
     </Compile>
     <Compile Include="Empleados.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Empleado\Lista_de_Proveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Empleado\Lista_de_Proveedores.Designer.cs">
-      <DependentUpon>Lista_de_Proveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="EntityDBMonteCarlo.Context.cs">
       <AutoGen>True</AutoGen>
@@ -257,8 +263,11 @@
     <Compile Include="Venta\Ventas_En_Espera.Designer.cs">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Empleado\Lista_de_Proveedores.resx">
-      <DependentUpon>Lista_de_Proveedores.cs</DependentUpon>
+    <EmbeddedResource Include="Compras\BuscarProveedor.resx">
+      <DependentUpon>BuscarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Grud_Compras.resx">
+      <DependentUpon>Grud_Compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Ventas_En_Espera.resx">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
@@ -393,9 +402,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Compras\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

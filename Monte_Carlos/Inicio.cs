@@ -260,24 +260,5 @@ namespace Monte_Carlos
         {
             AbrirFormEnPanel(new Usuarios.Ingresar_Usuarios());
         }
-
-        /*private void IBtnNormal_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            IBtnMax.Visible = true;
-            IBtnNormal.Visible = false;
-        }
-
-        private void iconButton2_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void IBtnMax_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            IBtnMax.Visible = false;
-            IBtnNormal.Visible = true;
-        }*/
     }
 }
