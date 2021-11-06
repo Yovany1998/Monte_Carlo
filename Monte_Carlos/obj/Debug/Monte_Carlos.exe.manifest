@@ -249,13 +249,13 @@
       <dsig:DigestValue>4RJ8mbN+PBHmlkROE0uzv9h1GiZezTZ1mtSeVs+wfzw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Monte_Carlos.exe.config" size="3947">
+  <file name="Monte_Carlos.exe.config" size="2096">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+lLirSmTnBr4xr+G9fpbtkHW3opcuJVlMZ4i0nkTZ+o=</dsig:DigestValue>
+      <dsig:DigestValue>iClyiMk6uPPe7H22vdrHaPS+rKUQ+qre/ycdRTADKDY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
