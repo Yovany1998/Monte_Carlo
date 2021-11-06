@@ -254,7 +254,7 @@
             this.btnOrdenesEnEspera.TabIndex = 50;
             this.btnOrdenesEnEspera.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdenesEnEspera.UseVisualStyleBackColor = true;
-            this.btnOrdenesEnEspera.Click += new System.EventHandler(this.btnOrdenesEnEspera_Click);
+            //this.btnOrdenesEnEspera.Click += new System.EventHandler(this.btnOrdenesEnEspera_Click);
             // 
             // icoBuscarComidaObebida
             // 

@@ -13,6 +13,7 @@ namespace Monte_Carlos
     public partial class Login : Form
     {
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+        internal static string nombreUsuario;
         public Login()
         {
             InitializeComponent();
@@ -60,6 +61,8 @@ namespace Monte_Carlos
                 ventana.Show();
 
             }
+
+            nombreUsuario = txtUsuario.Text;
         }
 
         private void Login_Load(object sender, EventArgs e)

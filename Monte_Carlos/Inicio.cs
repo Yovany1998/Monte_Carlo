@@ -105,11 +105,14 @@ namespace Monte_Carlos
         private void Inicio_Load(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Demas.Entrada());
+            lblUser.Text = Login.nombreUsuario;
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
 
         private void Cerrar_Click(object sender, EventArgs e)
         {
