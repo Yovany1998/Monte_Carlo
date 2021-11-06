@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the
-          requestedExecutionLevel node with one of the following.
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward
-         compatibility then delete the requestedExecutionLevel node.
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="3595296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monte_Carlos.exe" size="3610144">
       <assemblyIdentity name="Monte_Carlos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PfrmgISkm+Nfj6nybrmcpyilcPV2aS0z+8F5yixyhXM=</dsig:DigestValue>
+        <dsig:DigestValue>yuaabBkr67g1ppHCulJ3dWDV91zLj031sFsEOF5IAnw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -249,13 +249,13 @@
       <dsig:DigestValue>4RJ8mbN+PBHmlkROE0uzv9h1GiZezTZ1mtSeVs+wfzw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Monte_Carlos.exe.config" size="2090">
+  <file name="Monte_Carlos.exe.config" size="2096">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>iVoW01qpJVe4VrWUlfySsxE/jWRThBgZEl3zCKYQ5lo=</dsig:DigestValue>
+      <dsig:DigestValue>iClyiMk6uPPe7H22vdrHaPS+rKUQ+qre/ycdRTADKDY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

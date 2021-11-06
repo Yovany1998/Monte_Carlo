@@ -206,7 +206,7 @@ namespace Monte_Carlos
 
         private void IBtnCompra_Click(object sender, EventArgs e)
         {
-            //AbrirFormEnPanel(new Compras.Grud_Compras());
+            AbrirFormEnPanel(new Compras.Grud_Compras());
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
