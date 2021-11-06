@@ -40,11 +40,11 @@ namespace Monte_Carlos.Venta
             this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCantidad.Location = new System.Drawing.Point(59, 44);
+            this.lblCantidad.Location = new System.Drawing.Point(31, 44);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(151, 18);
+            this.lblCantidad.Size = new System.Drawing.Size(74, 18);
             this.lblCantidad.TabIndex = 42;
-            this.lblCantidad.Text = "Detalles del pedido";
+            this.lblCantidad.Text = "Cantidad";
             // 
             // txtCantidad
             // 

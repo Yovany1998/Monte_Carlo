@@ -13,7 +13,7 @@ namespace Monte_Carlos.Venta
     public partial class Ventas_En_Espera : Form
     {
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
-        public int codigoVenta;
+        internal static int codigoVenta;
         public Ventas_En_Espera()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace Monte_Carlos.Venta
                             on Detalle.IdMenu equals Menu.IdMenu
                             join Cliente in Entity.Clientes
                             on Factura.IdCliente equals Cliente.IdCliente
-                            where Factura.Estado == false
+                            where Factura.Estado == 0
                             group Factura by new { Factura.IdFactura, Cliente.Nombre, Cliente.Apellido } into t
                             select new { ID = t.Key.IdFactura, Cliente = t.Key.Nombre + " " + t.Key.Apellido };
             dvVentaEspera.DataSource = tFacturas.CopyAnonymusToDataTable();
@@ -65,7 +65,7 @@ namespace Monte_Carlos.Venta
                             on Detalle.IdMenu equals Menu.IdMenu
                             join Cliente in Entity.Clientes
                             on Factura.IdCliente equals Cliente.IdCliente
-                            where Factura.Estado == false
+                            where Factura.Estado == 0
                             where (Cliente.Nombre + " " + Cliente.Apellido).Contains(nombreCliente)
                             group Factura by new { Factura.IdFactura, Cliente.Nombre, Cliente.Apellido } into t
                             select new { ID = t.Key.IdFactura, Cliente = t.Key.Nombre + " " + t.Key.Apellido };

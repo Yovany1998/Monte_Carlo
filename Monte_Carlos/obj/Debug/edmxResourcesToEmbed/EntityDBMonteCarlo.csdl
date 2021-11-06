@@ -170,7 +170,7 @@
     <Property Name="IdFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdCliente" Type="Int32" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Clientes" Relationship="DBFincaMonteCarloModel.FK_Facturas_Clientes" FromRole="Facturas" ToRole="Clientes" />
     <NavigationProperty Name="DetalleDeFactura" Relationship="DBFincaMonteCarloModel.FK_DetalleDeFactura_Facturas" FromRole="Facturas" ToRole="DetalleDeFactura" />
   </EntityType>

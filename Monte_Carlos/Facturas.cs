@@ -23,7 +23,7 @@ namespace Monte_Carlos
         public int IdFactura { get; set; }
         public int IdCliente { get; set; }
         public System.DateTime Fecha { get; set; }
-        public bool Estado { get; set; }
+        public int Estado { get; set; }
     
         public virtual Clientes Clientes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
