@@ -196,7 +196,7 @@ namespace Monte_Carlos.Venta
 
                 tFactura.IdCliente = idCliente;
                 tFactura.Fecha = dtpFecha.Value;
-                tFactura.Estado = false;
+                tFactura.Estado = 0;
 
                 Entity.Facturas.Add(tFactura);
                 Entity.SaveChanges();
@@ -281,6 +281,12 @@ namespace Monte_Carlos.Venta
         private void txtNombreCompleto_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOrdenesEnEspera_Click(object sender, EventArgs e)
+        {
+            Venta.Ventas_En_Espera ventaEspera = new Venta.Ventas_En_Espera();
+            ventaEspera.Show();
         }
     }
 }

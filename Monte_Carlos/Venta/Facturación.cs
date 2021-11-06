@@ -23,7 +23,9 @@ namespace Monte_Carlos.Venta
             int codigo = Convert.ToInt32(lblCodigoVenta.Text);
             var tbFactura = Entity.Facturas.FirstOrDefault(x => x.IdFactura == codigo);
             tbFactura.Estado = 1;
+            Entity.SaveChanges();
             MessageBox.Show("¡Venta generada correctamente!");
+            
             this.Dispose();
 
         }
