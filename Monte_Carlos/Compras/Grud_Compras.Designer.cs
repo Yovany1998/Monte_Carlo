@@ -66,6 +66,7 @@ namespace Monte_Carlos.Compras
             this.btnNuevo.TabIndex = 98;
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // btnEliminar
             // 
@@ -83,6 +84,7 @@ namespace Monte_Carlos.Compras
             this.btnEliminar.TabIndex = 99;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // label12
             // 
@@ -175,13 +177,16 @@ namespace Monte_Carlos.Compras
             this.dvCompra.Name = "dvCompra";
             this.dvCompra.RowHeadersWidth = 51;
             this.dvCompra.RowTemplate.Height = 24;
-            this.dvCompra.Size = new System.Drawing.Size(396, 170);
+            this.dvCompra.Size = new System.Drawing.Size(486, 170);
             this.dvCompra.TabIndex = 100;
             this.dvCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvCompra_CellContentClick);
+            this.dvCompra.SelectionChanged += new System.EventHandler(this.dvCompra_SelectionChanged_1);
+            this.dvCompra.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvCompra_MouseClick_1);
             // 
             // txtNombre
             // 
             this.txtNombre.AllowDrop = true;
+            this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(131, 83);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
@@ -261,6 +266,7 @@ namespace Monte_Carlos.Compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(654, 777);
             this.Controls.Add(this.label1);

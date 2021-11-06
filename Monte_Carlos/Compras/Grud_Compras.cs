@@ -85,51 +85,6 @@ namespace Monte_Carlos.Compras
             dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (editar == false)
-            {
-                MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
-            }
-            else
-            {
-                if (dvCompra.RowCount == 2)
-                {
-                    MessageBox.Show("Si eliminas este registro no podras acceder al programa");
-                }
-                else
-                {
-
-                    Variables.DetalleDeCompra.RemoveRange(Variables.DetalleDeCompra.Where(x => x.IdCompra == idCompras));
-                    Variables.SaveChanges();
-                    Limpiar();
-                    CargaDv();
-                }
-            }
-        }
-
-
-        private void dvCompra_SelectionChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                idCompras = Convert.ToInt64(dvCompra.SelectedCells[0].Value);
-                var tComidaBebida = Variables.DetalleDeCompra.FirstOrDefault(x => x.IdCompra == idCompras);
-                txtCantidad.Text = Convert.ToString(tComidaBebida.Cantidad);
-                txtPrecio.Text = Convert.ToString(tComidaBebida.PrecioUnitario);
-                txtProducto.Text = Convert.ToString(tComidaBebida.Producto);
-                editar = true;
-            }
-            catch (Exception)
-            {
-            }
-            if (log == 1)
-            {
-                Limpiar();
-            }
-
-        }
-
         private void dvCompra_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -137,70 +92,6 @@ namespace Monte_Carlos.Compras
             {
                 log = 2;
             }
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-            dvCompra.ClearSelection();
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            if (txtProducto.Text.Equals(""))
-            {
-                MessageBox.Show("Por favor ingrese el producto");
-                return;
-            }
-            if (txtPrecio.Text.Equals(""))
-            {
-                MessageBox.Show("Por favor ingresar el precio");
-                return;
-            }
-            if (Convert.ToInt32(txtPrecio.Text) <= 0)
-            {
-                MessageBox.Show("El precio no puede ser menor o igual a 0");
-                return;
-            }
-            if (txtCantidad.Text.Equals(""))
-            {
-                MessageBox.Show("Por favor ingresar la cantidad de la compra");
-                return;
-            }
-
-            Subto = Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(txtPrecio.Text);
-
-            if (editar)
-            {
-                MessageBox.Show("Compra modificada!");
-                var tCompra = Variables.DetalleDeCompra.FirstOrDefault(x => x.IdCompra == idCompras);
-                tCompra.Producto = txtProducto.Text;
-                tCompra.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);               
-                tCompra.Cantidad = Convert.ToInt32(txtCantidad.Text);
-                Variables.SaveChanges();
-            }
-            else
-            {
-                MessageBox.Show("Compra guardada");
-                DetalleDeCompra tbCompra = new DetalleDeCompra
-                {
-                    Producto = txtProducto.Text,
-                    PrecioUnitario = Convert.ToInt32(txtPrecio.Text),
-                    Cantidad = Convert.ToInt32(txtCantidad.Text),
-                };
-                Variables.DetalleDeCompra.Add(tbCompra);
-                Variables.SaveChanges();
-            }
-            editar = false;
-            idCompras = 0;
-            CargaDv();
-            Limpiar();
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-            dvCompra.ClearSelection();
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
@@ -245,11 +136,11 @@ namespace Monte_Carlos.Compras
                 MessageBox.Show("Por favor ingresar el precio");
                 return;
             }
-            if (Convert.ToInt32(txtPrecio.Text) <= 0)
+            /*if (Convert.ToInt32(txtPrecio.Text) <= 0)
             {
                 MessageBox.Show("El precio no puede ser menor o igual a 0");
                 return;
-            }
+            }*/
             if (txtCantidad.Text.Equals(""))
             {
                 MessageBox.Show("Por favor ingresar la cantidad de la compra");
@@ -260,42 +151,117 @@ namespace Monte_Carlos.Compras
 
             if (editar)
             {
-                MessageBox.Show("Compra modificada!");
-                var tDetalleDeCompra = Variables.DetalleDeCompra.FirstOrDefault(x => x.IdCompra == idCompras);
+
+                
+                var tDetalleDeCompra = Variables.DetalleDeCompra.FirstOrDefault(x => x.IdDetalle == idCompras);
                 var tCompra = Variables.Compra.FirstOrDefault(x => x.IdCompra == idCompras);
                 tDetalleDeCompra.Producto = txtProducto.Text;
-                tDetalleDeCompra.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);
+                tDetalleDeCompra.PrecioUnitario = Convert.ToDecimal(txtPrecio.Text);
                 tDetalleDeCompra.Cantidad = Convert.ToInt32(txtCantidad.Text);
                 tCompra.Observacion = txtObservacion.Text;
                 Variables.SaveChanges();
+                MessageBox.Show("Compra modificada!");
             }
             else
             {
-                var proveedor = Variables.Proveedor.FirstOrDefault(x => x.NombreDeContacto == txtNombre.Text);
+                var proveedor = Variables.Proveedor.FirstOrDefault(x => x.Empresa == txtNombre.Text);
                 MessageBox.Show("Compra guardada");
                 DetalleDeCompra tbDetalle = new DetalleDeCompra();
                 Compra tbCompra = new Compra();
-                    tbDetalle.IdProveedor = proveedor.IdProveedor;
-                    tbDetalle.Producto = txtProducto.Text;
-                    tbDetalle.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);
-                    tbDetalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                   
+                   
                     tbCompra.Observacion = txtObservacion.Text;
                     tbCompra.Fecha = FechaActual;
                     
                 
-                Variables.DetalleDeCompra.Add(tbDetalle);
+               
                 Variables.Compra.Add(tbCompra);
+                Variables.SaveChanges();
+                int codigoCompra = tbCompra.IdCompra;
+                tbDetalle.IdProveedor = proveedor.IdProveedor;
+                tbDetalle.IdCompra = codigoCompra;
+                tbDetalle.Producto = txtProducto.Text;
+                tbDetalle.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);
+                tbDetalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                Variables.DetalleDeCompra.Add(tbDetalle);
                 Variables.SaveChanges();
             }
             editar = false;
-            idCompras = 0;
             CargaDv();
+            idCompras = 0;
             Limpiar();
         }
 
         private void dvCompra_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            if (editar == false)
+            {
+                MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
+            }
+            else
+            {
+                if (dvCompra.RowCount == 2)
+                {
+                    MessageBox.Show("Si eliminas este registro no podras acceder al programa");
+                }
+                else
+                {
+
+                    Variables.DetalleDeCompra.RemoveRange(Variables.DetalleDeCompra.Where(x => x.IdCompra == idCompras));
+                    Variables.SaveChanges();
+                    Limpiar();
+                    CargaDv();
+                }
+            }
+        }
+
+        private void dvCompra_SelectionChanged_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                idCompras = Convert.ToInt64(dvCompra.SelectedCells[0].Value);
+                var tbCompra = Variables.Compra.FirstOrDefault(x => x.IdCompra == idCompras);
+                var tbDetalle = Variables.DetalleDeCompra.FirstOrDefault(x => x.IdDetalle == idCompras);
+                var tbProveedor = Variables.Proveedor.FirstOrDefault(x => x.IdProveedor == tbDetalle.IdProveedor );
+                txtNombre.Text = tbProveedor.Empresa;
+                txtCantidad.Text = Convert.ToString(tbDetalle.Cantidad);
+                txtPrecio.Text = Convert.ToString(tbDetalle.PrecioUnitario);
+                txtProducto.Text = tbDetalle.Producto;
+                txtObservacion.Text = tbCompra.Observacion;
+                editar = true;
+                
+            }
+            catch (Exception)
+            {
+                editar = false;
+            }
+            if (log == 1)
+            {
+                Limpiar();
+            }
+
+
+
+        }
+
+        private void dvCompra_MouseClick_1(object sender, MouseEventArgs e)
+        {
+
+            if (log == 1)
+            {
+                log = 2;
+            }
         }
     }
 }

@@ -146,7 +146,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4XHQnVQRDSCxxqF6othRQba1uMGC5I+pLzeeRoR96I4=</dsig:DigestValue>
+        <dsig:DigestValue>06YpxFT54rkPXQuPQlY7brZlCvVdzXRbxLD6QosISJ4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -369,13 +369,13 @@
       <dsig:DigestValue>4RJ8mbN+PBHmlkROE0uzv9h1GiZezTZ1mtSeVs+wfzw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Monte_Carlos.exe.config" size="4263">
+  <file name="Monte_Carlos.exe.config" size="4276">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4jAabjavqwgM9+cArK2NG1ci7Nv7mqRRldCiTAUh5hs=</dsig:DigestValue>
+      <dsig:DigestValue>jhhnqSUcJkmhImrgn2RjutFQPpsaSHZNDI9zVfwIwzA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
