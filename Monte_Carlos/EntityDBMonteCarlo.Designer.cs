@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'D:\Universidad\III P 2021\Gestión de proyectos\Repositorio\Monte_Carlo\Monte_Carlos\EntityDBMonteCarlo.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\luis_\Documents\UNICAH\2021\Gestion de Proyectos Informaticos\Monte_Carlo\Monte_Carlos\EntityDBMonteCarlo.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

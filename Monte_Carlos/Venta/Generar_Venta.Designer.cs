@@ -45,14 +45,13 @@
             this.lblPedido = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnOrdenesEnEspera = new FontAwesome.Sharp.IconButton();
-            this.icoBuscarComidaObebida = new FontAwesome.Sharp.IconPictureBox();
             this.btnBuscarCliente = new FontAwesome.Sharp.IconButton();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.lblBuscarEnElMenu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgBebidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgComidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDetallesPedido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDetallesPedido
@@ -61,16 +60,16 @@
             this.lblDetallesPedido.BackColor = System.Drawing.Color.Transparent;
             this.lblDetallesPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetallesPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDetallesPedido.Location = new System.Drawing.Point(33, 97);
+            this.lblDetallesPedido.Location = new System.Drawing.Point(120, 154);
             this.lblDetallesPedido.Name = "lblDetallesPedido";
-            this.lblDetallesPedido.Size = new System.Drawing.Size(190, 24);
+            this.lblDetallesPedido.Size = new System.Drawing.Size(151, 18);
             this.lblDetallesPedido.TabIndex = 41;
             this.lblDetallesPedido.Text = "Detalles del pedido";
             // 
             // dgBebidas
             // 
             this.dgBebidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBebidas.Location = new System.Drawing.Point(31, 184);
+            this.dgBebidas.Location = new System.Drawing.Point(36, 200);
             this.dgBebidas.Name = "dgBebidas";
             this.dgBebidas.RowHeadersWidth = 51;
             this.dgBebidas.Size = new System.Drawing.Size(361, 150);
@@ -79,10 +78,11 @@
             // 
             // txtNombreCompleto
             // 
+            this.txtNombreCompleto.Enabled = false;
             this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCompleto.Location = new System.Drawing.Point(36, 28);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(372, 30);
+            this.txtNombreCompleto.Size = new System.Drawing.Size(372, 26);
             this.txtNombreCompleto.TabIndex = 46;
             this.txtNombreCompleto.TextChanged += new System.EventHandler(this.txtNombreCompleto_TextChanged);
             // 
@@ -98,11 +98,10 @@
             // 
             // txtBuscarComidaOBebida
             // 
-            this.txtBuscarComidaOBebida.Enabled = false;
             this.txtBuscarComidaOBebida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarComidaOBebida.Location = new System.Drawing.Point(94, 125);
+            this.txtBuscarComidaOBebida.Location = new System.Drawing.Point(36, 113);
             this.txtBuscarComidaOBebida.Name = "txtBuscarComidaOBebida";
-            this.txtBuscarComidaOBebida.Size = new System.Drawing.Size(222, 30);
+            this.txtBuscarComidaOBebida.Size = new System.Drawing.Size(222, 26);
             this.txtBuscarComidaOBebida.TabIndex = 48;
             this.txtBuscarComidaOBebida.TextChanged += new System.EventHandler(this.txtBuscarComidaOBebida_TextChanged);
             // 
@@ -112,9 +111,9 @@
             this.lblBebidas.BackColor = System.Drawing.Color.Transparent;
             this.lblBebidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBebidas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBebidas.Location = new System.Drawing.Point(33, 163);
+            this.lblBebidas.Location = new System.Drawing.Point(38, 179);
             this.lblBebidas.Name = "lblBebidas";
-            this.lblBebidas.Size = new System.Drawing.Size(85, 24);
+            this.lblBebidas.Size = new System.Drawing.Size(68, 18);
             this.lblBebidas.TabIndex = 51;
             this.lblBebidas.Text = "Bebidas";
             // 
@@ -124,16 +123,16 @@
             this.lblComidas.BackColor = System.Drawing.Color.Transparent;
             this.lblComidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComidas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblComidas.Location = new System.Drawing.Point(33, 346);
+            this.lblComidas.Location = new System.Drawing.Point(38, 362);
             this.lblComidas.Name = "lblComidas";
-            this.lblComidas.Size = new System.Drawing.Size(91, 24);
+            this.lblComidas.Size = new System.Drawing.Size(75, 18);
             this.lblComidas.TabIndex = 53;
             this.lblComidas.Text = "Comidas";
             // 
             // dgComidas
             // 
             this.dgComidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgComidas.Location = new System.Drawing.Point(31, 367);
+            this.dgComidas.Location = new System.Drawing.Point(36, 383);
             this.dgComidas.Name = "dgComidas";
             this.dgComidas.RowHeadersWidth = 51;
             this.dgComidas.Size = new System.Drawing.Size(361, 150);
@@ -210,7 +209,7 @@
             this.lblPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblPedido.Location = new System.Drawing.Point(594, 90);
             this.lblPedido.Name = "lblPedido";
-            this.lblPedido.Size = new System.Drawing.Size(76, 24);
+            this.lblPedido.Size = new System.Drawing.Size(60, 18);
             this.lblPedido.TabIndex = 56;
             this.lblPedido.Text = "Pedido";
             // 
@@ -237,27 +236,13 @@
             this.btnOrdenesEnEspera.IconColor = System.Drawing.Color.Black;
             this.btnOrdenesEnEspera.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOrdenesEnEspera.IconSize = 52;
-            this.btnOrdenesEnEspera.Location = new System.Drawing.Point(322, 111);
+            this.btnOrdenesEnEspera.Location = new System.Drawing.Point(274, 104);
             this.btnOrdenesEnEspera.Name = "btnOrdenesEnEspera";
             this.btnOrdenesEnEspera.Size = new System.Drawing.Size(86, 47);
             this.btnOrdenesEnEspera.TabIndex = 50;
             this.btnOrdenesEnEspera.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdenesEnEspera.UseVisualStyleBackColor = true;
             this.btnOrdenesEnEspera.Click += new System.EventHandler(this.btnOrdenesEnEspera_Click);
-            // 
-            // icoBuscarComidaObebida
-            // 
-            this.icoBuscarComidaObebida.BackColor = System.Drawing.Color.White;
-            this.icoBuscarComidaObebida.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.icoBuscarComidaObebida.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.icoBuscarComidaObebida.IconColor = System.Drawing.SystemColors.ControlText;
-            this.icoBuscarComidaObebida.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoBuscarComidaObebida.Location = new System.Drawing.Point(56, 118);
-            this.icoBuscarComidaObebida.Name = "icoBuscarComidaObebida";
-            this.icoBuscarComidaObebida.Size = new System.Drawing.Size(32, 32);
-            this.icoBuscarComidaObebida.TabIndex = 49;
-            this.icoBuscarComidaObebida.TabStop = false;
-            this.icoBuscarComidaObebida.Click += new System.EventHandler(this.icoBuscarComidaObebida_Click);
             // 
             // btnBuscarCliente
             // 
@@ -283,9 +268,9 @@
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Location = new System.Drawing.Point(502, 28);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(273, 30);
+            this.dtpFecha.Size = new System.Drawing.Size(273, 26);
             this.dtpFecha.TabIndex = 58;
             // 
             // lblFecha
@@ -298,12 +283,25 @@
             this.lblFecha.TabIndex = 59;
             this.lblFecha.Text = "Fecha:";
             // 
+            // lblBuscarEnElMenu
+            // 
+            this.lblBuscarEnElMenu.AutoSize = true;
+            this.lblBuscarEnElMenu.BackColor = System.Drawing.Color.Transparent;
+            this.lblBuscarEnElMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarEnElMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBuscarEnElMenu.Location = new System.Drawing.Point(33, 95);
+            this.lblBuscarEnElMenu.Name = "lblBuscarEnElMenu";
+            this.lblBuscarEnElMenu.Size = new System.Drawing.Size(148, 18);
+            this.lblBuscarEnElMenu.TabIndex = 60;
+            this.lblBuscarEnElMenu.Text = "Buscar en el menu";
+            // 
             // Generar_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 572);
+            this.Controls.Add(this.lblBuscarEnElMenu);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.iconButton1);
@@ -314,7 +312,6 @@
             this.Controls.Add(this.dgComidas);
             this.Controls.Add(this.lblBebidas);
             this.Controls.Add(this.btnOrdenesEnEspera);
-            this.Controls.Add(this.icoBuscarComidaObebida);
             this.Controls.Add(this.txtBuscarComidaOBebida);
             this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.txtNombreCompleto);
@@ -329,7 +326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgBebidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgComidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDetallesPedido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,7 +338,6 @@
         private System.Windows.Forms.TextBox txtNombreCompleto;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtBuscarComidaOBebida;
-        private FontAwesome.Sharp.IconPictureBox icoBuscarComidaObebida;
         private FontAwesome.Sharp.IconButton btnOrdenesEnEspera;
         private System.Windows.Forms.Label lblBebidas;
         private System.Windows.Forms.Label lblComidas;
@@ -357,5 +352,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblBuscarEnElMenu;
     }
 }

@@ -37,23 +37,12 @@ namespace Monte_Carlos.Venta
            
 
         }
-
-        
-        
-
        
         public DateTime FechaActual
         {
             get { return DateTime.Today; ; }
             set { this.FechaActual = value; }
         }
-
-       
-        
-       
-
-
-       
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -68,9 +57,17 @@ namespace Monte_Carlos.Venta
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            ObtenerCodigoFactura();
-            InsertarFactura();
-            InsertarDetallesPedido();
+            if (idCliente != 0)
+            {
+                ObtenerCodigoFactura();
+                InsertarFactura();
+                InsertarDetallesPedido();
+
+            }
+            else
+            {
+                MessageBox.Show("Verifique que el usuario sea correcto");
+            }
 
         }
 
@@ -78,7 +75,9 @@ namespace Monte_Carlos.Venta
         {
             CargarComida();
             CargarBebida();
-            
+            ContarFacturasEnEspera();
+
+
         }
 
         //Cargamos los datos de las comidas que esten disponibles
@@ -206,7 +205,7 @@ namespace Monte_Carlos.Venta
                 MessageBox.Show("Faltan datos para realizar la insercion");
             }
 
-            MessageBox.Show("la factura se inserto sin problemas");
+            
         }
 
         private void InsertarDetallesPedido()
@@ -227,7 +226,7 @@ namespace Monte_Carlos.Venta
                 }
             }
 
-            MessageBox.Show("Los detalles se insertaron sin problemas");
+            
         }
 
         private void ObtenerCodigoFactura()
@@ -265,7 +264,7 @@ namespace Monte_Carlos.Venta
 
             codigoFactura = Convert.ToInt32(siguienteCodigo.ToString());
 
-            MessageBox.Show("El codigo de facturo se genero corretamente");
+            
         }
 
         private void icoBuscarComidaObebida_Click(object sender, EventArgs e)
@@ -275,7 +274,7 @@ namespace Monte_Carlos.Venta
 
         private void txtBuscarComidaOBebida_TextChanged(object sender, EventArgs e)
         {
-
+            FiltrarMenu(txtBuscarComidaOBebida.Text);
         }
 
         private void txtNombreCompleto_TextChanged(object sender, EventArgs e)
@@ -287,6 +286,51 @@ namespace Monte_Carlos.Venta
         {
             Venta.Ventas_En_Espera ventaEspera = new Venta.Ventas_En_Espera();
             ventaEspera.Show();
+        }
+
+        private void FiltrarMenu(string nombre)
+        {
+
+            //Filtramos la comida
+            var tComida = from Menu in Entity.Menu
+                          where Menu.Tipo == "Comida" && Menu.Disponible == true
+                          where Menu.Nombre.Contains(nombre)
+                          select new
+                          {
+                              Menu.IdMenu,
+                              Menu.Nombre,
+                              Menu.Precio
+                          };
+
+            dgComidas.DataSource = tComida.CopyAnonymusToDataTable();
+            dgComidas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            //Filtrar Bebidas
+            var tBebidas = from Menu in Entity.Menu
+                           where Menu.Tipo == "Bebida" && Menu.Disponible == true
+                           where Menu.Nombre.Contains(nombre)
+                           select new
+                           {
+                               Menu.IdMenu,
+                               Menu.Nombre,
+                               Menu.Precio
+                           };
+
+            dgBebidas.DataSource = tBebidas.CopyAnonymusToDataTable();
+            dgBebidas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void ContarFacturasEnEspera()
+        {
+            var tFacturasEnEspera = from Facturas in Entity.Facturas
+                                    where Facturas.Estado == 0
+                                    select new
+                                    {
+                                        Facturas.IdFactura
+                                    };
+            int count = tFacturasEnEspera.Count();
+
+            btnOrdenesEnEspera.Text = count.ToString();
         }
     }
 }
