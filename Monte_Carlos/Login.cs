@@ -54,15 +54,17 @@ namespace Monte_Carlos
             }
             else
             {
+                nombreUsuario = txtUsuario.Text;
+                MessageBox.Show(nombreUsuario);
                 Limpiar();
-
+                
                 this.Hide();
                 Inicio ventana = new Inicio();
                 ventana.Show();
 
             }
 
-            nombreUsuario = txtUsuario.Text;
+            
         }
 
         private void Login_Load(object sender, EventArgs e)

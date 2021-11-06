@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.PanelIzquierdo = new System.Windows.Forms.Panel();
+            this.lblUser = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -43,7 +44,7 @@
             this.IBtnReservacion = new FontAwesome.Sharp.IconButton();
             this.PanelCentral = new System.Windows.Forms.Panel();
             this.ProgesoBarra = new System.Windows.Forms.Timer(this.components);
-            this.lblUser = new System.Windows.Forms.Label();
+            this.mySqlCommand1 = new MySqlConnector.MySqlCommand();
             this.PanelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,11 +69,20 @@
             this.PanelIzquierdo.Controls.Add(this.IBtnReservacion);
             this.PanelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.PanelIzquierdo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelIzquierdo.Margin = new System.Windows.Forms.Padding(4);
             this.PanelIzquierdo.Name = "PanelIzquierdo";
             this.PanelIzquierdo.Size = new System.Drawing.Size(275, 784);
             this.PanelIzquierdo.TabIndex = 16;
             this.PanelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelIzquierdo_Paint);
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(42, 667);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(46, 17);
+            this.lblUser.TabIndex = 10;
+            this.lblUser.Text = "label1";
             // 
             // iconButton2
             // 
@@ -86,7 +96,7 @@
             this.iconButton2.IconSize = 35;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.Location = new System.Drawing.Point(0, 426);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(273, 46);
             this.iconButton2.TabIndex = 9;
@@ -99,7 +109,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(45, 39);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +128,7 @@
             this.iconButton1.IconSize = 52;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.iconButton1.Location = new System.Drawing.Point(1, 729);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(273, 54);
             this.iconButton1.TabIndex = 8;
@@ -139,7 +149,7 @@
             this.IBtnProveedor.IconSize = 35;
             this.IBtnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IBtnProveedor.Location = new System.Drawing.Point(0, 586);
-            this.IBtnProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IBtnProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnProveedor.Name = "IBtnProveedor";
             this.IBtnProveedor.Size = new System.Drawing.Size(273, 46);
             this.IBtnProveedor.TabIndex = 7;
@@ -160,7 +170,7 @@
             this.IBtnCliente.IconSize = 35;
             this.IBtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IBtnCliente.Location = new System.Drawing.Point(0, 479);
-            this.IBtnCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IBtnCliente.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnCliente.Name = "IBtnCliente";
             this.IBtnCliente.Size = new System.Drawing.Size(273, 46);
             this.IBtnCliente.TabIndex = 6;
@@ -181,7 +191,7 @@
             this.IBtnCarta.IconSize = 35;
             this.IBtnCarta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IBtnCarta.Location = new System.Drawing.Point(0, 268);
-            this.IBtnCarta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IBtnCarta.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnCarta.Name = "IBtnCarta";
             this.IBtnCarta.Size = new System.Drawing.Size(273, 46);
             this.IBtnCarta.TabIndex = 1;
@@ -202,7 +212,7 @@
             this.IBtnCompra.IconSize = 35;
             this.IBtnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IBtnCompra.Location = new System.Drawing.Point(0, 532);
-            this.IBtnCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IBtnCompra.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnCompra.Name = "IBtnCompra";
             this.IBtnCompra.Size = new System.Drawing.Size(273, 46);
             this.IBtnCompra.TabIndex = 5;
@@ -223,7 +233,7 @@
             this.IBtnEmpleado.IconSize = 35;
             this.IBtnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IBtnEmpleado.Location = new System.Drawing.Point(0, 220);
-            this.IBtnEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IBtnEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnEmpleado.Name = "IBtnEmpleado";
             this.IBtnEmpleado.Size = new System.Drawing.Size(273, 46);
             this.IBtnEmpleado.TabIndex = 2;
@@ -244,7 +254,7 @@
             this.IBtnVenta.IconSize = 35;
             this.IBtnVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IBtnVenta.Location = new System.Drawing.Point(0, 318);
-            this.IBtnVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IBtnVenta.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnVenta.Name = "IBtnVenta";
             this.IBtnVenta.Size = new System.Drawing.Size(273, 46);
             this.IBtnVenta.TabIndex = 4;
@@ -265,7 +275,7 @@
             this.IBtnReservacion.IconSize = 35;
             this.IBtnReservacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IBtnReservacion.Location = new System.Drawing.Point(0, 373);
-            this.IBtnReservacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IBtnReservacion.Margin = new System.Windows.Forms.Padding(4);
             this.IBtnReservacion.Name = "IBtnReservacion";
             this.IBtnReservacion.Size = new System.Drawing.Size(273, 46);
             this.IBtnReservacion.TabIndex = 3;
@@ -279,7 +289,7 @@
             this.PanelCentral.BackColor = System.Drawing.Color.Transparent;
             this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelCentral.Location = new System.Drawing.Point(275, 0);
-            this.PanelCentral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelCentral.Margin = new System.Windows.Forms.Padding(4);
             this.PanelCentral.Name = "PanelCentral";
             this.PanelCentral.Size = new System.Drawing.Size(1202, 784);
             this.PanelCentral.TabIndex = 17;
@@ -289,14 +299,12 @@
             // 
             this.ProgesoBarra.Tick += new System.EventHandler(this.ProgesoBarra_Tick);
             // 
-            // lblUser
+            // mySqlCommand1
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(42, 667);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(46, 17);
-            this.lblUser.TabIndex = 10;
-            this.lblUser.Text = "label1";
+            this.mySqlCommand1.CommandTimeout = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.Transaction = null;
+            this.mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
             // Inicio
             // 
@@ -307,7 +315,7 @@
             this.ClientSize = new System.Drawing.Size(1477, 784);
             this.Controls.Add(this.PanelCentral);
             this.Controls.Add(this.PanelIzquierdo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -335,5 +343,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Label lblUser;
+        private MySqlConnector.MySqlCommand mySqlCommand1;
     }
 }
