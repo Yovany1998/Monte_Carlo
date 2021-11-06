@@ -29,8 +29,6 @@ namespace Monte_Carlos.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnNuevo = new FontAwesome.Sharp.IconButton();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblEmpresa = new System.Windows.Forms.Label();
@@ -47,44 +45,10 @@ namespace Monte_Carlos.Compras
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dvCompra)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnNuevo.IconColor = System.Drawing.Color.Black;
-            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevo.IconSize = 52;
-            this.btnNuevo.Location = new System.Drawing.Point(430, 500);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.btnNuevo.Size = new System.Drawing.Size(52, 52);
-            this.btnNuevo.TabIndex = 98;
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.Color.Black;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 52;
-            this.btnEliminar.Location = new System.Drawing.Point(475, 500);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.btnEliminar.Size = new System.Drawing.Size(52, 52);
-            this.btnEliminar.TabIndex = 99;
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // label12
             // 
@@ -119,7 +83,7 @@ namespace Monte_Carlos.Compras
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(127, 525);
+            this.label8.Location = new System.Drawing.Point(127, 540);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(252, 24);
@@ -172,7 +136,7 @@ namespace Monte_Carlos.Compras
             // 
             this.dvCompra.BackgroundColor = System.Drawing.Color.White;
             this.dvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvCompra.Location = new System.Drawing.Point(131, 562);
+            this.dvCompra.Location = new System.Drawing.Point(131, 577);
             this.dvCompra.Margin = new System.Windows.Forms.Padding(2);
             this.dvCompra.Name = "dvCompra";
             this.dvCompra.RowHeadersWidth = 51;
@@ -219,16 +183,18 @@ namespace Monte_Carlos.Compras
             // 
             // btnproveedor
             // 
-            this.btnproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.btnproveedor.BackColor = System.Drawing.Color.Transparent;
             this.btnproveedor.FlatAppearance.BorderSize = 0;
             this.btnproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnproveedor.Location = new System.Drawing.Point(129, 124);
+            this.btnproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
+            this.btnproveedor.Location = new System.Drawing.Point(129, 112);
             this.btnproveedor.Name = "btnproveedor";
             this.btnproveedor.Size = new System.Drawing.Size(198, 31);
             this.btnproveedor.TabIndex = 110;
             this.btnproveedor.Text = "Buscar proveedor";
             this.btnproveedor.UseVisualStyleBackColor = false;
+            this.btnproveedor.Click += new System.EventHandler(this.btnproveedor_Click);
             // 
             // txtPrecio
             // 
@@ -261,6 +227,42 @@ namespace Monte_Carlos.Compras
             this.label1.Size = new System.Drawing.Size(133, 24);
             this.label1.TabIndex = 113;
             this.label1.Text = "Cantidad";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNuevo.IconColor = System.Drawing.Color.Black;
+            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevo.IconSize = 52;
+            this.btnNuevo.Location = new System.Drawing.Point(430, 515);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.btnNuevo.Size = new System.Drawing.Size(52, 52);
+            this.btnNuevo.TabIndex = 98;
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 52;
+            this.btnEliminar.Location = new System.Drawing.Point(475, 515);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(52, 52);
+            this.btnEliminar.TabIndex = 99;
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // Grud_Compras
             // 

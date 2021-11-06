@@ -112,6 +112,12 @@
     <Compile Include="Compra.cs">
       <DependentUpon>EntityDBMonteCarlo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Compras\BuscarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\BuscarProveedor.Designer.cs">
+      <DependentUpon>BuscarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\Grud_Compras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     <Compile Include="Venta\Ventas_En_Espera.Designer.cs">
       <DependentUpon>Ventas_En_Espera.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Compras\BuscarProveedor.resx">
+      <DependentUpon>BuscarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Compras\Grud_Compras.resx">
       <DependentUpon>Grud_Compras.cs</DependentUpon>
     </EmbeddedResource>

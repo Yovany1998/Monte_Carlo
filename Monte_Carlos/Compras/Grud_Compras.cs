@@ -14,6 +14,8 @@ namespace Monte_Carlos.Compras
     {
         DBFincaMonteCarloEntities1 Variables = new DBFincaMonteCarloEntities1();
         long idCompras = 0;
+        public string empresa = string.Empty;
+        public int idProveedor = 0;
         bool editar = false;
         Double Subto;
         int log;
@@ -83,41 +85,7 @@ namespace Monte_Carlos.Compras
                            };
 
             dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
-        }
-
-        private void dvCompra_MouseClick(object sender, MouseEventArgs e)
-        {
-
-            if (log == 1)
-            {
-                log = 2;
-            }
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            if (editar == false)
-            {
-                MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
-            }
-            else
-            {
-                if (dvCompra.RowCount == 2)
-                {
-                    MessageBox.Show("Si eliminas este registro no podras acceder al programa");
-                }
-                else
-                {
-
-                    Variables.DetalleDeCompra.RemoveRange(Variables.DetalleDeCompra.Where(x => x.IdCompra == idCompras));
-                    Variables.SaveChanges();
-                    Limpiar();
-                    CargaDv();
-                }
-            }
-        }
-
-        
+        }        
 
         private void btninsertar_Click(object sender, EventArgs e)
         {
@@ -261,6 +229,26 @@ namespace Monte_Carlos.Compras
             if (log == 1)
             {
                 log = 2;
+            }
+        }
+
+        private void btnproveedor_Click(object sender, EventArgs e)
+        {
+            Compras.BuscarProveedor Proveedor = new Compras.BuscarProveedor();
+            Proveedor.ShowDialog();
+            EstablecerDatos(Proveedor.nombreProveedor, Proveedor.idProveedor);
+        }
+        private void EstablecerDatos(string nombre, int id)
+        {
+            if (id > 0)
+            {
+                empresa = nombre;
+                idProveedor = id;
+                txtNombre.Text = empresa;
+            }
+            else
+            {
+                MessageBox.Show("No selecciono ningun cliente");
             }
         }
     }

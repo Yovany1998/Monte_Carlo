@@ -788,3 +788,4 @@ D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Usuarios.Ingresar_Usua
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.CantidadProducto.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Facturación.resources
 D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Carta.Ingreso_Carta.resources
+D:\GitHub\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Compras.BuscarProveedor.resources
