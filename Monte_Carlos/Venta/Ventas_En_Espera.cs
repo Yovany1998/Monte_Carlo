@@ -24,11 +24,6 @@ namespace Monte_Carlos.Venta
 
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Ventas_En_Espera_Load(object sender, EventArgs e)
         {
             CambiarFactura();

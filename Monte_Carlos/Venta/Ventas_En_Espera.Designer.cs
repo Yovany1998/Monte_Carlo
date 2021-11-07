@@ -31,12 +31,9 @@ namespace Monte_Carlos.Venta
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.icoBuscarComidaObebida = new FontAwesome.Sharp.IconPictureBox();
             this.dvVentaEspera = new System.Windows.Forms.DataGridView();
-            this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvVentaEspera)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,25 +50,11 @@ namespace Monte_Carlos.Venta
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(200, 131);
+            this.textBox1.Location = new System.Drawing.Point(139, 130);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 26);
+            this.textBox1.Size = new System.Drawing.Size(301, 26);
             this.textBox1.TabIndex = 51;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // icoBuscarComidaObebida
-            // 
-            this.icoBuscarComidaObebida.BackColor = System.Drawing.Color.White;
-            this.icoBuscarComidaObebida.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.icoBuscarComidaObebida.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.icoBuscarComidaObebida.IconColor = System.Drawing.SystemColors.ControlText;
-            this.icoBuscarComidaObebida.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoBuscarComidaObebida.IconSize = 35;
-            this.icoBuscarComidaObebida.Location = new System.Drawing.Point(149, 122);
-            this.icoBuscarComidaObebida.Name = "icoBuscarComidaObebida";
-            this.icoBuscarComidaObebida.Size = new System.Drawing.Size(45, 35);
-            this.icoBuscarComidaObebida.TabIndex = 50;
-            this.icoBuscarComidaObebida.TabStop = false;
             // 
             // dvVentaEspera
             // 
@@ -81,24 +64,6 @@ namespace Monte_Carlos.Venta
             this.dvVentaEspera.Size = new System.Drawing.Size(600, 255);
             this.dvVentaEspera.TabIndex = 52;
             this.dvVentaEspera.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvVentaEspera_CellDoubleClick);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnNuevo.IconColor = System.Drawing.Color.Black;
-            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevo.IconSize = 52;
-            this.btnNuevo.Location = new System.Drawing.Point(636, 116);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.btnNuevo.Size = new System.Drawing.Size(52, 52);
-            this.btnNuevo.TabIndex = 94;
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEliminar
             // 
@@ -140,17 +105,14 @@ namespace Monte_Carlos.Venta
             this.ClientSize = new System.Drawing.Size(886, 533);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dvVentaEspera);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.icoBuscarComidaObebida);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ventas_En_Espera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas_En_Espera";
             this.Load += new System.EventHandler(this.Ventas_En_Espera_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.icoBuscarComidaObebida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvVentaEspera)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,10 +122,8 @@ namespace Monte_Carlos.Venta
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconPictureBox icoBuscarComidaObebida;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dvVentaEspera;
-        private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.Button button1;
     }

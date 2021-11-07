@@ -332,5 +332,11 @@ namespace Monte_Carlos.Venta
 
             btnOrdenesEnEspera.Text = count.ToString();
         }
+
+        private void btnOrdenesEnEspera_Click_1(object sender, EventArgs e)
+        {
+            Venta.Ventas_En_Espera ventaEspera = new Venta.Ventas_En_Espera();
+            ventaEspera.Show();
+        }
     }
 }

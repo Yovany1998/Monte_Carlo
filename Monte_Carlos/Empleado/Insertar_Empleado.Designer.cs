@@ -229,7 +229,7 @@
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Broom;
             this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.IconSize = 52;

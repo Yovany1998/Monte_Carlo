@@ -26,7 +26,7 @@ namespace Monte_Carlos.Venta
             Entity.SaveChanges();
             MessageBox.Show("¡Venta generada correctamente!");
             
-            this.Dispose();
+            this.Close();
 
         }
 

@@ -51,11 +51,11 @@ namespace Monte_Carlos.Usuarios
         }
         private void Ingresar_Usuarios_Load(object sender, EventArgs e)
         {
-            var Id = 0;
+            /*var Id = 0;
             lblIdUser.Text = Administrar_Usuarios.idUser.ToString();
             Id = Convert.ToInt32(lblIdUser.Text);
             var TUser = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == Id);
-            txtUsername.Text = TUser.UserName;
+            txtUsername.Text = TUser.UserName;*/
         }
 
         private void txtGuardar_Click(object sender, EventArgs e)

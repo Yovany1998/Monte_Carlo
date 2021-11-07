@@ -37,7 +37,6 @@
             this.txtMesa = new System.Windows.Forms.TextBox();
             this.btnAgregarReservacion = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.dgListaReservaciones = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaReservaciones)).BeginInit();
@@ -145,24 +144,6 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Lista de reservaciones";
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAgregar.IconColor = System.Drawing.Color.Black;
-            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregar.IconSize = 52;
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregar.Location = new System.Drawing.Point(577, 257);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(46, 50);
-            this.btnAgregar.TabIndex = 41;
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
@@ -197,7 +178,6 @@
             this.ClientSize = new System.Drawing.Size(902, 499);
             this.Controls.Add(this.dgListaReservaciones);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAgregarReservacion);
             this.Controls.Add(this.txtMesa);
@@ -229,7 +209,6 @@
         private System.Windows.Forms.TextBox txtMesa;
         private System.Windows.Forms.Button btnAgregarReservacion;
         private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton btnAgregar;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.DataGridView dgListaReservaciones;
     }
