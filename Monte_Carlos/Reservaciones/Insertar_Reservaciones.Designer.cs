@@ -39,13 +39,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.dgListaReservaciones = new System.Windows.Forms.DataGridView();
+            this.lblInsertarReservacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaReservaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // Fecha
             // 
             this.Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fecha.Location = new System.Drawing.Point(306, 115);
+            this.Fecha.Location = new System.Drawing.Point(307, 147);
             this.Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.Fecha.Name = "Fecha";
             this.Fecha.Size = new System.Drawing.Size(273, 26);
@@ -54,7 +55,7 @@
             // lblFecha
             // 
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(303, 96);
+            this.lblFecha.Location = new System.Drawing.Point(304, 128);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(99, 24);
@@ -64,7 +65,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(303, 16);
+            this.label1.Location = new System.Drawing.Point(304, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 24);
@@ -74,7 +75,7 @@
             // txtNombreCompleto
             // 
             this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCompleto.Location = new System.Drawing.Point(306, 36);
+            this.txtNombreCompleto.Location = new System.Drawing.Point(307, 68);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
             this.txtNombreCompleto.Size = new System.Drawing.Size(273, 26);
             this.txtNombreCompleto.TabIndex = 32;
@@ -89,7 +90,7 @@
             this.btnBuscarCliente.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBuscarCliente.IconColor = System.Drawing.Color.Black;
             this.btnBuscarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(306, 62);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(307, 94);
             this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(193, 32);
@@ -103,7 +104,7 @@
             // 
             this.lblMesa.BackColor = System.Drawing.Color.Transparent;
             this.lblMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMesa.Location = new System.Drawing.Point(303, 160);
+            this.lblMesa.Location = new System.Drawing.Point(304, 192);
             this.lblMesa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMesa.Name = "lblMesa";
             this.lblMesa.Size = new System.Drawing.Size(99, 24);
@@ -113,7 +114,7 @@
             // txtMesa
             // 
             this.txtMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMesa.Location = new System.Drawing.Point(306, 180);
+            this.txtMesa.Location = new System.Drawing.Point(307, 212);
             this.txtMesa.Name = "txtMesa";
             this.txtMesa.Size = new System.Drawing.Size(273, 26);
             this.txtMesa.TabIndex = 37;
@@ -125,7 +126,7 @@
             this.btnAgregarReservacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarReservacion.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarReservacion.Location = new System.Drawing.Point(306, 210);
+            this.btnAgregarReservacion.Location = new System.Drawing.Point(307, 242);
             this.btnAgregarReservacion.Name = "btnAgregarReservacion";
             this.btnAgregarReservacion.Size = new System.Drawing.Size(273, 42);
             this.btnAgregarReservacion.TabIndex = 38;
@@ -137,7 +138,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(227, 279);
+            this.label2.Location = new System.Drawing.Point(228, 311);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(196, 24);
@@ -154,7 +155,7 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 52;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(623, 257);
+            this.btnEliminar.Location = new System.Drawing.Point(624, 289);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 50);
@@ -165,10 +166,20 @@
             // dgListaReservaciones
             // 
             this.dgListaReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListaReservaciones.Location = new System.Drawing.Point(230, 306);
+            this.dgListaReservaciones.Location = new System.Drawing.Point(231, 338);
             this.dgListaReservaciones.Name = "dgListaReservaciones";
             this.dgListaReservaciones.Size = new System.Drawing.Size(448, 150);
             this.dgListaReservaciones.TabIndex = 43;
+            // 
+            // lblInsertarReservacion
+            // 
+            this.lblInsertarReservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsertarReservacion.Location = new System.Drawing.Point(340, 9);
+            this.lblInsertarReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInsertarReservacion.Name = "lblInsertarReservacion";
+            this.lblInsertarReservacion.Size = new System.Drawing.Size(220, 24);
+            this.lblInsertarReservacion.TabIndex = 50;
+            this.lblInsertarReservacion.Text = "Insertar Reservacion";
             // 
             // Insertar_Reservaciones
             // 
@@ -176,6 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 499);
+            this.Controls.Add(this.lblInsertarReservacion);
             this.Controls.Add(this.dgListaReservaciones);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label2);
@@ -211,5 +223,6 @@
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.DataGridView dgListaReservaciones;
+        private System.Windows.Forms.Label lblInsertarReservacion;
     }
 }

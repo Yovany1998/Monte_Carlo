@@ -39,10 +39,10 @@ namespace Monte_Carlos.Compras
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(272, 20);
+            this.label1.Location = new System.Drawing.Point(211, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 24);
+            this.label1.Size = new System.Drawing.Size(204, 24);
             this.label1.TabIndex = 42;
             this.label1.Text = "Buscar Proveedor";
             // 
