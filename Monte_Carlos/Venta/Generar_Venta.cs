@@ -322,13 +322,22 @@ namespace Monte_Carlos.Venta
 
         private void ContarFacturasEnEspera()
         {
+            int count = 0;
             var tFacturasEnEspera = from Facturas in Entity.Facturas
                                     where Facturas.Estado == 0
                                     select new
                                     {
                                         Facturas.IdFactura
                                     };
-            int count = tFacturasEnEspera.Count();
+            try
+            {
+                count = tFacturasEnEspera.Count();
+            }
+            catch
+            {
+                
+            }
+
 
             btnOrdenesEnEspera.Text = count.ToString();
         }

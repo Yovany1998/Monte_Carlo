@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Monte_Carlos
 {
@@ -17,6 +18,27 @@ namespace Monte_Carlos
         public Login()
         {
             InitializeComponent();
+        }
+
+        public class Hash
+        {
+            public static string obtenerHash256(string text)
+            {
+
+                byte[] bytes = Encoding.Unicode.GetBytes(text);
+                SHA256Managed hashString = new SHA256Managed();
+
+                byte[] hash = hashString.ComputeHash(bytes);
+                string hashStr = string.Empty;
+
+                foreach (byte x in hash)
+                {
+                    hashStr += String.Format("{0:x2}", x);
+                }
+
+                return hashStr;
+
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -43,8 +65,9 @@ namespace Monte_Carlos
                 MessageBox.Show("Ingrese contraseña");
                 return;
             }
+            string pass = Hash.obtenerHash256(txtContraseña.Text);
 
-            var tUsuarios = Entity.Usuario.FirstOrDefault(x => x.UserName == txtUsuario.Text && x.Password == txtContraseña.Text);
+            var tUsuarios = Entity.Usuario.FirstOrDefault(x => x.UserName == txtUsuario.Text && x.Password == pass);
 
             if (tUsuarios == null)
             {
@@ -55,7 +78,7 @@ namespace Monte_Carlos
             else
             {
                 nombreUsuario = txtUsuario.Text;
-                MessageBox.Show(nombreUsuario);
+              //  MessageBox.Show(nombreUsuario);
                 Limpiar();
                 
                 this.Hide();
