@@ -14,6 +14,7 @@ namespace Monte_Carlos.Compras
     {
         DBFincaMonteCarloEntities1 Variables = new DBFincaMonteCarloEntities1();
         long idCompras = 0;
+
         public string empresa = string.Empty;
         public int idProveedor = 0;
         bool editar = false;
@@ -33,6 +34,7 @@ namespace Monte_Carlos.Compras
             txtPrecio.Text = "";
             editar = false;
             dvCompra.ClearSelection();
+            DgVerCompras.ClearSelection();
         }
         public DateTime FechaActual
         {
@@ -42,50 +44,51 @@ namespace Monte_Carlos.Compras
         private void Grud_Compras_Load(object sender, EventArgs e)
         {
             log = 1;
-            try
-            {
-
-                DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
-                var tCompras = from j in Variables.DetalleDeCompra
-                               select new
-                               {
-                                   j.IdDetalle,
-                                   j.IdCompra,
-                                   j.IdProveedor,
-                                   j.Producto,
-                                   j.PrecioUnitario,
-                                   j.Cantidad,
-                               };
-                dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
-                dvCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            }
-            catch
-            {
-
-            }
-            
+     
+            CargaComprasDg();
             idCompras = 0;
             Limpiar();
             editar = false;
         }
         private void CargaDv()
         {
+      
+            try
+            {
+        
+            }
+            catch
+            {
 
-            DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
-            var tCompras = from p in Variables.Compra
-                           join j in Variables.DetalleDeCompra on p.IdCompra equals j.IdCompra
-                           select new
-                           {
-                               p.IdCompra,
-                               j.IdProveedor,
-                               j.Producto,
-                               j.PrecioUnitario,
-                               j.Cantidad,
-                               p.Observacion
-                           };
+            }
+        }  
+        private void CargaComprasDg()
+        {
+            try
+            {
 
-            dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
-        }        
+
+                DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
+                var tCompras = from Detalle in Variables.DetalleDeCompra
+                               join Compras
+                               in Variables.Compra on Detalle.IdCompra equals Compras.IdCompra
+                               join Proveedor in Variables.Proveedor on Detalle.IdProveedor
+                               equals Proveedor.IdProveedor
+                               select new
+                               {
+                                   Compras.IdCompra,
+                                   Proveedor.Empresa
+
+                               };
+                DgVerCompras.DataSource = tCompras.CopyAnonymusToDataTable();
+                DgVerCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            }
+            catch
+            {
+
+            }
+          
+        }
 
         private void btninsertar_Click(object sender, EventArgs e)
         {
@@ -156,6 +159,7 @@ namespace Monte_Carlos.Compras
             }
             editar = false;
             CargaDv();
+            CargaComprasDg();
             idCompras = 0;
             Limpiar();
         }
@@ -167,7 +171,11 @@ namespace Monte_Carlos.Compras
 
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
+            DgVerCompras.ClearSelection();
+            dvCompra.ClearSelection();
             Limpiar();
+            dvCompra.DataSource = " ";
+            dvCompra.Refresh();
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
@@ -216,6 +224,8 @@ namespace Monte_Carlos.Compras
             }
             if (log == 1)
             {
+                dvCompra.DataSource = " ";
+                dvCompra.Refresh();
                 Limpiar();
             }
 
@@ -249,6 +259,47 @@ namespace Monte_Carlos.Compras
             else
             {
                 MessageBox.Show("No selecciono ningun cliente");
+            }
+        }
+
+        private void DgVerCompras_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int idCompre = Convert.ToInt32(DgVerCompras.SelectedCells[0].Value);
+                DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
+                var tCompras = from j in Variables.DetalleDeCompra
+                               where j.IdCompra == idCompre
+                               select new
+                               {
+                                   j.IdDetalle,
+                                   j.Producto,
+                                   j.PrecioUnitario,
+                                   j.Cantidad,
+                               };
+                dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
+                dvCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+
+            }
+            catch (Exception)
+            {
+                editar = false;
+            }
+            if (log == 1)
+            {
+                dvCompra.DataSource = " ";
+                dvCompra.Refresh();
+                Limpiar();
+            }
+
+        }
+
+        private void DgVerCompras_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (log == 1)
+            {
+                log = 2;
             }
         }
     }
