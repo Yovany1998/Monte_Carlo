@@ -49,7 +49,7 @@ namespace Monte_Carlos.Usuarios
             this.txtRepetirContrasena.AllowDrop = true;
             this.txtRepetirContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepetirContrasena.Location = new System.Drawing.Point(226, 275);
-            this.txtRepetirContrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRepetirContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtRepetirContrasena.Multiline = true;
             this.txtRepetirContrasena.Name = "txtRepetirContrasena";
             this.txtRepetirContrasena.PasswordChar = '*';
@@ -61,7 +61,7 @@ namespace Monte_Carlos.Usuarios
             this.txtPassword.AllowDrop = true;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(226, 197);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.MaxLength = 15;
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -74,7 +74,7 @@ namespace Monte_Carlos.Usuarios
             this.txtUsername.AllowDrop = true;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(226, 130);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(351, 24);
@@ -158,6 +158,7 @@ namespace Monte_Carlos.Usuarios
             this.dgUsuarios.TabIndex = 73;
             this.dgUsuarios.SelectionChanged += new System.EventHandler(this.dgUsuarios_SelectionChanged);
             this.dgUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgUsuarios_MouseClick);
+            this.dgUsuarios.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgUsuarios_MouseMove);
             // 
             // btnBorrarUsusario
             // 

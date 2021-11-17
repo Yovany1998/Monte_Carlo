@@ -15,6 +15,7 @@ namespace Monte_Carlos.Proveedor
         DBFincaMonteCarloEntities1 entity = new DBFincaMonteCarloEntities1();
         long idProveedor = 0;
         bool editar = false;
+        int Log = 0;
         public CRUD_Proveedor()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Monte_Carlos.Proveedor
 
         private void CRUD_Proveedor_Load(object sender, EventArgs e)
         {
+            Log = 1;
             SelectAll();
             dgProvedores.ClearSelection();
             LimpiarTextBoxs();
@@ -49,13 +51,13 @@ namespace Monte_Carlos.Proveedor
         private void LimpiarTextBoxs()
         {
             txtEmpresa.Text = txtNombreDeContacto.Text = txtNumeroTelefono.Text = txtObservacion.Text = txtRTN.Text = string.Empty;
+            dgProvedores.ClearSelection();
         }
 
         private void dgProvedores_SelectionChanged(object sender, EventArgs e)
         {
 
-            if (dgProvedores.SelectedRows.Count > 0)
-            {
+          
                 try
                 {
                     idProveedor = Convert.ToInt64(dgProvedores.SelectedCells[0].Value);
@@ -67,10 +69,16 @@ namespace Monte_Carlos.Proveedor
                     txtObservacion.Text = rowProveedor.Observacion;
                     editar = true;
                 }
-                catch (Exception)
-                {
-                }
+            catch (Exception)
+            {
+                
             }
+            if (Log == 1)
+            {
+                LimpiarTextBoxs();
+                dgProvedores.ClearSelection();
+            }
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -119,13 +127,12 @@ namespace Monte_Carlos.Proveedor
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(idProveedor.ToString());
             try 
             {
                 entity.Proveedor.RemoveRange(entity.Proveedor.Where(x => x.IdProveedor == idProveedor));
-                MessageBox.Show("El proveedor se elimino");
                 entity.SaveChanges();
                 SelectAll();
+                MessageBox.Show("El proveedor se elimino");
                 LimpiarTextBoxs();
                 dgProvedores.ClearSelection();
             } catch(Exception ex) { MessageBox.Show(ex.Message); }
@@ -174,6 +181,14 @@ namespace Monte_Carlos.Proveedor
         private void dgProvedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgProvedores_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Log == 1)
+            {
+                Log = 2;
+            }
         }
     }
 }

@@ -49,8 +49,8 @@ namespace Monte_Carlos.Usuarios
             txtUsername.Text = "";
             txtPassword.Text = "";
             txtRepetirContrasena.Text = "";
-
-
+            dgUsuarios.ClearSelection();
+            
         }
         private void CargarDv()
         {
@@ -69,13 +69,7 @@ namespace Monte_Carlos.Usuarios
 
 
         private void Ingresar_Usuarios_Load(object sender, EventArgs e)
-        {
-            /*var Id = 0;
-            lblIdUser.Text = Administrar_Usuarios.idUser.ToString();
-            Id = Convert.ToInt32(lblIdUser.Text);
-            var TUser = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == Id);
-            txtUsername.Text = TUser.UserName;*/
-          
+        {          
             CargarDv();
             dgUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             idUsuario = 0;
@@ -231,6 +225,15 @@ namespace Monte_Carlos.Usuarios
             dgUsuarios.ClearSelection();
             Limpiar();
 
+        }
+
+        private void dgUsuarios_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            if (login == 1)
+            {
+                login = 2;
+            }
         }
     }
 }

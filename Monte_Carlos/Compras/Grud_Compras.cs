@@ -302,5 +302,13 @@ namespace Monte_Carlos.Compras
                 log = 2;
             }
         }
+
+        private void DgVerCompras_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (log == 1)
+            {
+                log = 2;
+            }
+        }
     }
 }

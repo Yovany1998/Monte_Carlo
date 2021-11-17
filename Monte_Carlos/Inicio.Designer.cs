@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.PanelIzquierdo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,7 +46,6 @@
             this.PanelCentral = new System.Windows.Forms.Panel();
             this.ProgesoBarra = new System.Windows.Forms.Timer(this.components);
             this.mySqlCommand1 = new MySqlConnector.MySqlCommand();
-            this.label1 = new System.Windows.Forms.Label();
             this.PanelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,10 +76,19 @@
             this.PanelIzquierdo.TabIndex = 16;
             this.PanelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelIzquierdo_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Bienvenido: ";
+            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(73, 9);
+            this.lblUser.Location = new System.Drawing.Point(74, 9);
             this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(44, 13);
@@ -296,15 +305,6 @@
             this.mySqlCommand1.Connection = null;
             this.mySqlCommand1.Transaction = null;
             this.mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Usuario:";
             // 
             // Inicio
             // 

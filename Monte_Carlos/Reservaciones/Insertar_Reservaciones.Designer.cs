@@ -40,6 +40,7 @@
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.dgListaReservaciones = new System.Windows.Forms.DataGridView();
             this.lblInsertarReservacion = new System.Windows.Forms.Label();
+            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaReservaciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,11 +166,14 @@
             // 
             // dgListaReservaciones
             // 
+            this.dgListaReservaciones.BackgroundColor = System.Drawing.Color.White;
             this.dgListaReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaReservaciones.Location = new System.Drawing.Point(231, 338);
             this.dgListaReservaciones.Name = "dgListaReservaciones";
             this.dgListaReservaciones.Size = new System.Drawing.Size(448, 150);
             this.dgListaReservaciones.TabIndex = 43;
+            this.dgListaReservaciones.SelectionChanged += new System.EventHandler(this.dgListaReservaciones_SelectionChanged);
+            this.dgListaReservaciones.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgListaReservaciones_MouseMove);
             // 
             // lblInsertarReservacion
             // 
@@ -181,12 +185,31 @@
             this.lblInsertarReservacion.TabIndex = 50;
             this.lblInsertarReservacion.Text = "Insertar Reservacion";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiar.IconSize = 52;
+            this.btnLimpiar.Location = new System.Drawing.Point(582, 293);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.btnLimpiar.Size = new System.Drawing.Size(39, 42);
+            this.btnLimpiar.TabIndex = 76;
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // Insertar_Reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 499);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblInsertarReservacion);
             this.Controls.Add(this.dgListaReservaciones);
             this.Controls.Add(this.btnEliminar);
@@ -224,5 +247,6 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.DataGridView dgListaReservaciones;
         private System.Windows.Forms.Label lblInsertarReservacion;
+        private FontAwesome.Sharp.IconButton btnLimpiar;
     }
 }

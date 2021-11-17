@@ -291,6 +291,7 @@ namespace Monte_Carlos.Compras
             this.DgVerCompras.TabIndex = 115;
             this.DgVerCompras.SelectionChanged += new System.EventHandler(this.DgVerCompras_SelectionChanged);
             this.DgVerCompras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DgVerCompras_MouseClick);
+            this.DgVerCompras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DgVerCompras_MouseMove);
             // 
             // label2
             // 

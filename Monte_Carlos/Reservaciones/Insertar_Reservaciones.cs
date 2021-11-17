@@ -18,6 +18,9 @@ namespace Monte_Carlos.Reservaciones
         //Variables que almacenaran los datos del cliente para la reservacion
         public string nombreCliente = string.Empty;
         public int idCliente = 0;
+        long idReservacion = 0;
+        bool editar = false;
+        int Log;
 
 
         public Insertar_Reservaciones()
@@ -27,42 +30,19 @@ namespace Monte_Carlos.Reservaciones
         }
 
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+       private void Limpiar()
         {
+            txtNombreCompleto.Text = "";
+            txtMesa.Text = "";
+            dgListaReservaciones.ClearSelection();
 
-        
-        }
-     
+        } 
 
         private void Insertar_Reservaciones_Load(object sender, EventArgs e)
         {
             CargarTabla();
-        }
-
-        private void btnInsertar_Click_1(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void dvReservacion_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void dvRegistro_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            
+            Log = 1;
+            Limpiar();
 
         }
 
@@ -72,32 +52,17 @@ namespace Monte_Carlos.Reservaciones
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            
-       
-        }
-
-        private void dvReservacion_SelectionChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void btnLimpiarPedido_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregarReservacion_Click(object sender, EventArgs e)
         {
-            try
+            if (editar)
+            {
+                MessageBox.Show("Reservación modifiada");
+                var tReservacion = Entity.Reservacion.FirstOrDefault(x => x.IdReservacion == idReservacion);
+                tReservacion.Fecha= Convert.ToDateTime(Fecha.Text);
+                tReservacion.Mesa = Convert.ToInt32(txtMesa.Text);
+                Entity.SaveChanges();
+            }
+            else
             {
                 Reservacion tReservacion = new Reservacion();
 
@@ -106,16 +71,12 @@ namespace Monte_Carlos.Reservaciones
                 tReservacion.Mesa = Convert.ToInt32(txtMesa.Text);
 
                 Entity.Reservacion.Add(tReservacion);
-
                 Entity.SaveChanges();
                 MessageBox.Show("Reservacion registrada");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                throw;
-            }
-
+            Limpiar();
+            editar = false;
+            idCliente = 0;
             CargarTabla();
         }
 
@@ -156,6 +117,29 @@ namespace Monte_Carlos.Reservaciones
 
             dgListaReservaciones.DataSource = tReservaciones.CopyAnonymusToDataTable();
             dgListaReservaciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void dgListaReservaciones_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Log == 1)
+            {
+                Log = 2;
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void dgListaReservaciones_SelectionChanged(object sender, EventArgs e)
+        {
+           
+                if (Log == 1)
+                {
+                    dgListaReservaciones.ClearSelection();
+                    Limpiar();
+                }
         }
     }
 }

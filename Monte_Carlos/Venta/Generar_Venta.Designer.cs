@@ -69,6 +69,7 @@
             // 
             // dgBebidas
             // 
+            this.dgBebidas.BackgroundColor = System.Drawing.Color.White;
             this.dgBebidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBebidas.Location = new System.Drawing.Point(36, 232);
             this.dgBebidas.Name = "dgBebidas";
@@ -76,6 +77,8 @@
             this.dgBebidas.Size = new System.Drawing.Size(361, 150);
             this.dgBebidas.TabIndex = 44;
             this.dgBebidas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBebidas_CellDoubleClick);
+            this.dgBebidas.SelectionChanged += new System.EventHandler(this.dgBebidas_SelectionChanged);
+            this.dgBebidas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgBebidas_MouseMove);
             // 
             // txtNombreCompleto
             // 
@@ -132,6 +135,7 @@
             // 
             // dgComidas
             // 
+            this.dgComidas.BackgroundColor = System.Drawing.Color.White;
             this.dgComidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgComidas.Location = new System.Drawing.Point(36, 415);
             this.dgComidas.Name = "dgComidas";
@@ -139,6 +143,7 @@
             this.dgComidas.Size = new System.Drawing.Size(361, 150);
             this.dgComidas.TabIndex = 52;
             this.dgComidas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgComidas_CellDoubleClick);
+            this.dgComidas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgComidas_MouseMove);
             // 
             // btnContinuar
             // 
@@ -157,18 +162,20 @@
             // 
             // dgDetallesPedido
             // 
+            this.dgDetallesPedido.BackgroundColor = System.Drawing.Color.White;
             this.dgDetallesPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDetallesPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
             this.Precio,
             this.Cantidad});
-            this.dgDetallesPedido.Location = new System.Drawing.Point(432, 143);
+            this.dgDetallesPedido.Location = new System.Drawing.Point(436, 145);
             this.dgDetallesPedido.Name = "dgDetallesPedido";
             this.dgDetallesPedido.ReadOnly = true;
             this.dgDetallesPedido.RowHeadersWidth = 51;
             this.dgDetallesPedido.Size = new System.Drawing.Size(444, 394);
             this.dgDetallesPedido.TabIndex = 55;
+            this.dgDetallesPedido.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgDetallesPedido_MouseMove);
             // 
             // Codigo
             // 

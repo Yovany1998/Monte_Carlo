@@ -111,13 +111,13 @@ namespace Monte_Carlos.Empleado
 
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("INGRESE EL NOMBRE");
+                MessageBox.Show("Ingrese el nombre");
                 txtNombre.Focus();
                 return;
             }
             if (txtApellido.Text == "")
             {
-                MessageBox.Show("INGRESE EL APELLIDO");
+                MessageBox.Show("Ingrese el apellido");
                 txtApellido.Focus();
                 return;
             }
@@ -126,7 +126,7 @@ namespace Monte_Carlos.Empleado
            
             if (CmbCargo.SelectedItem.ToString().Equals(""))
             {
-                MessageBox.Show("ASIGNE UN CARGO AL EMPLEADO");
+                MessageBox.Show("Asigne un cargo al empleado");
                 return;
             }
 
@@ -134,7 +134,7 @@ namespace Monte_Carlos.Empleado
             if (editar)
             {
 
-                MessageBox.Show("EMPLEADO MODIFICADO");
+                MessageBox.Show("Empleado modificado");
                 var tEmpleado = Entity.Empleados.FirstOrDefault(x => x.IdEmpleado == idEmpleado);
                 tEmpleado.Nombre = txtNombre.Text;
                 tEmpleado.Apellido = txtApellido.Text;
@@ -148,7 +148,7 @@ namespace Monte_Carlos.Empleado
             {
 
 
-                MessageBox.Show("EMPLEADO GUARDADO");
+                MessageBox.Show("Empleado guardado");
                 Empleados tbEmpleado = new Empleados
                 {
 
@@ -220,11 +220,11 @@ namespace Monte_Carlos.Empleado
           
             if (editar == false)
             {
-                MessageBox.Show("SELECCIONE EL REGISTRO PARA PODER BORRARLO");
+                MessageBox.Show("Seleccione un registro para poder borrarlo");
             }
             else
             {
-                MessageBox.Show("SE ELIMINO EL CLIENTE Y TODAS SUS REFERENCIAS");
+                MessageBox.Show("Se elimino el empleado y todas sus dependencias");
                 Entity.Empleados.RemoveRange(Entity.Empleados.Where(x => x.IdEmpleado == idEmpleado));
                 Entity.Usuario.RemoveRange(Entity.Usuario.Where(x => x.IdEmpleado == idEmpleado));
                 Entity.SaveChanges();
@@ -296,6 +296,15 @@ namespace Monte_Carlos.Empleado
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dvEmpleado_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            if (Log == 1)
+            {
+                Log = 2;
+            }
         }
     }
 }
