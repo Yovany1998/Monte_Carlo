@@ -39,9 +39,10 @@ namespace Monte_Carlos.Cliente
             }           
             if (txtTelefono.Text.Equals(""))
             {
-                MessageBox.Show("Por favor ingresar el numero telefonico");
+                MessageBox.Show("Por favor ingresar el número telefonico");
                 return;
             }
+
             var TamanoTelefono = txtTelefono.TextLength;
             if (TamanoTelefono < 9)
             {
@@ -69,6 +70,11 @@ namespace Monte_Carlos.Cliente
                 }
               
             }
+            if(Entity.Clientes.Any(x => x.Nombre == txtNombre.Text) && Entity.Clientes.Any(x => x.Apellido == txtApellido.Text) && Entity.Clientes.Any(x => x.Telefono == txtTelefono.Text))
+            {
+                MessageBox.Show("Los datos que se han ingresado ya se encuentran en la base de datos");
+            }
+            else { 
        
 
             if (editar)
@@ -97,6 +103,7 @@ namespace Monte_Carlos.Cliente
             }
             CargaDv();
             Limpiar();
+            }
         }
         private void CargaDv()
         {
@@ -184,6 +191,36 @@ namespace Monte_Carlos.Cliente
         private void btnNuevo1_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (' ')) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != ('-')) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (' ')) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
