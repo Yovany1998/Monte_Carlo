@@ -46,6 +46,7 @@ namespace Monte_Carlos.Venta
             this.lblCliente = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCodigoVenta = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgListadeProductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -208,6 +209,7 @@ namespace Monte_Carlos.Venta
             // panel1
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.lblCodigoVenta);
             this.panel1.Controls.Add(this.lblCliente);
             this.panel1.Controls.Add(this.dtpFechaHoy);
@@ -237,6 +239,22 @@ namespace Monte_Carlos.Venta
             this.lblCodigoVenta.TabIndex = 60;
             this.lblCodigoVenta.Text = "label2";
             this.lblCodigoVenta.Visible = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(20)))), ((int)(((byte)(25)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(565, 480);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(220, 37);
+            this.btnCancelar.TabIndex = 61;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Facturación
             // 
@@ -273,5 +291,6 @@ namespace Monte_Carlos.Venta
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCodigoVenta;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
