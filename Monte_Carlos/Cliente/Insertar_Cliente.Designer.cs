@@ -110,14 +110,14 @@
             this.dvClientes.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvClientes.Location = new System.Drawing.Point(278, 360);
+            this.dvClientes.Location = new System.Drawing.Point(211, 360);
             this.dvClientes.Name = "dvClientes";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -128,7 +128,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvClientes.RowHeadersWidth = 51;
-            this.dvClientes.Size = new System.Drawing.Size(351, 154);
+            this.dvClientes.Size = new System.Drawing.Size(481, 154);
             this.dvClientes.TabIndex = 7;
             this.dvClientes.SelectionChanged += new System.EventHandler(this.dvClientes_SelectionChanged);
             this.dvClientes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvClientes_MouseClick);

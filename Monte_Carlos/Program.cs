@@ -16,7 +16,7 @@ namespace Monte_Carlos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Reservaciones.Insertar_Reservaciones());
+            Application.Run(new Inicio());
         }
     }
 }
