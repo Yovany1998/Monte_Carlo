@@ -75,6 +75,7 @@
             // 
             // txtNombreCompleto
             // 
+            this.txtNombreCompleto.Enabled = false;
             this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCompleto.Location = new System.Drawing.Point(307, 68);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
@@ -163,6 +164,7 @@
             this.btnEliminar.TabIndex = 42;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgListaReservaciones
             // 
@@ -172,6 +174,7 @@
             this.dgListaReservaciones.Name = "dgListaReservaciones";
             this.dgListaReservaciones.Size = new System.Drawing.Size(448, 150);
             this.dgListaReservaciones.TabIndex = 43;
+            this.dgListaReservaciones.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaReservaciones_CellDoubleClick);
             this.dgListaReservaciones.SelectionChanged += new System.EventHandler(this.dgListaReservaciones_SelectionChanged);
             this.dgListaReservaciones.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgListaReservaciones_MouseMove);
             // 

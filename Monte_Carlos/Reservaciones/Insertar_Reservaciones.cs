@@ -56,11 +56,11 @@ namespace Monte_Carlos.Reservaciones
         {
             if (editar)
             {
-                MessageBox.Show("Reservación modifiada");
                 var tReservacion = Entity.Reservacion.FirstOrDefault(x => x.IdReservacion == idReservacion);
-                tReservacion.Fecha= Convert.ToDateTime(Fecha.Text);
+                tReservacion.Fecha= Fecha.Value;
                 tReservacion.Mesa = Convert.ToInt32(txtMesa.Text);
                 Entity.SaveChanges();
+                MessageBox.Show("Reservación modifiada");
             }
             else
             {
@@ -140,6 +140,35 @@ namespace Monte_Carlos.Reservaciones
                     dgListaReservaciones.ClearSelection();
                     Limpiar();
                 }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int indice = 0;
+            int idReservacion = 0;
+            if (dgListaReservaciones.SelectedRows.Count > 0)
+            {
+                indice = dgListaReservaciones.CurrentCell.RowIndex;
+                idReservacion = Convert.ToInt32(dgListaReservaciones.Rows[indice].Cells[0].Value.ToString());
+                Entity.Reservacion.RemoveRange(Entity.Reservacion.Where(x => x.IdReservacion == idReservacion));
+                Entity.SaveChanges();
+                CargarTabla();
+                MessageBox.Show("Se ha eliminado correctamente la reservacion");
+            }
+            else
+            {
+                MessageBox.Show("No se puede eliminar ningun elemento");
+            }
+        }
+
+        private void dgListaReservaciones_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            editar = true;
+            int indice = 0;
+            indice = dgListaReservaciones.CurrentCell.RowIndex;
+            idReservacion = Convert.ToInt32(dgListaReservaciones.Rows[indice].Cells[0].Value.ToString());
+            txtNombreCompleto.Text = dgListaReservaciones.Rows[indice].Cells[1].Value.ToString();
+            txtMesa.Text = dgListaReservaciones.Rows[indice].Cells[4].Value.ToString();
         }
     }
 }
