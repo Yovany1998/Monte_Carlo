@@ -55,6 +55,7 @@
             this.dvComida.TabIndex = 6;
             this.dvComida.SelectionChanged += new System.EventHandler(this.dvComida_SelectionChanged);
             this.dvComida.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvComida_MouseClick);
+            this.dvComida.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dvComida_MouseMove);
             // 
             // label3
             // 
@@ -157,7 +158,7 @@
             // 
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Broom;
             this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.IconSize = 52;

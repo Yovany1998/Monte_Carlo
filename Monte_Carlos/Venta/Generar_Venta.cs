@@ -17,7 +17,8 @@ namespace Monte_Carlos.Venta
         public string nombreCliente = string.Empty;
         public int idCliente = 0;
         public int codigoFactura = 0;
-        
+        int login = 0;
+
 
         public Generar_Venta()
         {
@@ -73,9 +74,14 @@ namespace Monte_Carlos.Venta
 
         private void Generar_Venta_Load(object sender, EventArgs e)
         {
+            login = 1;
             CargarComida();
             CargarBebida();
             ContarFacturasEnEspera();
+            dgBebidas.ClearSelection();
+            dgComidas.ClearSelection();
+            dgDetallesPedido.ClearSelection();
+
 
 
         }
@@ -322,13 +328,22 @@ namespace Monte_Carlos.Venta
 
         private void ContarFacturasEnEspera()
         {
+            int count = 0;
             var tFacturasEnEspera = from Facturas in Entity.Facturas
                                     where Facturas.Estado == 0
                                     select new
                                     {
                                         Facturas.IdFactura
                                     };
-            int count = tFacturasEnEspera.Count();
+            try
+            {
+                count = tFacturasEnEspera.Count();
+            }
+            catch
+            {
+                
+            }
+
 
             btnOrdenesEnEspera.Text = count.ToString();
         }
@@ -337,6 +352,39 @@ namespace Monte_Carlos.Venta
         {
             Venta.Ventas_En_Espera ventaEspera = new Venta.Ventas_En_Espera();
             ventaEspera.Show();
+        }
+
+        private void dgBebidas_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (login == 1)
+            {
+                login = 2;
+            }
+        }
+
+        private void dgComidas_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (login == 1)
+            {
+                login = 2;
+            }
+        }
+
+        private void dgDetallesPedido_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (login == 1)
+            {
+                login = 2;
+            }
+        }
+
+        private void dgBebidas_SelectionChanged(object sender, EventArgs e)
+        {
+            if (login == 1)
+            {
+                dgBebidas.ClearSelection();
+                dgComidas.ClearSelection();
+            }
         }
     }
 }

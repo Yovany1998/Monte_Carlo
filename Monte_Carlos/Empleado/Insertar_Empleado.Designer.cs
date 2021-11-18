@@ -145,6 +145,7 @@
             this.dvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvEmpleado_CellContentClick);
             this.dvEmpleado.SelectionChanged += new System.EventHandler(this.dvEmpleado_SelectionChanged_1);
             this.dvEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvEmpleado_MouseClick_1);
+            this.dvEmpleado.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dvEmpleado_MouseMove);
             // 
             // txtApellido
             // 

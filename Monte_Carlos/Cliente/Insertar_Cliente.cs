@@ -190,6 +190,7 @@ namespace Monte_Carlos.Cliente
 
         private void btnNuevo1_Click(object sender, EventArgs e)
         {
+            dvClientes.ClearSelection();
             Limpiar();
         }
 

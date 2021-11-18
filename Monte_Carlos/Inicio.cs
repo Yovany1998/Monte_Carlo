@@ -19,7 +19,7 @@ namespace Monte_Carlos
 {
     public partial class Inicio : Form
     {
-        
+        DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
         private int Contador;
         public Inicio()
         {
@@ -37,8 +37,7 @@ namespace Monte_Carlos
               
                 Contador++;
                 for (int x = 0; x < 100; x++)
-                {
-                
+                {                
 
                 }
                 Form fh = formhija as Form;
@@ -52,34 +51,25 @@ namespace Monte_Carlos
             else
             {
                 Contador = 0;
-            }
-
-       
-          
-           
-
+            } 
         }
         private void btncliente_Click(object sender, EventArgs e)
-        {
-           
+        {           
             AbrirFormEnPanel(new Cliente.Insertar_Cliente());
         }
 
         private void btnservicio_Click(object sender, EventArgs e)
-        {
-            
+        {            
             AbrirFormEnPanel(new Ver_Pedido());
         }
 
         private void btnempleado_Click(object sender, EventArgs e)
         {
-
             AbrirFormEnPanel(new Insertar_Empleado());
         }
 
         private void Venta_Click(object sender, EventArgs e)
         {
-
             AbrirFormEnPanel(new Generar_Venta());
         }
 
@@ -91,21 +81,40 @@ namespace Monte_Carlos
         private void lblFecha_Click(object sender, EventArgs e)
         {
 
-        }
-
-  
+        }  
 
         private void button1_Click(object sender, EventArgs e)
-        {
-    
+        {    
             AbrirFormEnPanel(new Ingreso_Carta());
-
         }
 
         private void Inicio_Load(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Demas.Entrada());
             lblUser.Text = Login.nombreUsuario;
+            try
+            {
+                var EmpleadoBuscar = Entity.Empleados.FirstOrDefault(x => x.Nombre == lblUser.Text);
+                int EmpleadoGuardar;
+                EmpleadoGuardar = EmpleadoBuscar.IdEmpleado;
+                string Departamento = EmpleadoBuscar.Cargo;
+
+                if (Departamento == "Administrador" || Departamento == "Gerente")
+                {
+                    iconButton2.Enabled = true;
+                    IBtnEmpleado.Enabled = true;
+                }
+                else
+                {           
+                    iconButton2.Enabled = false;
+                    IBtnEmpleado.Enabled = false;
+                }
+            }
+            catch
+            {
+
+            }
+
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -171,7 +180,6 @@ namespace Monte_Carlos
             this.Hide();
             Login ventana = new Login();
             ventana.Show();
-
         }
 
         private void btnRed_Click(object sender, EventArgs e)

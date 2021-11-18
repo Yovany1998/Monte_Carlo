@@ -227,5 +227,13 @@ namespace Monte_Carlos.Carta
         {
             validarSoloLetras(e);
         }
+
+        private void dvComida_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (log == 1)
+            {
+                log = 2;
+            }
+        }
     }
 }

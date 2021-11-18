@@ -48,13 +48,16 @@ namespace Monte_Carlos.Compras
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.lblInsertarCompra = new System.Windows.Forms.Label();
+            this.DgVerCompras = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvCompra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgVerCompras)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(102, 204);
+            this.label12.Location = new System.Drawing.Point(60, 204);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(234, 24);
@@ -64,7 +67,7 @@ namespace Monte_Carlos.Compras
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(103, 384);
+            this.label11.Location = new System.Drawing.Point(61, 384);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(156, 24);
@@ -74,7 +77,7 @@ namespace Monte_Carlos.Compras
             // lblEmpresa
             // 
             this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpresa.Location = new System.Drawing.Point(104, 93);
+            this.lblEmpresa.Location = new System.Drawing.Point(62, 93);
             this.lblEmpresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmpresa.Name = "lblEmpresa";
             this.lblEmpresa.Size = new System.Drawing.Size(199, 24);
@@ -84,7 +87,7 @@ namespace Monte_Carlos.Compras
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(99, 524);
+            this.label8.Location = new System.Drawing.Point(57, 524);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(252, 24);
@@ -94,7 +97,7 @@ namespace Monte_Carlos.Compras
             // Ingreso
             // 
             this.Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ingreso.Location = new System.Drawing.Point(214, 51);
+            this.Ingreso.Location = new System.Drawing.Point(172, 51);
             this.Ingreso.Name = "Ingreso";
             this.Ingreso.Size = new System.Drawing.Size(289, 26);
             this.Ingreso.TabIndex = 96;
@@ -102,7 +105,7 @@ namespace Monte_Carlos.Compras
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(101, 286);
+            this.label3.Location = new System.Drawing.Point(59, 286);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 24);
@@ -112,7 +115,7 @@ namespace Monte_Carlos.Compras
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(103, 51);
+            this.label6.Location = new System.Drawing.Point(61, 51);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 24);
@@ -125,7 +128,7 @@ namespace Monte_Carlos.Compras
             this.btninsertar.FlatAppearance.BorderSize = 0;
             this.btninsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btninsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btninsertar.Location = new System.Drawing.Point(105, 440);
+            this.btninsertar.Location = new System.Drawing.Point(63, 440);
             this.btninsertar.Name = "btninsertar";
             this.btninsertar.Size = new System.Drawing.Size(396, 44);
             this.btninsertar.TabIndex = 97;
@@ -137,12 +140,12 @@ namespace Monte_Carlos.Compras
             // 
             this.dvCompra.BackgroundColor = System.Drawing.Color.White;
             this.dvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvCompra.Location = new System.Drawing.Point(103, 561);
+            this.dvCompra.Location = new System.Drawing.Point(61, 561);
             this.dvCompra.Margin = new System.Windows.Forms.Padding(2);
             this.dvCompra.Name = "dvCompra";
             this.dvCompra.RowHeadersWidth = 51;
             this.dvCompra.RowTemplate.Height = 24;
-            this.dvCompra.Size = new System.Drawing.Size(486, 170);
+            this.dvCompra.Size = new System.Drawing.Size(408, 170);
             this.dvCompra.TabIndex = 100;
             this.dvCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvCompra_CellContentClick);
             this.dvCompra.SelectionChanged += new System.EventHandler(this.dvCompra_SelectionChanged_1);
@@ -153,7 +156,7 @@ namespace Monte_Carlos.Compras
             this.txtNombre.AllowDrop = true;
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(107, 119);
+            this.txtNombre.Location = new System.Drawing.Point(65, 119);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -164,7 +167,7 @@ namespace Monte_Carlos.Compras
             // 
             this.txtObservacion.AllowDrop = true;
             this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacion.Location = new System.Drawing.Point(104, 411);
+            this.txtObservacion.Location = new System.Drawing.Point(62, 411);
             this.txtObservacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
@@ -175,7 +178,7 @@ namespace Monte_Carlos.Compras
             // 
             this.txtProducto.AllowDrop = true;
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(103, 230);
+            this.txtProducto.Location = new System.Drawing.Point(61, 230);
             this.txtProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txtProducto.Multiline = true;
             this.txtProducto.Name = "txtProducto";
@@ -189,7 +192,7 @@ namespace Monte_Carlos.Compras
             this.btnproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
-            this.btnproveedor.Location = new System.Drawing.Point(105, 148);
+            this.btnproveedor.Location = new System.Drawing.Point(63, 148);
             this.btnproveedor.Name = "btnproveedor";
             this.btnproveedor.Size = new System.Drawing.Size(198, 31);
             this.btnproveedor.TabIndex = 110;
@@ -201,7 +204,7 @@ namespace Monte_Carlos.Compras
             // 
             this.txtPrecio.AllowDrop = true;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(103, 312);
+            this.txtPrecio.Location = new System.Drawing.Point(61, 312);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Multiline = true;
             this.txtPrecio.Name = "txtPrecio";
@@ -212,7 +215,7 @@ namespace Monte_Carlos.Compras
             // 
             this.txtCantidad.AllowDrop = true;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(344, 312);
+            this.txtCantidad.Location = new System.Drawing.Point(302, 312);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
@@ -222,7 +225,7 @@ namespace Monte_Carlos.Compras
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(340, 286);
+            this.label1.Location = new System.Drawing.Point(298, 286);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 24);
@@ -234,11 +237,11 @@ namespace Monte_Carlos.Compras
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Broom;
             this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.IconSize = 52;
-            this.btnNuevo.Location = new System.Drawing.Point(402, 499);
+            this.btnNuevo.Location = new System.Drawing.Point(360, 499);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.btnNuevo.Size = new System.Drawing.Size(52, 52);
@@ -256,7 +259,7 @@ namespace Monte_Carlos.Compras
             this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 52;
-            this.btnEliminar.Location = new System.Drawing.Point(447, 499);
+            this.btnEliminar.Location = new System.Drawing.Point(405, 499);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.btnEliminar.Size = new System.Drawing.Size(52, 52);
@@ -275,13 +278,40 @@ namespace Monte_Carlos.Compras
             this.lblInsertarCompra.TabIndex = 114;
             this.lblInsertarCompra.Text = "Insertar Compra";
             // 
+            // DgVerCompras
+            // 
+            this.DgVerCompras.BackgroundColor = System.Drawing.Color.White;
+            this.DgVerCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgVerCompras.Location = new System.Drawing.Point(543, 148);
+            this.DgVerCompras.Margin = new System.Windows.Forms.Padding(2);
+            this.DgVerCompras.Name = "DgVerCompras";
+            this.DgVerCompras.RowHeadersWidth = 51;
+            this.DgVerCompras.RowTemplate.Height = 24;
+            this.DgVerCompras.Size = new System.Drawing.Size(205, 237);
+            this.DgVerCompras.TabIndex = 115;
+            this.DgVerCompras.SelectionChanged += new System.EventHandler(this.DgVerCompras_SelectionChanged);
+            this.DgVerCompras.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DgVerCompras_MouseClick);
+            this.DgVerCompras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DgVerCompras_MouseMove);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(539, 104);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 24);
+            this.label2.TabIndex = 116;
+            this.label2.Text = "Compras";
+            // 
             // Grud_Compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(654, 777);
+            this.ClientSize = new System.Drawing.Size(959, 777);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DgVerCompras);
             this.Controls.Add(this.lblInsertarCompra);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCantidad);
@@ -306,6 +336,7 @@ namespace Monte_Carlos.Compras
             this.Text = "Grud_Compras";
             this.Load += new System.EventHandler(this.Grud_Compras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvCompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgVerCompras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +363,7 @@ namespace Monte_Carlos.Compras
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblInsertarCompra;
+        private System.Windows.Forms.DataGridView DgVerCompras;
+        private System.Windows.Forms.Label label2;
     }
 }

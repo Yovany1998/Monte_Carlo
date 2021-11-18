@@ -30,6 +30,7 @@ namespace Monte_Carlos.Proveedor
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblInsertarProveedor = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.dgProvedores = new System.Windows.Forms.DataGridView();
@@ -45,7 +46,6 @@ namespace Monte_Carlos.Proveedor
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblInsertarProveedor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProvedores)).BeginInit();
             this.SuspendLayout();
@@ -69,10 +69,20 @@ namespace Monte_Carlos.Proveedor
             this.panel1.Controls.Add(this.txtEmpresa);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(37, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 802);
             this.panel1.TabIndex = 2;
+            // 
+            // lblInsertarProveedor
+            // 
+            this.lblInsertarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsertarProveedor.Location = new System.Drawing.Point(283, 7);
+            this.lblInsertarProveedor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInsertarProveedor.Name = "lblInsertarProveedor";
+            this.lblInsertarProveedor.Size = new System.Drawing.Size(218, 24);
+            this.lblInsertarProveedor.TabIndex = 50;
+            this.lblInsertarProveedor.Text = "Insertar Proveedores";
             // 
             // btnEliminar
             // 
@@ -83,7 +93,7 @@ namespace Monte_Carlos.Proveedor
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 52;
             this.btnEliminar.Location = new System.Drawing.Point(758, 420);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(39, 42);
             this.btnEliminar.TabIndex = 8;
@@ -100,7 +110,7 @@ namespace Monte_Carlos.Proveedor
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.IconSize = 52;
             this.btnNuevo.Location = new System.Drawing.Point(706, 420);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(39, 42);
             this.btnNuevo.TabIndex = 7;
@@ -109,9 +119,10 @@ namespace Monte_Carlos.Proveedor
             // 
             // dgProvedores
             // 
+            this.dgProvedores.BackgroundColor = System.Drawing.Color.White;
             this.dgProvedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProvedores.Location = new System.Drawing.Point(2, 467);
-            this.dgProvedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgProvedores.Margin = new System.Windows.Forms.Padding(2);
             this.dgProvedores.Name = "dgProvedores";
             this.dgProvedores.RowHeadersWidth = 51;
             this.dgProvedores.RowTemplate.Height = 24;
@@ -119,6 +130,7 @@ namespace Monte_Carlos.Proveedor
             this.dgProvedores.TabIndex = 9;
             this.dgProvedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProvedores_CellContentClick);
             this.dgProvedores.SelectionChanged += new System.EventHandler(this.dgProvedores_SelectionChanged);
+            this.dgProvedores.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgProvedores_MouseMove);
             // 
             // btnAgregar
             // 
@@ -127,7 +139,7 @@ namespace Monte_Carlos.Proveedor
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(0, 359);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(794, 29);
             this.btnAgregar.TabIndex = 6;
@@ -139,7 +151,7 @@ namespace Monte_Carlos.Proveedor
             // 
             this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservacion.Location = new System.Drawing.Point(0, 241);
-            this.txtObservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtObservacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.Size = new System.Drawing.Size(795, 97);
@@ -160,7 +172,7 @@ namespace Monte_Carlos.Proveedor
             // 
             this.txtRTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRTN.Location = new System.Drawing.Point(410, 173);
-            this.txtRTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRTN.Margin = new System.Windows.Forms.Padding(2);
             this.txtRTN.MaxLength = 14;
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(386, 26);
@@ -193,7 +205,7 @@ namespace Monte_Carlos.Proveedor
             // 
             this.txtNombreDeContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreDeContacto.Location = new System.Drawing.Point(0, 173);
-            this.txtNombreDeContacto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreDeContacto.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreDeContacto.Name = "txtNombreDeContacto";
             this.txtNombreDeContacto.Size = new System.Drawing.Size(386, 26);
             this.txtNombreDeContacto.TabIndex = 3;
@@ -214,7 +226,7 @@ namespace Monte_Carlos.Proveedor
             // 
             this.txtNumeroTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroTelefono.Location = new System.Drawing.Point(410, 94);
-            this.txtNumeroTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumeroTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumeroTelefono.MaxLength = 9;
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(386, 26);
@@ -236,7 +248,7 @@ namespace Monte_Carlos.Proveedor
             // 
             this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpresa.Location = new System.Drawing.Point(0, 94);
-            this.txtEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(386, 26);
             this.txtEmpresa.TabIndex = 1;
@@ -253,26 +265,16 @@ namespace Monte_Carlos.Proveedor
             this.label1.TabIndex = 0;
             this.label1.Text = "Empresa";
             // 
-            // lblInsertarProveedor
-            // 
-            this.lblInsertarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInsertarProveedor.Location = new System.Drawing.Point(283, 7);
-            this.lblInsertarProveedor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblInsertarProveedor.Name = "lblInsertarProveedor";
-            this.lblInsertarProveedor.Size = new System.Drawing.Size(218, 24);
-            this.lblInsertarProveedor.TabIndex = 50;
-            this.lblInsertarProveedor.Text = "Insertar Proveedores";
-            // 
             // CRUD_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(904, 482);
+            this.ClientSize = new System.Drawing.Size(904, 555);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CRUD_Proveedor";
             this.Text = "CRUD_Proveedor";
             this.Load += new System.EventHandler(this.CRUD_Proveedor_Load);

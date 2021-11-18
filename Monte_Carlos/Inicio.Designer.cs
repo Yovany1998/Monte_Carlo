@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.PanelIzquierdo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,6 +57,7 @@
             // PanelIzquierdo
             // 
             this.PanelIzquierdo.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelIzquierdo.Controls.Add(this.label1);
             this.PanelIzquierdo.Controls.Add(this.lblUser);
             this.PanelIzquierdo.Controls.Add(this.iconButton2);
             this.PanelIzquierdo.Controls.Add(this.pictureBox1);
@@ -69,20 +71,29 @@
             this.PanelIzquierdo.Controls.Add(this.IBtnReservacion);
             this.PanelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.PanelIzquierdo.Margin = new System.Windows.Forms.Padding(4);
             this.PanelIzquierdo.Name = "PanelIzquierdo";
-            this.PanelIzquierdo.Size = new System.Drawing.Size(275, 784);
+            this.PanelIzquierdo.Size = new System.Drawing.Size(206, 609);
             this.PanelIzquierdo.TabIndex = 16;
             this.PanelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelIzquierdo_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Bienvenido: ";
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(42, 667);
+            this.lblUser.Location = new System.Drawing.Point(74, 9);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(46, 17);
+            this.lblUser.Size = new System.Drawing.Size(44, 13);
             this.lblUser.TabIndex = 10;
-            this.lblUser.Text = "label1";
+            this.lblUser.Text = "Nombre";
             // 
             // iconButton2
             // 
@@ -95,10 +106,9 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 35;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 426);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButton2.Location = new System.Drawing.Point(0, 346);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(273, 46);
+            this.iconButton2.Size = new System.Drawing.Size(205, 37);
             this.iconButton2.TabIndex = 9;
             this.iconButton2.Text = "Usuario";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -108,10 +118,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 39);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -127,10 +136,9 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 52;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.iconButton1.Location = new System.Drawing.Point(1, 729);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButton1.Location = new System.Drawing.Point(1, 592);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(273, 54);
+            this.iconButton1.Size = new System.Drawing.Size(205, 44);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Text = "Cerrar Sesion";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,10 +156,9 @@
             this.IBtnProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnProveedor.IconSize = 35;
             this.IBtnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnProveedor.Location = new System.Drawing.Point(0, 586);
-            this.IBtnProveedor.Margin = new System.Windows.Forms.Padding(4);
+            this.IBtnProveedor.Location = new System.Drawing.Point(0, 476);
             this.IBtnProveedor.Name = "IBtnProveedor";
-            this.IBtnProveedor.Size = new System.Drawing.Size(273, 46);
+            this.IBtnProveedor.Size = new System.Drawing.Size(205, 37);
             this.IBtnProveedor.TabIndex = 7;
             this.IBtnProveedor.Text = "Proveedor";
             this.IBtnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -169,10 +176,9 @@
             this.IBtnCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCliente.IconSize = 35;
             this.IBtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnCliente.Location = new System.Drawing.Point(0, 479);
-            this.IBtnCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.IBtnCliente.Location = new System.Drawing.Point(0, 389);
             this.IBtnCliente.Name = "IBtnCliente";
-            this.IBtnCliente.Size = new System.Drawing.Size(273, 46);
+            this.IBtnCliente.Size = new System.Drawing.Size(205, 37);
             this.IBtnCliente.TabIndex = 6;
             this.IBtnCliente.Text = "Cliente";
             this.IBtnCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -190,10 +196,9 @@
             this.IBtnCarta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCarta.IconSize = 35;
             this.IBtnCarta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnCarta.Location = new System.Drawing.Point(0, 268);
-            this.IBtnCarta.Margin = new System.Windows.Forms.Padding(4);
+            this.IBtnCarta.Location = new System.Drawing.Point(0, 218);
             this.IBtnCarta.Name = "IBtnCarta";
-            this.IBtnCarta.Size = new System.Drawing.Size(273, 46);
+            this.IBtnCarta.Size = new System.Drawing.Size(205, 37);
             this.IBtnCarta.TabIndex = 1;
             this.IBtnCarta.Text = "Carta";
             this.IBtnCarta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -211,10 +216,9 @@
             this.IBtnCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnCompra.IconSize = 35;
             this.IBtnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnCompra.Location = new System.Drawing.Point(0, 532);
-            this.IBtnCompra.Margin = new System.Windows.Forms.Padding(4);
+            this.IBtnCompra.Location = new System.Drawing.Point(0, 432);
             this.IBtnCompra.Name = "IBtnCompra";
-            this.IBtnCompra.Size = new System.Drawing.Size(273, 46);
+            this.IBtnCompra.Size = new System.Drawing.Size(205, 37);
             this.IBtnCompra.TabIndex = 5;
             this.IBtnCompra.Text = "Compra";
             this.IBtnCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -232,10 +236,9 @@
             this.IBtnEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnEmpleado.IconSize = 35;
             this.IBtnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnEmpleado.Location = new System.Drawing.Point(0, 220);
-            this.IBtnEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.IBtnEmpleado.Location = new System.Drawing.Point(0, 179);
             this.IBtnEmpleado.Name = "IBtnEmpleado";
-            this.IBtnEmpleado.Size = new System.Drawing.Size(273, 46);
+            this.IBtnEmpleado.Size = new System.Drawing.Size(205, 37);
             this.IBtnEmpleado.TabIndex = 2;
             this.IBtnEmpleado.Text = "Empleado";
             this.IBtnEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -253,10 +256,9 @@
             this.IBtnVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnVenta.IconSize = 35;
             this.IBtnVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnVenta.Location = new System.Drawing.Point(0, 318);
-            this.IBtnVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.IBtnVenta.Location = new System.Drawing.Point(0, 258);
             this.IBtnVenta.Name = "IBtnVenta";
-            this.IBtnVenta.Size = new System.Drawing.Size(273, 46);
+            this.IBtnVenta.Size = new System.Drawing.Size(205, 37);
             this.IBtnVenta.TabIndex = 4;
             this.IBtnVenta.Text = "Venta";
             this.IBtnVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -274,10 +276,9 @@
             this.IBtnReservacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnReservacion.IconSize = 35;
             this.IBtnReservacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IBtnReservacion.Location = new System.Drawing.Point(0, 373);
-            this.IBtnReservacion.Margin = new System.Windows.Forms.Padding(4);
+            this.IBtnReservacion.Location = new System.Drawing.Point(0, 303);
             this.IBtnReservacion.Name = "IBtnReservacion";
-            this.IBtnReservacion.Size = new System.Drawing.Size(273, 46);
+            this.IBtnReservacion.Size = new System.Drawing.Size(205, 37);
             this.IBtnReservacion.TabIndex = 3;
             this.IBtnReservacion.Text = "Reservacion";
             this.IBtnReservacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -288,10 +289,9 @@
             // 
             this.PanelCentral.BackColor = System.Drawing.Color.Transparent;
             this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelCentral.Location = new System.Drawing.Point(275, 0);
-            this.PanelCentral.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelCentral.Location = new System.Drawing.Point(206, -28);
             this.PanelCentral.Name = "PanelCentral";
-            this.PanelCentral.Size = new System.Drawing.Size(1202, 784);
+            this.PanelCentral.Size = new System.Drawing.Size(822, 637);
             this.PanelCentral.TabIndex = 17;
             this.PanelCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCentral_Paint);
             // 
@@ -308,14 +308,13 @@
             // 
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1477, 784);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.PanelCentral);
             this.Controls.Add(this.PanelIzquierdo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -344,5 +343,6 @@
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Label lblUser;
         private MySqlConnector.MySqlCommand mySqlCommand1;
+        private System.Windows.Forms.Label label1;
     }
 }

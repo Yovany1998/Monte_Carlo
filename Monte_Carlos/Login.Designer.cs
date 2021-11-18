@@ -50,10 +50,9 @@ namespace Monte_Carlos
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
-            this.panel1.Location = new System.Drawing.Point(969, 527);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(727, 428);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 1);
+            this.panel1.Size = new System.Drawing.Size(266, 1);
             this.panel1.TabIndex = 30;
             // 
             // txtUsuario
@@ -62,10 +61,10 @@ namespace Monte_Carlos
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
-            this.txtUsuario.Location = new System.Drawing.Point(969, 368);
+            this.txtUsuario.Location = new System.Drawing.Point(727, 299);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(355, 38);
+            this.txtUsuario.Size = new System.Drawing.Size(266, 30);
             this.txtUsuario.TabIndex = 26;
             this.txtUsuario.Tag = "";
             this.txtUsuario.Text = "Usuario";
@@ -73,10 +72,9 @@ namespace Monte_Carlos
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(51)))));
-            this.panel2.Location = new System.Drawing.Point(969, 417);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(727, 339);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(355, 1);
+            this.panel2.Size = new System.Drawing.Size(266, 1);
             this.panel2.TabIndex = 29;
             // 
             // txtContraseña
@@ -85,10 +83,10 @@ namespace Monte_Carlos
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Black;
-            this.txtContraseña.Location = new System.Drawing.Point(969, 478);
+            this.txtContraseña.Location = new System.Drawing.Point(727, 388);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(355, 38);
+            this.txtContraseña.Size = new System.Drawing.Size(266, 30);
             this.txtContraseña.TabIndex = 27;
             this.txtContraseña.Tag = "";
             this.txtContraseña.Text = "Contraseña";
@@ -102,10 +100,9 @@ namespace Monte_Carlos
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.Black;
             this.btnIniciar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnIniciar.Location = new System.Drawing.Point(899, 652);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIniciar.Location = new System.Drawing.Point(674, 530);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(425, 59);
+            this.btnIniciar.Size = new System.Drawing.Size(319, 48);
             this.btnIniciar.TabIndex = 28;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
@@ -118,11 +115,12 @@ namespace Monte_Carlos
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 50;
+            this.iconPictureBox2.IconSize = 38;
             this.iconPictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.iconPictureBox2.Location = new System.Drawing.Point(899, 478);
+            this.iconPictureBox2.Location = new System.Drawing.Point(674, 388);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.iconPictureBox2.Size = new System.Drawing.Size(38, 41);
             this.iconPictureBox2.TabIndex = 35;
             this.iconPictureBox2.TabStop = false;
             // 
@@ -133,11 +131,12 @@ namespace Monte_Carlos
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 50;
+            this.iconPictureBox1.IconSize = 38;
             this.iconPictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.iconPictureBox1.Location = new System.Drawing.Point(899, 368);
+            this.iconPictureBox1.Location = new System.Drawing.Point(674, 299);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.iconPictureBox1.Size = new System.Drawing.Size(38, 41);
             this.iconPictureBox1.TabIndex = 34;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -145,10 +144,10 @@ namespace Monte_Carlos
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(-12, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(-9, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1498, 949);
+            this.pictureBox1.Size = new System.Drawing.Size(1124, 771);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
@@ -156,19 +155,22 @@ namespace Monte_Carlos
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(794, 60);
+            this.pictureBox2.Location = new System.Drawing.Point(596, 49);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(612, 806);
+            this.pictureBox2.Size = new System.Drawing.Size(459, 655);
             this.pictureBox2.TabIndex = 36;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lblIngresar
             // 
             this.lblIngresar.AutoSize = true;
             this.lblIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresar.Location = new System.Drawing.Point(891, 214);
+            this.lblIngresar.Location = new System.Drawing.Point(668, 174);
+            this.lblIngresar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIngresar.Name = "lblIngresar";
-            this.lblIngresar.Size = new System.Drawing.Size(172, 46);
+            this.lblIngresar.Size = new System.Drawing.Size(142, 37);
             this.lblIngresar.TabIndex = 37;
             this.lblIngresar.Text = "Ingresar";
             this.lblIngresar.Click += new System.EventHandler(this.lblIngresar_Click);
@@ -179,18 +181,19 @@ namespace Monte_Carlos
             this.lblSistema.BackColor = System.Drawing.Color.Transparent;
             this.lblSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSistema.ForeColor = System.Drawing.Color.White;
-            this.lblSistema.Location = new System.Drawing.Point(89, 774);
+            this.lblSistema.Location = new System.Drawing.Point(67, 629);
+            this.lblSistema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSistema.Name = "lblSistema";
-            this.lblSistema.Size = new System.Drawing.Size(364, 92);
+            this.lblSistema.Size = new System.Drawing.Size(296, 74);
             this.lblSistema.TabIndex = 38;
             this.lblSistema.Text = "Sistema\r\nFinca Monte Carlo";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1477, 937);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.lblSistema);
             this.Controls.Add(this.lblIngresar);
             this.Controls.Add(this.panel1);
@@ -202,6 +205,7 @@ namespace Monte_Carlos
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
