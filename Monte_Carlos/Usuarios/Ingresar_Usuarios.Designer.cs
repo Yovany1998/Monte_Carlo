@@ -151,7 +151,7 @@ namespace Monte_Carlos.Usuarios
             // 
             this.dgUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUsuarios.Location = new System.Drawing.Point(205, 407);
+            this.dgUsuarios.Location = new System.Drawing.Point(205, 419);
             this.dgUsuarios.Name = "dgUsuarios";
             this.dgUsuarios.RowHeadersWidth = 51;
             this.dgUsuarios.Size = new System.Drawing.Size(392, 171);
@@ -170,7 +170,7 @@ namespace Monte_Carlos.Usuarios
             this.btnBorrarUsusario.IconSize = 52;
             this.btnBorrarUsusario.Location = new System.Drawing.Point(555, 359);
             this.btnBorrarUsusario.Name = "btnBorrarUsusario";
-            this.btnBorrarUsusario.Size = new System.Drawing.Size(39, 42);
+            this.btnBorrarUsusario.Size = new System.Drawing.Size(39, 58);
             this.btnBorrarUsusario.TabIndex = 74;
             this.btnBorrarUsusario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBorrarUsusario.UseVisualStyleBackColor = true;
@@ -188,7 +188,7 @@ namespace Monte_Carlos.Usuarios
             this.btnNuevo.Location = new System.Drawing.Point(502, 359);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.btnNuevo.Size = new System.Drawing.Size(39, 42);
+            this.btnNuevo.Size = new System.Drawing.Size(39, 58);
             this.btnNuevo.TabIndex = 75;
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.UseVisualStyleBackColor = true;

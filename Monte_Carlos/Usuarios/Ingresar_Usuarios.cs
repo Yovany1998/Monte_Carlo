@@ -45,9 +45,10 @@ namespace Monte_Carlos.Usuarios
         private void Limpiar()
         {
             //dvEmpleado.ClearSelection();
-
             txtUsername.Text = "";
             txtPassword.Text = "";
+            idUsuario = 0;
+            editar = false;
             txtRepetirContrasena.Text = "";
             dgUsuarios.ClearSelection();
             
@@ -106,69 +107,78 @@ namespace Monte_Carlos.Usuarios
 
             string pass = Hash.obtenerHash256(txtRepetirContrasena.Text);
 
-
-
-            var EmpleadoBuscar = Entity.Empleados.FirstOrDefault(x => x.Nombre == txtUsername.Text);
-            int EmpleadoGuardar;
-            EmpleadoGuardar = EmpleadoBuscar.IdEmpleado;
+        
+                var EmpleadoBuscar = Entity.Empleados.FirstOrDefault(x => x.Nombre == txtUsername.Text);
+                int EmpleadoGuardar;
+                EmpleadoGuardar = EmpleadoBuscar.IdEmpleado;
+                if (EmpleadoGuardar == null)
+                {
+                    MessageBox.Show("El empleado no existe");
+                Limpiar();
+                return;
+                }
             string Departamento = EmpleadoBuscar.Cargo;
 
-            if (Departamento == "Mesero" || Departamento == "Cocinero" || Departamento == "TI")
-            {
-                MessageBox.Show("El empleado no tiene la autoridad suficiente para tener acceso al sistema");
-                return;
-            }
+                if (Departamento == "Mesero" || Departamento == "Cocinero" || Departamento == "TI")
+                {
+                    MessageBox.Show("El empleado no tiene la autoridad suficiente para tener acceso al sistema");
+                    Limpiar();
+                    return;
+                }
 
-            if (editar)
-            {
-    
-                var tusuario = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == idUsuario);
-                tusuario.IdEmpleado = EmpleadoGuardar;
-                if (txtPassword.Text == "")
+                if (editar)
                 {
 
+                    var tusuario = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == idUsuario);
+                
+                    tusuario.IdEmpleado = EmpleadoGuardar;
+                    if (txtPassword.Text == "")
+                    {
+
+                    }
+                    else
+                    {
+                        tusuario.Password = Convert.ToString(pass);
+                    }
+                    tusuario.UserName = txtUsername.Text;
+                    Entity.SaveChanges();
+                    MessageBox.Show("Usuario modificado");
+                  
                 }
                 else
                 {
-                    tusuario.Password = Convert.ToString(pass);
-                }
-                tusuario.UserName = txtUsername.Text;
-                Entity.SaveChanges();
-                MessageBox.Show("Usuario modificado");
-            }
-            else
-            {
-                var Usuarios = Entity.Usuario.FirstOrDefault(x => x.UserName == txtUsername.Text);
-                if (Usuarios != null)
-                {
-                    MessageBox.Show("Este empleado ya tiene acceso al sistema");
-                    txtUsername.Text = "";
-                    txtUsername.Focus();
-                    return;
-                }
-                try
-                {
-                    Usuario Uusuario = new Usuario
+                    var Usuarios = Entity.Usuario.FirstOrDefault(x => x.UserName == txtUsername.Text);
+                    if (Usuarios != null)
                     {
-                        IdEmpleado = EmpleadoGuardar,
-                        Password = Convert.ToString(pass),
-                        UserName = txtUsername.Text
-                    };
-                    Entity.Usuario.Add(Uusuario);
-                    Entity.SaveChanges();
+                        MessageBox.Show("Este empleado ya tiene acceso al sistema");
+                        txtUsername.Text = "";
+                        Limpiar();
+                        txtUsername.Focus();
+                        return;
+                    }
+                    try
+                    {
+                        Usuario Uusuario = new Usuario
+                        {
+                            IdEmpleado = EmpleadoGuardar,
+                            Password = Convert.ToString(pass),
+                            UserName = txtUsername.Text
+                        };
+                        Entity.Usuario.Add(Uusuario);
+                        Entity.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("El Empleado no esta registrado revise");
+                        txtUsername.Focus();
+                        return;
+                        Limpiar();
+                    }
+                    MessageBox.Show("Usuario guardado!");
+                  
                 }
-                catch
-                {
-                    MessageBox.Show("El Empleado no esta registrado revise");
-                    txtUsername.Focus();
-                    return;
-                }
-                Limpiar();
-                MessageBox.Show("Usuario guardado!");
-            }
-
-            editar = false;
-            idUsuario = 0;
+          
+        
             CargarDv();
             Limpiar();
         }
@@ -177,14 +187,12 @@ namespace Monte_Carlos.Usuarios
         {
             try
             {
-
                 idUsuario = Convert.ToInt64(dgUsuarios.SelectedCells[0].Value);
                 var tUsuario = Entity.Usuario.FirstOrDefault(x => x.IdUsuario == idUsuario);
               //  txtPassword.Text = tUsuario.Password;
               //  txtRepetirContrasena.Text = tUsuario.Password;
                 txtUsername.Text = tUsuario.UserName;
                 editar = true;
-
             }
             catch (Exception)
             {
@@ -209,14 +217,15 @@ namespace Monte_Carlos.Usuarios
         {
             if (editar == false)
             {
-                MessageBox.Show("SELECCIONE EL REGISTRO PARA PODER BORRARLO");
+                MessageBox.Show("Seleccione un registro para borrarlo");
             }
             else
             {
-                MessageBox.Show("SE ELIMINO EL USUSARIO Y TODAS SUS REFERENCIAS");
+                MessageBox.Show("Se elimino el usuario con exito!");
                 Entity.Usuario.RemoveRange(Entity.Usuario.Where(x => x.IdUsuario == idUsuario));
                 Entity.SaveChanges();
                 CargarDv();
+                Limpiar();
             }
         }
 
