@@ -179,26 +179,13 @@ namespace Monte_Carlos.Compras
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
-        {
-            if (editar == false)
-            {
-                MessageBox.Show("Debe haber un registro seleccionado para poder borrarlo");
-            }
-            else
-            {
-                if (dvCompra.RowCount == 2)
-                {
-                    MessageBox.Show("Si eliminas este registro no podras acceder al programa");
-                }
-                else
-                {
+        {      
 
                     Variables.DetalleDeCompra.RemoveRange(Variables.DetalleDeCompra.Where(x => x.IdCompra == idCompras));
                     Variables.SaveChanges();
                     Limpiar();
                     CargaDv();
-                }
-            }
+            
         }
 
         private void dvCompra_SelectionChanged_1(object sender, EventArgs e)

@@ -37,10 +37,10 @@ namespace Monte_Carlos.Usuarios
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblIdUser = new System.Windows.Forms.Label();
             this.dgUsuarios = new System.Windows.Forms.DataGridView();
             this.btnBorrarUsusario = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +88,7 @@ namespace Monte_Carlos.Usuarios
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 24);
             this.label4.TabIndex = 67;
-            this.label4.Text = "Username";
+            this.label4.Text = "Nombre";
             // 
             // txtGuardar
             // 
@@ -124,7 +124,7 @@ namespace Monte_Carlos.Usuarios
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(156, 24);
             this.label7.TabIndex = 70;
-            this.label7.Text = "Password";
+            this.label7.Text = "Contraseña";
             // 
             // label1
             // 
@@ -135,17 +135,6 @@ namespace Monte_Carlos.Usuarios
             this.label1.Size = new System.Drawing.Size(242, 25);
             this.label1.TabIndex = 71;
             this.label1.Text = "Creación de usuarios";
-            // 
-            // lblIdUser
-            // 
-            this.lblIdUser.AutoSize = true;
-            this.lblIdUser.Location = new System.Drawing.Point(614, 139);
-            this.lblIdUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblIdUser.Name = "lblIdUser";
-            this.lblIdUser.Size = new System.Drawing.Size(27, 13);
-            this.lblIdUser.TabIndex = 72;
-            this.lblIdUser.Text = "user";
-            this.lblIdUser.Visible = false;
             // 
             // dgUsuarios
             // 
@@ -194,16 +183,26 @@ namespace Monte_Carlos.Usuarios
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(201, 390);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(242, 25);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Lista de usuarios";
+            // 
             // Ingresar_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 644);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnBorrarUsusario);
             this.Controls.Add(this.dgUsuarios);
-            this.Controls.Add(this.lblIdUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -232,9 +231,9 @@ namespace Monte_Carlos.Usuarios
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblIdUser;
         private System.Windows.Forms.DataGridView dgUsuarios;
         private FontAwesome.Sharp.IconButton btnBorrarUsusario;
         private FontAwesome.Sharp.IconButton btnNuevo;
+        private System.Windows.Forms.Label label2;
     }
 }
