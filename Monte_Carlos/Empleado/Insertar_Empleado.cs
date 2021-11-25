@@ -52,8 +52,7 @@ namespace Monte_Carlos.Empleado
 
         private void Limpiar()
         {
-            //dvEmpleado.ClearSelection();
-       
+            dvEmpleado.ClearSelection();       
             txtNombre.Text = "";
             txtApellido.Text = "";
             Ingreso.Value = DateTime.Today;
@@ -106,8 +105,7 @@ namespace Monte_Carlos.Empleado
         }
 
         private void btninsertar_Click_1(object sender, EventArgs e)
-        {
-           
+        {           
 
             if (txtNombre.Text == "")
             {
@@ -130,10 +128,8 @@ namespace Monte_Carlos.Empleado
                 return;
             }
 
-
             if (editar)
             {
-
                 MessageBox.Show("Empleado modificado");
                 var tEmpleado = Entity.Empleados.FirstOrDefault(x => x.IdEmpleado == idEmpleado);
                 tEmpleado.Nombre = txtNombre.Text;
@@ -146,8 +142,6 @@ namespace Monte_Carlos.Empleado
             }
             else
             {
-
-
                 MessageBox.Show("Empleado guardado");
                 Empleados tbEmpleado = new Empleados
                 {
@@ -181,7 +175,6 @@ namespace Monte_Carlos.Empleado
         {
             try
             {
-
                 if (Log == 1)
                 {
                     dvEmpleado.ClearSelection();
@@ -201,9 +194,7 @@ namespace Monte_Carlos.Empleado
             {
                 dvEmpleado.ClearSelection();
                 editar = false;
-            }
-
-        
+            }        
         }
 
         private void dvEmpleado_MouseClick_1(object sender, MouseEventArgs e)
