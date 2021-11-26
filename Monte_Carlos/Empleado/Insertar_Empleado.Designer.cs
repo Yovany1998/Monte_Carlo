@@ -58,7 +58,7 @@
             this.label8.Size = new System.Drawing.Size(252, 24);
             this.label8.TabIndex = 84;
             this.label8.Text = "Lista de empleados";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+      
             // 
             // CmbCargo
             // 
@@ -77,7 +77,7 @@
             this.CmbCargo.Name = "CmbCargo";
             this.CmbCargo.Size = new System.Drawing.Size(396, 28);
             this.CmbCargo.TabIndex = 3;
-            this.CmbCargo.SelectedIndexChanged += new System.EventHandler(this.CmbCargo_SelectedIndexChanged);
+          
             // 
             // Ingreso
             // 
@@ -86,7 +86,7 @@
             this.Ingreso.Name = "Ingreso";
             this.Ingreso.Size = new System.Drawing.Size(396, 26);
             this.Ingreso.TabIndex = 4;
-            this.Ingreso.ValueChanged += new System.EventHandler(this.Ingreso_ValueChanged);
+       
             // 
             // label3
             // 
@@ -97,7 +97,7 @@
             this.label3.Size = new System.Drawing.Size(252, 24);
             this.label3.TabIndex = 79;
             this.label3.Text = "Información del cargo";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+     
             // 
             // Nacimiento
             // 
@@ -106,7 +106,7 @@
             this.Nacimiento.Name = "Nacimiento";
             this.Nacimiento.Size = new System.Drawing.Size(396, 26);
             this.Nacimiento.TabIndex = 2;
-            this.Nacimiento.ValueChanged += new System.EventHandler(this.Nacimiento_ValueChanged);
+         
             // 
             // label6
             // 
@@ -117,7 +117,7 @@
             this.label6.Size = new System.Drawing.Size(252, 24);
             this.label6.TabIndex = 74;
             this.label6.Text = "Datos personales";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+         
             // 
             // btninsertar
             // 
@@ -142,7 +142,7 @@
             this.dvEmpleado.RowTemplate.Height = 24;
             this.dvEmpleado.Size = new System.Drawing.Size(396, 122);
             this.dvEmpleado.TabIndex = 8;
-            this.dvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvEmpleado_CellContentClick);
+           
             this.dvEmpleado.SelectionChanged += new System.EventHandler(this.dvEmpleado_SelectionChanged_1);
             this.dvEmpleado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dvEmpleado_MouseClick_1);
             this.dvEmpleado.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dvEmpleado_MouseMove);
@@ -157,7 +157,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(396, 24);
             this.txtApellido.TabIndex = 1;
-            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
+        
             // 
             // txtNombre
             // 
@@ -169,7 +169,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(396, 24);
             this.txtNombre.TabIndex = 0;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+       
             // 
             // label9
             // 
@@ -180,7 +180,7 @@
             this.label9.Size = new System.Drawing.Size(156, 24);
             this.label9.TabIndex = 87;
             this.label9.Text = "Nombre";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+       
             // 
             // label10
             // 
@@ -191,7 +191,7 @@
             this.label10.Size = new System.Drawing.Size(220, 24);
             this.label10.TabIndex = 88;
             this.label10.Text = "Fecha de Ingreso";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+          
             // 
             // label11
             // 
@@ -202,7 +202,7 @@
             this.label11.Size = new System.Drawing.Size(156, 24);
             this.label11.TabIndex = 89;
             this.label11.Text = "Cargo";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+  
             // 
             // label12
             // 
@@ -213,7 +213,7 @@
             this.label12.Size = new System.Drawing.Size(234, 24);
             this.label12.TabIndex = 90;
             this.label12.Text = "Fecha de nacimiento";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+     
             // 
             // label13
             // 
@@ -224,7 +224,7 @@
             this.label13.Size = new System.Drawing.Size(156, 24);
             this.label13.TabIndex = 91;
             this.label13.Text = "Apellido";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+           
             // 
             // btnNuevo
             // 

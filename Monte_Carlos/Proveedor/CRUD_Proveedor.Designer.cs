@@ -71,7 +71,7 @@ namespace Monte_Carlos.Proveedor
             this.panel1.Location = new System.Drawing.Point(37, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 802);
+            this.panel1.Size = new System.Drawing.Size(799, 641);
             this.panel1.TabIndex = 2;
             // 
             // lblInsertarProveedor
@@ -126,7 +126,7 @@ namespace Monte_Carlos.Proveedor
             this.dgProvedores.Name = "dgProvedores";
             this.dgProvedores.RowHeadersWidth = 51;
             this.dgProvedores.RowTemplate.Height = 24;
-            this.dgProvedores.Size = new System.Drawing.Size(794, 271);
+            this.dgProvedores.Size = new System.Drawing.Size(794, 166);
             this.dgProvedores.TabIndex = 9;
             this.dgProvedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProvedores_CellContentClick);
             this.dgProvedores.SelectionChanged += new System.EventHandler(this.dgProvedores_SelectionChanged);
@@ -271,7 +271,7 @@ namespace Monte_Carlos.Proveedor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(904, 555);
+            this.ClientSize = new System.Drawing.Size(862, 654);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);

@@ -12,15 +12,19 @@ namespace Monte_Carlos.Empleado
 {
     public partial class Insertar_Empleado : Form
     {
+        //Se llamo a la base de datos DBFincaMonteCarlosEntities1
         DBFincaMonteCarloEntities1 Entity = new DBFincaMonteCarloEntities1();
+        //Declaramos las variables que necesitaremos
         long idEmpleado = 0;
         bool editar = false;
         int Log;
+        //En el public Insertar_Empleado inicializamos el componente
         public Insertar_Empleado()
         {
             InitializeComponent();
            
         }
+        //Se creo la función CargarDv para llenar el DataGridView
         private void CargarDv()
         {
             var tEmpleado = from p in Entity.Empleados
@@ -35,21 +39,18 @@ namespace Monte_Carlos.Empleado
                             };
 
             dvEmpleado.DataSource = tEmpleado.CopyAnonymusToDataTable();
+            dvEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
+        //Los función que se ejecuta al entrar ala ventana de clientes 
         private void Insertar_Empleado_Load(object sender, EventArgs e)
         {
             editar = false;
             Log = 1;
-            CargarDv();
-           // dvEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;        
+            CargarDv();     
             dvEmpleado.ClearSelection();
         }
 
-        private void btninsertar_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+        //Se creo una funcion que limpie los datos del formulario  y la selección del DataGridView
         private void Limpiar()
         {
             dvEmpleado.ClearSelection();       
@@ -61,32 +62,8 @@ namespace Monte_Carlos.Empleado
             editar = false;
 
         }
-        private void dvEmpleado_SelectionChanged(object sender, EventArgs e)
-        {
-
-            try
-            {
-                idEmpleado = Convert.ToInt64(dvEmpleado.SelectedCells[0].Value);
-                var tEmpleado = Entity.Empleados.FirstOrDefault(x => x.IdEmpleado == idEmpleado);
-                txtNombre.Text = tEmpleado.Nombre;
-                txtApellido.Text = tEmpleado.Apellido;
-
-                editar = true;
-            }
-            catch (Exception)
-            {
-                //dvEmpleado.ClearSelection();
-                editar = false;
-            }
-
-            if (Log == 1)
-            {
-                //dvEmpleado.ClearSelection();
-                Limpiar();
-            }
-            
-        }
-
+  
+        //Evita que Incie el formulario con una selección al inicio
         private void dvEmpleado_MouseClick(object sender, MouseEventArgs e)
         {
             if (Log == 1)
@@ -94,19 +71,12 @@ namespace Monte_Carlos.Empleado
                 Log = 2;
             }
         }
-
-        private void btnElimicar_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
+      
+ 
+        //Boton de insertar empleado este tiene doble funcionalidad de guardar y eliminar
         private void btninsertar_Click_1(object sender, EventArgs e)
         {           
-
+            //Validamos los campos
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre");
@@ -119,6 +89,7 @@ namespace Monte_Carlos.Empleado
                 txtApellido.Focus();
                 return;
             }
+            //Convertimos la fecha tomada en el formato de la base de datos
             DateTime FechaNacimiento = Convert.ToDateTime(Nacimiento.Value.ToString("yyyy/MM/dd 00:00:00"));
             DateTime FechaIngreso = Convert.ToDateTime(Ingreso.Value.ToString("yyyy/MM/dd 00:00:00"));
            
@@ -127,7 +98,7 @@ namespace Monte_Carlos.Empleado
                 MessageBox.Show("Asigne un cargo al empleado");
                 return;
             }
-
+            //Editar edita los campos modificados se convierte en veradera la condicion en el SelecciónChange
             if (editar)
             {
                 MessageBox.Show("Empleado modificado");
@@ -137,15 +108,14 @@ namespace Monte_Carlos.Empleado
                 tEmpleado.Cargo = CmbCargo.SelectedItem.ToString();
                 tEmpleado.FechaDeIngreso = FechaIngreso;
                 tEmpleado.FechaDeNacimiento = FechaNacimiento;
-
                 Entity.SaveChanges();
             }
+            //Guarda los el empleado agregado
             else
             {
                 MessageBox.Show("Empleado guardado");
                 Empleados tbEmpleado = new Empleados
                 {
-
                     Nombre = txtNombre.Text,
                     Apellido = txtApellido.Text,
                     FechaDeNacimiento = FechaNacimiento,
@@ -155,22 +125,16 @@ namespace Monte_Carlos.Empleado
                 Entity.Empleados.Add(tbEmpleado);
                 Entity.SaveChanges();
             }
-          
+            //se actualiza el DataGridView y se limpian los campos y variables
             CargarDv();
             Limpiar();
         }
-
+        //Este botón solo ejecuta limpiar para incializa los componentes asu estado de inicio
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
-            dvEmpleado.ClearSelection();
             Limpiar();
         }
-
-        private void dvEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        //Se ejecuta cada vez que hacemos una selección en el DataGridView
         private void dvEmpleado_SelectionChanged_1(object sender, EventArgs e)
         {
             try
@@ -196,7 +160,7 @@ namespace Monte_Carlos.Empleado
                 editar = false;
             }        
         }
-
+        //Evita que Incie el formulario con una selección al inicio
         private void dvEmpleado_MouseClick_1(object sender, MouseEventArgs e)
         {
 
@@ -205,10 +169,10 @@ namespace Monte_Carlos.Empleado
                 Log = 2;
             }
         }
-
+        //Elimina el cliente seleccionado
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-          
+          //Verificamos que alla algun empleado seleccionado para eliminarlo
             if (editar == false)
             {
                 MessageBox.Show("Seleccione un registro para poder borrarlo");
@@ -224,71 +188,7 @@ namespace Monte_Carlos.Empleado
             }
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtApellido_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nacimiento_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CmbCargo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Ingreso_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Evita que Incie el formulario con una selección al inicio
         private void dvEmpleado_MouseMove(object sender, MouseEventArgs e)
         {
 
