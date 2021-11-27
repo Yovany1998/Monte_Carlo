@@ -105,6 +105,8 @@ namespace Monte_Carlos.Cliente
             Limpiar();
             }
         }
+        
+        // Función que realiza la carga de datos al datagrid
         private void CargaDv()
         {
             var tClientes = from p in Entity.Clientes
@@ -117,6 +119,8 @@ namespace Monte_Carlos.Cliente
                             };
             dvClientes.DataSource = tClientes.CopyAnonymusToDataTable();
         }
+
+        // Limpia los textbox
         private void Limpiar()
         {          
             txtNombre.Text = "";
@@ -127,6 +131,7 @@ namespace Monte_Carlos.Cliente
             dvClientes.ClearSelection();
         }
 
+        // carga los datos
         private void Insertar_Cliente_Load(object sender, EventArgs e)
         {
             Log = 1;
@@ -136,7 +141,7 @@ namespace Monte_Carlos.Cliente
         }
 
        
-
+        // selecciona un elemento del datagrid en este caso a traves del id 
         private void dvClientes_SelectionChanged(object sender, EventArgs e)
         {
           
@@ -172,7 +177,7 @@ namespace Monte_Carlos.Cliente
         }
 
         
-
+        // al seleccionar un elemento del datagrid se puede eliminar presionando el botón  de eliminar
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (editar == false)
@@ -188,12 +193,14 @@ namespace Monte_Carlos.Cliente
             }
         }
 
+        // el botón simplemente manda a llamar la función limpiar
         private void btnNuevo1_Click(object sender, EventArgs e)
         {
             dvClientes.ClearSelection();
             Limpiar();
         }
 
+        // verifica el textbox de Nombre para que solamente pueda escribir letras, el caracter de espacio y borrar
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (' ')) && (e.KeyChar != (char)Keys.Back))
@@ -204,6 +211,7 @@ namespace Monte_Carlos.Cliente
             }
         }
 
+        // verifica el textbox de telefono para que solamente pueda escribir numeros, el caracter de guión y borrar
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != ('-')) && (e.KeyChar != (char)Keys.Back))
@@ -214,6 +222,7 @@ namespace Monte_Carlos.Cliente
             }
         }
 
+        // verifica el textbox de Apellido para que solamente pueda escribir caracteres, el caracter de espacio y borrar
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (' ')) && (e.KeyChar != (char)Keys.Back))

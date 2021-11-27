@@ -17,7 +17,7 @@ namespace Monte_Carlos.Venta
         {
             InitializeComponent();
         }
-
+        // botón que realiza la venta
         private void btnInsertarCliente_Click(object sender, EventArgs e)
         {
             int codigo = Convert.ToInt32(lblCodigoVenta.Text);
@@ -35,6 +35,7 @@ namespace Monte_Carlos.Venta
 
         }
 
+        // carga de los datas del datagrid y de los label correspondientes
         private void Facturación_Load(object sender, EventArgs e)
         {
             
@@ -68,14 +69,16 @@ namespace Monte_Carlos.Venta
          
         }
 
+        // Se realizan los calculos correspondientes
         public void calculos()
         {
+            // declaración de variables
             int cantidadProductos = dgListadeProductos.Rows.Count;
             decimal isv;
             decimal subTotal;            
             decimal total;
 
-
+            // Las cantidades no pueden ser negativas, se calculan sumando los subtotales del datagrid
             if (cantidadProductos > 0)
             {
                 subTotal = 0;
