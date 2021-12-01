@@ -50,6 +50,7 @@ namespace Monte_Carlos.Compras
             this.lblInsertarCompra = new System.Windows.Forms.Label();
             this.DgVerCompras = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dvCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgVerCompras)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +102,7 @@ namespace Monte_Carlos.Compras
             this.Ingreso.Name = "Ingreso";
             this.Ingreso.Size = new System.Drawing.Size(289, 26);
             this.Ingreso.TabIndex = 96;
+            this.Ingreso.ValueChanged += new System.EventHandler(this.Ingreso_ValueChanged);
             // 
             // label3
             // 
@@ -303,6 +305,24 @@ namespace Monte_Carlos.Compras
             this.label2.TabIndex = 116;
             this.label2.Text = "Compras";
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.GrinTongueWink;
+            this.btnAgregar.IconColor = System.Drawing.Color.Black;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 52;
+            this.btnAgregar.Location = new System.Drawing.Point(301, 504);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.btnAgregar.Size = new System.Drawing.Size(52, 52);
+            this.btnAgregar.TabIndex = 117;
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // Grud_Compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +330,7 @@ namespace Monte_Carlos.Compras
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(959, 777);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DgVerCompras);
             this.Controls.Add(this.lblInsertarCompra);
@@ -365,5 +386,6 @@ namespace Monte_Carlos.Compras
         private System.Windows.Forms.Label lblInsertarCompra;
         private System.Windows.Forms.DataGridView DgVerCompras;
         private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconButton btnAgregar;
     }
 }

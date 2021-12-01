@@ -19,12 +19,36 @@ namespace Monte_Carlos.Compras
         public int idProveedor = 0;
         bool editar = false;
         Double Subto;
+        int Agregar = 0;
         int log;
+        int idCompre = 0;
         public Grud_Compras()
         {
             InitializeComponent();
         }
 
+        private void CargaDv()
+        {
+
+            try
+            {
+                var tCompras = from j in Variables.DetalleDeCompra
+                               where j.IdCompra == idCompre
+                               select new
+                               {
+                                   j.IdDetalle,
+                                   j.Producto,
+                                   j.PrecioUnitario,
+                                   j.Cantidad,
+                               };
+                dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
+                dvCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            }
+            catch
+            {
+
+            }
+        }
         private void Limpiar()
         {
             txtNombre.Text = "";
@@ -50,28 +74,17 @@ namespace Monte_Carlos.Compras
             Limpiar();
             editar = false;
         }
-        private void CargaDv()
-        {
-      
-            try
-            {
-        
-            }
-            catch
-            {
-
-            }
-        }  
+  
         private void CargaComprasDg()
         {
             try
             {
-
+                /*
 
                 DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
                 var tCompras = from Detalle in Variables.DetalleDeCompra
-                               join Compras
-                               in Variables.Compra on Detalle.IdCompra equals Compras.IdCompra
+                               join Compras in Variables.Compra
+                               on Detalle.IdCompra equals Compras.IdCompra
                                join Proveedor in Variables.Proveedor on Detalle.IdProveedor
                                equals Proveedor.IdProveedor
                                select new
@@ -82,12 +95,28 @@ namespace Monte_Carlos.Compras
                                };
                 DgVerCompras.DataSource = tCompras.CopyAnonymusToDataTable();
                 DgVerCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                */
+                DateTime Fechas = Convert.ToDateTime(Ingreso.Value.ToString("yyyy/MM/dd 00:00:00"));
+                var tUsuario = from p in Variables.Compra
+                               where p.Fecha == Fechas
+                               select new
+                               {
+                                   p.IdCompra,
+                                   p.Fecha
+                               };
+
+                DgVerCompras.DataSource = tUsuario.CopyAnonymusToDataTable();
+                DgVerCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+
             }
             catch
             {
-
+                MessageBox.Show("En esta fecha no se realizo ninguna compra!");
             }
-          
+       
+
+
         }
 
         private void btninsertar_Click(object sender, EventArgs e)
@@ -107,18 +136,18 @@ namespace Monte_Carlos.Compras
                 MessageBox.Show("Por favor ingresar el precio");
                 return;
             }
-            /*if (Convert.ToInt32(txtPrecio.Text) <= 0)
+            if (Convert.ToInt32(txtPrecio.Text) <= 0)
             {
                 MessageBox.Show("El precio no puede ser menor o igual a 0");
                 return;
-            }*/
+            }
+
             if (txtCantidad.Text.Equals(""))
             {
                 MessageBox.Show("Por favor ingresar la cantidad de la compra");
                 return;
             }
 
-          //  Subto = Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(txtPrecio.Text);
 
             if (editar)
             {
@@ -131,37 +160,57 @@ namespace Monte_Carlos.Compras
                 tDetalleDeCompra.Cantidad = Convert.ToInt32(txtCantidad.Text);
                 tCompra.Observacion = txtObservacion.Text;
                 Variables.SaveChanges();
-                MessageBox.Show("Compra modificada!");
+                MessageBox.Show("Se modifico el detalle de la compra!");
             }
             else
             {
-                var proveedor = Variables.Proveedor.FirstOrDefault(x => x.Empresa == txtNombre.Text);
-                MessageBox.Show("Compra guardada");
-                DetalleDeCompra tbDetalle = new DetalleDeCompra();
-                Compra tbCompra = new Compra();
-                   
-                   
+
+
+                if (Agregar == 1)
+                {
+                    var proveedores = Variables.Proveedor.FirstOrDefault(x => x.Empresa == txtNombre.Text);
+                    MessageBox.Show("Se ingreso el detalle de la compra");
+                    DetalleDeCompra tbDetalles = new DetalleDeCompra();
+                    int codigoCompras = idCompre;
+                    tbDetalles.IdProveedor = proveedores.IdProveedor;
+                    tbDetalles.IdCompra = codigoCompras;
+                    tbDetalles.Producto = txtProducto.Text;
+                    tbDetalles.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);
+                    tbDetalles.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    Variables.DetalleDeCompra.Add(tbDetalles);
+                    Variables.SaveChanges();
+                    Agregar = 0;
+                }
+                else
+                {
+                    Compra tbCompra = new Compra();
                     tbCompra.Observacion = txtObservacion.Text;
                     tbCompra.Fecha = FechaActual;
-                    
-                
-               
-                Variables.Compra.Add(tbCompra);
-                Variables.SaveChanges();
-                int codigoCompra = tbCompra.IdCompra;
-                tbDetalle.IdProveedor = proveedor.IdProveedor;
-                tbDetalle.IdCompra = codigoCompra;
-                tbDetalle.Producto = txtProducto.Text;
-                tbDetalle.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);
-                tbDetalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
-                Variables.DetalleDeCompra.Add(tbDetalle);
-                Variables.SaveChanges();
+                    Variables.Compra.Add(tbCompra);
+                    Variables.SaveChanges();
+
+                    var proveedor = Variables.Proveedor.FirstOrDefault(x => x.Empresa == txtNombre.Text);
+                    MessageBox.Show("Compra guardada");
+                    DetalleDeCompra tbDetalle = new DetalleDeCompra();
+                    int codigoCompra = tbCompra.IdCompra;
+                    tbDetalle.IdProveedor = proveedor.IdProveedor;
+                    tbDetalle.IdCompra = codigoCompra;
+                    tbDetalle.Producto = txtProducto.Text;
+                    tbDetalle.PrecioUnitario = Convert.ToInt32(txtPrecio.Text);
+                    tbDetalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    Variables.DetalleDeCompra.Add(tbDetalle);
+                    Variables.SaveChanges();
+                }
+              
+             
+
             }
             editar = false;
             CargaDv();
             CargaComprasDg();
             idCompras = 0;
             Limpiar();
+            Agregar = 0;
         }
 
         private void dvCompra_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -179,9 +228,10 @@ namespace Monte_Carlos.Compras
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
-        {      
-
-                    Variables.DetalleDeCompra.RemoveRange(Variables.DetalleDeCompra.Where(x => x.IdCompra == idCompras));
+        {
+         
+            MessageBox.Show(Convert.ToString(idCompras));
+                    Variables.DetalleDeCompra.RemoveRange(Variables.DetalleDeCompra.Where(x => x.IdDetalle == idCompras));
                     Variables.SaveChanges();
                     Limpiar();
                     CargaDv();
@@ -207,7 +257,7 @@ namespace Monte_Carlos.Compras
             }
             catch (Exception)
             {
-                editar = false;
+               // editar = false;
             }
             if (log == 1)
             {
@@ -253,7 +303,7 @@ namespace Monte_Carlos.Compras
         {
             try
             {
-                int idCompre = Convert.ToInt32(DgVerCompras.SelectedCells[0].Value);
+                 idCompre = Convert.ToInt32(DgVerCompras.SelectedCells[0].Value);
                 DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
                 var tCompras = from j in Variables.DetalleDeCompra
                                where j.IdCompra == idCompre
@@ -267,7 +317,7 @@ namespace Monte_Carlos.Compras
                 dvCompra.DataSource = tCompras.CopyAnonymusToDataTable();
                 dvCompra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-
+                Agregar = 0;
             }
             catch (Exception)
             {
@@ -295,6 +345,46 @@ namespace Monte_Carlos.Compras
             if (log == 1)
             {
                 log = 2;
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+          //  txtNombre.Text = "";
+            txtObservacion.Text = "";
+            txtProducto.Text = "";
+            txtCantidad.Text = "";
+            txtPrecio.Text = "";
+            editar = false;
+            Agregar = 1;
+           dvCompra.ClearSelection();
+           // DgVerCompras.ClearSelection();
+        }
+
+        private void Ingreso_ValueChanged(object sender, EventArgs e)
+        {
+   
+            // string Fecha = DateTimes.Value.ToString("yyyy/MM/dd 00:00:00");
+            DateTime Fechas = Convert.ToDateTime(Ingreso.Value.ToString("yyyy/MM/dd 00:00:00"));
+            MessageBox.Show(Convert.ToString(Fechas));
+            //  Int64 Fechas = Convert.ToInt64(Fecha);           
+            try
+            {             
+                 var tUsuario = from p in Variables.Compra
+                                where p.Fecha == Fechas
+                                select new
+                                {
+                                    p.IdCompra,
+                                    p.Fecha
+                                };
+
+                DgVerCompras.DataSource = tUsuario.CopyAnonymusToDataTable();
+                DgVerCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            }
+            catch
+            {
+              
+                MessageBox.Show("En esta fecha no se realizo ninguna compra!");
             }
         }
     }
