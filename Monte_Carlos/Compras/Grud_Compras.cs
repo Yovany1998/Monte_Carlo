@@ -79,14 +79,16 @@ namespace Monte_Carlos.Compras
         {
             try
             {
-                /*
+                
 
                 DateTime Fechas = Convert.ToDateTime(FechaActual.ToString("yyyy/MM/dd 00:00:00"));
+                /*
                 var tCompras = from Detalle in Variables.DetalleDeCompra
                                join Compras in Variables.Compra
                                on Detalle.IdCompra equals Compras.IdCompra
                                join Proveedor in Variables.Proveedor on Detalle.IdProveedor
                                equals Proveedor.IdProveedor
+                               where Compras.Fecha == Fechas
                                select new
                                {
                                    Compras.IdCompra,
@@ -95,8 +97,9 @@ namespace Monte_Carlos.Compras
                                };
                 DgVerCompras.DataSource = tCompras.CopyAnonymusToDataTable();
                 DgVerCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                */
-                DateTime Fechas = Convert.ToDateTime(Ingreso.Value.ToString("yyyy/MM/dd 00:00:00"));
+                
+             */
+                
                 var tUsuario = from p in Variables.Compra
                                where p.Fecha == Fechas
                                select new
@@ -107,7 +110,7 @@ namespace Monte_Carlos.Compras
 
                 DgVerCompras.DataSource = tUsuario.CopyAnonymusToDataTable();
                 DgVerCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
+                 
 
             }
             catch
@@ -363,11 +366,11 @@ namespace Monte_Carlos.Compras
 
         private void Ingreso_ValueChanged(object sender, EventArgs e)
         {
-   
-            // string Fecha = DateTimes.Value.ToString("yyyy/MM/dd 00:00:00");
+            Limpiar();
+            dvCompra.DataSource = " ";
+            dvCompra.Refresh();
             DateTime Fechas = Convert.ToDateTime(Ingreso.Value.ToString("yyyy/MM/dd 00:00:00"));
-            MessageBox.Show(Convert.ToString(Fechas));
-            //  Int64 Fechas = Convert.ToInt64(Fecha);           
+       
             try
             {             
                  var tUsuario = from p in Variables.Compra
@@ -380,6 +383,8 @@ namespace Monte_Carlos.Compras
 
                 DgVerCompras.DataSource = tUsuario.CopyAnonymusToDataTable();
                 DgVerCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+
             }
             catch
             {
